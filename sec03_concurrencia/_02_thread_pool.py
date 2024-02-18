@@ -9,7 +9,7 @@ Un ThreadPool le permite reutilizar los subprocesos de trabajo una vez que se
 completan las tareas. También protege contra fallas inesperadas, como excepciones.
 
 Un ThreadPool extiende de Executor y retorna un objeto Future. La clase Exceutor
-tiene 3 mètodos para controlar el thread pool.
+tiene 3 métodos para controlar el thread pool.
 - submit
 - map
 - shutdown
