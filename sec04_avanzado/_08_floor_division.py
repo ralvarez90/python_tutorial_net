@@ -6,7 +6,6 @@ el operador // retorna la división entera.
 1. Función floor
 Recibe cualquier número y retorna la parte entera.
 """
-import decimal
 import math
 
 
