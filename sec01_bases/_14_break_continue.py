@@ -5,7 +5,7 @@ bucles.
 """
 
 
-def breakExample():
+def break_example():
     while True:
         print('Hello from while')
         break
@@ -13,8 +13,8 @@ def breakExample():
 
 if __name__ == '__main__':
 
-    # break
-    breakExample()
+    # ejemplod de uso de break
+    break_example()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

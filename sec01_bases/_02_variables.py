@@ -15,8 +15,8 @@ def show_message():
 
 if __name__ == '__main__':
 
-    # message
+    # imprime mensaje
     show_message()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

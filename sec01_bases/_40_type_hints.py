@@ -5,7 +5,8 @@ opcional para aprovechar lo mejor de la escritura estática y
 dinámica.
 
 Python en el módulo typing incluye alias de tipos que son
-List, Tuple, Dict, Set, Frozenset, Sequence, Mapping, ByteString
+List, Tuple, Dict, Set, Frozenset, Sequence, Mapping, 
+ByteString, etc.
 """
 
 

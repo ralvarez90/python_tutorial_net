@@ -22,10 +22,10 @@ def list_keywords():
 
 def main():
 
-    # message 1
+    # mensaje de bienvenida
     print('Hello World in Python3')
 
-    # kewords
+    # se muestran palabras reservadas
     list_keywords()
 
 
@@ -34,5 +34,5 @@ if __name__ == '__main__':
     # run app
     main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

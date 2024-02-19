@@ -7,7 +7,6 @@ o False.
 1. Constructor bool
 Este recibe cualquier objeto y retorna un booleano equivalente. Cualquier
 objeto distinto de 0, '', None, [], {}, () retorna True.
-
 """
 from enum import Enum
 
@@ -33,7 +32,7 @@ class User:
         self.isActive = False
 
     @staticmethod
-    def checkStatus(user: 'User'):
+    def check_status(user: 'User'):
         if user.isActive:
             print('OK')
             return
@@ -42,16 +41,16 @@ class User:
 
 if __name__ == '__main__':
 
-    # instances
-    userAdmin = User('Rodrigo Álvarez', Roll.ADMIN)
-    otherUser = User('Aldo Caldo', Roll.NORMAL)
-    otherUser.deactivate()
+    # instancias
+    user1 = User('Rodrigo Álvarez', Roll.ADMIN)
+    user2 = User('Aldo Caldo', Roll.NORMAL)
 
-    # status 1
-    User.checkStatus(userAdmin)
+    # cambio de estado de user2
+    user2.deactivate()
 
-    # status 2
-    User.checkStatus(otherUser)
+    # verificación de estatis
+    User.check_status(user1)
+    User.check_status(user2)
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

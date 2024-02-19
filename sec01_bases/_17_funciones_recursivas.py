@@ -7,7 +7,7 @@ cuando ya no invocarse.
 
 
 def count_down_v1(n: int):
-    assert n >= 0, 'n can not be < 1'
+    assert n >= 0 and n is not None, 'n can not be < 0 or None'
     if n == 0:
         print('Adios!')
     else:
@@ -16,6 +16,7 @@ def count_down_v1(n: int):
 
 
 def count_down_v2(n: int):
+    assert n >= 0 and n is not None, 'n can not be < 0 or None'
     print(n)
     next = n-1
     if next > 0:
@@ -31,23 +32,27 @@ def get_sum_v1(n: int) -> int:
 
 
 def get_sum_v2(n: int) -> int:
-    assert n >= 0, 'n can not be a negative'
-    return n+get_sum_v2(n-1) if n > 0 else 0
+    assert n >= 0 and n is not None, 'n can not be a negative or None'
+    return n + get_sum_v2(n-1) if n > 0 else 0
+
+
+def main():
+    # ejemplo 1
+    count_down_v1(10)
+    print()
+
+    # ejemplo 2
+    count_down_v2(10)
+    print()
+
+    # ejemplo 3
+    print(f'sum(1+2+...+5000) -> {get_sum_v1(500)}')
 
 
 if __name__ == '__main__':
 
-    # count down
-    count_down_v1(10)
-    print()
+    # run application
+    main()
 
-    # count down
-    count_down_v2(10)
-    print()
-
-    # get sum
-    print(f'sum(1+2+...+5000) -> {get_sum_v1(500)}')
-    print(f'sum(1+2+...+5000) -> {get_sum_v2(500)}')
-
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

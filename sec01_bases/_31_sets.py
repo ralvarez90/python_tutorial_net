@@ -38,11 +38,11 @@ objetos mediante un ciclo for.
 import types
 
 
-def runtimeType(obj: object) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def ejemploDefinicion():
+def ejemplo_set_definicion():
     skills = {
         'Python Programming',
         'Databases',
@@ -50,34 +50,33 @@ def ejemploDefinicion():
     }
 
     print(f'skills: {skills}')
-    print(runtimeType(skills))
+    print(runtime_type(skills))
 
 
-def ejemploEmpty():
+def ejemplo_empty_set():
     empty_set = set()
     empty_dict = {}
     print(f'empty_set : {empty_set}')
     print(f'empty_dict: {empty_dict}')
 
 
-def ejemploCaracteres():
+def ejemplo_char_set():
     caracteres = set('letter')
     print(f'caracteres: {caracteres}')
 
 
-def ejemploInNotin():
+def ejemplo_contension():
     rating = 1
     ratings = {1, 2, 3, 4, 5}
     print(f'1     in {ratings} ? {rating in ratings}')
     print(f'1 not in {ratings} ? {rating not in ratings}')
 
 
-def ejemploAgregarRemoverDescartar():
+def ejemplo_agregar_remover_descartar():
     skills = {'Python', 'Java', 'Perl'}
     skills.add('Go')
     skills.add('Rust')
     print(f'skills: {skills}')
-
     try:
         skills.remove('Rust')
     except KeyError:
@@ -90,14 +89,14 @@ def ejemploAgregarRemoverDescartar():
     skills.discard('Cobol')
 
 
-def ejemploPop():
+def ejemplo_metodo_pop():
     skills = {'Problem Solving', 'Algorithms', 'Python Programming'}
     while len(skills) != 0:
         removed = skills.pop()
         print(f'Eliminado: "{removed}", restantes -> {skills}')
 
 
-def ejemploClear():
+def ejemplo_metodo_clear():
     languages = {
         'python',
         'haskell',
@@ -110,15 +109,15 @@ def ejemploClear():
     print(f'languages: {languages}')
 
 
-def ejemploFrozeenSet():
+def ejemplo_frozenset():
     skills = {'Python programming', 'Problem solving', 'Design patterns'}
     skills.add('Django')
     skills = frozenset(skills)
-    print(f'type of {skills} -> {runtimeType(skills)} ')
+    print(f'type of {skills} -> {runtime_type(skills)} ')
     # skills.add('REST Framework') lana error
 
 
-def ejemploFor():
+def ejemplo_for():
     languages = {
         'python',
         'haskell',
@@ -134,18 +133,22 @@ def ejemploFor():
         print(index, value)
 
 
+def main():
+    ejemplo_set_definicion()
+    ejemplo_empty_set()
+    ejemplo_char_set()
+    ejemplo_contension()
+    ejemplo_agregar_remover_descartar()
+    ejemplo_metodo_pop()
+    ejemplo_metodo_clear()
+    ejemplo_frozenset()
+    ejemplo_for()
+
+
 if __name__ == '__main__':
 
-    # run examples
-    ejemploDefinicion()
-    ejemploEmpty()
-    ejemploCaracteres()
-    ejemploInNotin()
-    ejemploAgregarRemoverDescartar()
-    ejemploPop()
-    ejemploClear()
-    ejemploFrozeenSet()
-    ejemploFor()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . .')

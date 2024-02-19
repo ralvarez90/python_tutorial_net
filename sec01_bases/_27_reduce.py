@@ -2,23 +2,35 @@
 
 Permite obtener un valor concreto a partir de una secuencia.
 """
-from functools import reduce
+import functools
 
 
-def reduceExample():
-    """Se muestra como usar reduce para obtener la suma de
-    los elementos dentro de una lista.
-    """
-    someNumbers = [1, 2, 3, 4, 5]
-    total = reduce(lambda x, y: x+y, someNumbers, 0)
+def reduce_example1():
+    numeros = [1, 2, 3, 4, 5]
+    total = functools.reduce(lambda x, y: x+y, numeros, 0)
     print(f'sum1: {total}')
-    print(f'sum2: {sum(someNumbers)}')
+    print(f'sum2: {sum(numeros)}')
+
+
+def reduce_example2():
+    def __suma(a: int | float, b: int | float) -> int | float:
+        print(f'a={a}, b={b}, {a}+{b} = {a+b}')
+        return a+b
+    scores = [75, 65, 80, 95, 50]
+    total = functools.reduce(__suma, scores)
+    print(f'Total: {total}')
+
+
+def main():
+    # uso de functools.reduce
+    reduce_example1()
+    reduce_example2()
 
 
 if __name__ == '__main__':
 
-    # reduce
-    reduceExample()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

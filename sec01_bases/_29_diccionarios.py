@@ -15,14 +15,17 @@ diccionario[key] = valor
 y eliminamos elementos empleando del diccionario[key]. Podemos iterar
 meidante un for a traves de las keys, values y tuplas (key, value)
 de un diccionario.
+
+Los diccionarios tiene un serie de métodos útiles para manejarlos.
+Esta es una de las estructuras de datos más importantes.
 """
 
 
-def runtimeType(item: object) -> str:
+def runtime_type(item: object) -> str:
     return str(type(item))[8:-2]
 
 
-def diccionarioEjemplo1():
+def diccionario_ejemplo1():
     persona = {
         'firstName': 'Rodrigo',
         'lastName': 'Alvarez',
@@ -31,7 +34,7 @@ def diccionarioEjemplo1():
     }
 
     print(f'Persona: {persona}')
-    print(runtimeType(persona))
+    print(runtime_type(persona))
 
     # iteración de keys
     for k in persona:
@@ -41,7 +44,7 @@ def diccionarioEjemplo1():
     print(persona.get('nombre', 'sin-nombre'))
 
 
-def diccionarioEjemplo2():
+def diccionario_ejemplo2():
     persona = {
         'firstName': 'rodrigo',
         'lastName': 'alvarez',
@@ -53,13 +56,15 @@ def diccionarioEjemplo2():
     print(f'persona: {persona}')
 
 
+def main():
+    diccionario_ejemplo1()
+    diccionario_ejemplo2()
+
+
 if __name__ == '__main__':
 
-    # ejemplo 1
-    diccionarioEjemplo1()
+    # run application
+    main()
 
-    # ejemplo 2
-    diccionarioEjemplo2()
-
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

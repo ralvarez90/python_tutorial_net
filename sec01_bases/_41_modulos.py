@@ -3,8 +3,6 @@
 Son piezas de código acotadas por un espacio de nombres. Un
 archivo python es un módulo. El conjunto de módulos se denomina
 paquete. 
-
-Para el manejo de 
 """
 import sys
 

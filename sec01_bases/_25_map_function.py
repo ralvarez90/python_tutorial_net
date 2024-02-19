@@ -11,12 +11,11 @@ expresión lambda.
 """
 
 
-
 def square(number: int | float) -> int | float:
     return number**2
 
 
-def mapFunctionExampleV1():
+def map_function_example1():
     bonuses = [100, 200, 300]
     doubles = list(map(square, bonuses))
     negatives = list(map(lambda n: -n, bonuses))
@@ -25,20 +24,22 @@ def mapFunctionExampleV1():
     print(f'negatives: {negatives}')
 
 
-def mapFunctionExampleV2():
+def map_function_example2():
     names = ['david', 'peter', 'jenifer']
     title_names = list(map(lambda name: name.title(), names))
     print(f'names: {names}')
     print(f'title_names: {title_names}')
 
 
+def main():
+    map_function_example1()
+    map_function_example2()
+
+
 if __name__ == '__main__':
 
-    # map
-    mapFunctionExampleV1()
+    # run application
+    main()
 
-    # map
-    mapFunctionExampleV2()
-
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

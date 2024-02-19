@@ -5,7 +5,7 @@ al igual que las listas por comprensión. Pueden incluir condiciones.
 """
 
 
-def exampleSetComprenhension():
+def example_comprenhension_sets():
     tags = {'Django', 'Flask', 'Pandas', 'Flet'}
     lowercaseTagsV1 = {tag.lower() for tag in tags}
     lowercaseTagsV2 = set(map(lambda tag: tag.lower(), tags))
@@ -15,10 +15,15 @@ def exampleSetComprenhension():
     print(f'lowercaseTagsV3: {lowercaseTagsV3}')
 
 
+def main():
+    # run single example
+    example_comprenhension_sets()
+
+
 if __name__ == '__main__':
 
-    # run examples
-    exampleSetComprenhension()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

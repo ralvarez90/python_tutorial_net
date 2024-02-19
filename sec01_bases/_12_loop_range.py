@@ -4,13 +4,12 @@
 
 Extiende de una Sequence[int] por lo que es una secuencia de enteros
 
-Se suele emplearn en bucles junto con la sentencia for. Genera los elementos
+Se suele emplear en bucles junto con la sentencia for. Genera los elementos
 de forma dinámica bajo demanda, por lo que es un generador.
 
 Esta clase puede tener hasta 3 parámetros, que indica el inicio, fin y el
 step a utilizar.
 """
-from typing import final
 
 
 def range_example():
@@ -22,6 +21,7 @@ def range_example():
 
 if __name__ == '__main__':
 
+    # ejemplo de rango
     range_example()
 
     # end application
