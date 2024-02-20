@@ -10,33 +10,28 @@ argumento.
 """
 
 
-def iterate_with_for_example():
+def iterateWithForExample():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for c in cities:
         print(c)
 
 
-def enumerate_example1():
+def enumerateExample1():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for item in enumerate(cities):
         print(item)
 
 
-def enumerate_example2():
+def enumerateExample2():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for item in enumerate(cities, 1):
         print(item)
 
 
 def main():
-    # for
-    iterate_with_for_example()
-
-    # enumerate
-    enumerate_example1()
-
-    # enumerate
-    enumerate_example2()
+    iterateWithForExample()
+    enumerateExample1()
+    enumerateExample2()
 
 
 if __name__ == '__main__':

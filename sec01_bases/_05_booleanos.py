@@ -32,7 +32,7 @@ class User:
         self.isActive = False
 
     @staticmethod
-    def check_status(user: 'User'):
+    def checkStatus(user: 'User'):
         if user.isActive:
             print('OK')
             return
@@ -49,8 +49,8 @@ if __name__ == '__main__':
     user2.deactivate()
 
     # verificación de estatis
-    User.check_status(user1)
-    User.check_status(user2)
+    User.checkStatus(user1)
+    User.checkStatus(user2)
 
     # end message
     input('\nPress any key to continue . . . ')

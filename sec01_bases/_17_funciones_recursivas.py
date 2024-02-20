@@ -6,47 +6,47 @@ cuando ya no invocarse.
 """
 
 
-def count_down_v1(n: int):
+def countDown1(n: int):
     assert n >= 0 and n is not None, 'n can not be < 0 or None'
     if n == 0:
         print('Adios!')
     else:
         print(n)
-        count_down_v1(n-1)
+        countDown1(n-1)
 
 
-def count_down_v2(n: int):
+def countDown2(n: int):
     assert n >= 0 and n is not None, 'n can not be < 0 or None'
     print(n)
     next = n-1
     if next > 0:
-        count_down_v2(next)
+        countDown2(next)
 
 
-def get_sum_v1(n: int) -> int:
+def getSum1(n: int) -> int:
     """sum(n) = 1+2+...+n
     sum(n) = n + sum(n-1)"""
     if n > 0:
-        return n + get_sum_v1(n-1)
+        return n + getSum1(n-1)
     return 0
 
 
-def get_sum_v2(n: int) -> int:
+def getSum2(n: int) -> int:
     assert n >= 0 and n is not None, 'n can not be a negative or None'
-    return n + get_sum_v2(n-1) if n > 0 else 0
+    return n + getSum2(n-1) if n > 0 else 0
 
 
 def main():
     # ejemplo 1
-    count_down_v1(10)
+    countDown1(10)
     print()
 
     # ejemplo 2
-    count_down_v2(10)
+    countDown2(10)
     print()
 
     # ejemplo 3
-    print(f'sum(1+2+...+5000) -> {get_sum_v1(500)}')
+    print(f'sum(1+2+...+5000) -> {getSum1(500)}')
 
 
 if __name__ == '__main__':

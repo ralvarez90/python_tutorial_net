@@ -10,13 +10,22 @@ Python incluye funciones built-in listas para usar.
 
 def agradecer():
     """Display a greeting to users."""
-    print('Hi')
+    print('Nos salvaste, estamos agradecidos')
+
+
+def sayHi():
+    print('Hi!')
+
+
+def main():
+    sayHi()
+    agradecer()
 
 
 if __name__ == '__main__':
 
-    # invocamos función
-    agradecer()
+    # run application
+    main()
 
     # end message
     input('\nPress any key to continue . . . ')

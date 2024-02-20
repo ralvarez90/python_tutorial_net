@@ -9,7 +9,7 @@ De forma general la sintaxis es:
 from copy import deepcopy
 
 
-def ejemplo_comprehension_dict():
+def ejemploComprehensionDict():
 
     stoks = {
         'APLN': 121,
@@ -30,8 +30,7 @@ def ejemplo_comprehension_dict():
 
 
 def main():
-    # muestra ejemplo
-    ejemplo_comprehension_dict()
+    ejemploComprehensionDict()
 
 
 if __name__ == '__main__':

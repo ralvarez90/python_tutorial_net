@@ -24,26 +24,23 @@ cada elemento de su interior este se elimina.
 """
 
 
-def iter_example_v1():
+def iterExample1():
     colors = ['red', 'green', 'blue']
-    colors_iter = iter(colors)
+    colorsIter = iter(colors)
     for _ in range(len(colors)):
-        print(next(colors_iter))
+        print(next(colorsIter))
 
 
-def iter_example_v2():
+def iterExample2():
     colors = ['red', 'green', 'blue']
-    colors_iter = iter(colors)
-    for item in colors_iter:
+    colorsIter = iter(colors)
+    for item in colorsIter:
         print(item)
 
 
 def main():
-    # iterator1
-    iter_example_v1()
-
-    # iterador2
-    iter_example_v2()
+    iterExample1()
+    iterExample2()
 
 
 if __name__ == '__main__':

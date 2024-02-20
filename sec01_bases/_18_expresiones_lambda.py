@@ -28,9 +28,14 @@ def lambdasExamples():
         print(f())
 
 
-if __name__ == '__main__':
-
+def main():
     lambdasExamples()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . . ')

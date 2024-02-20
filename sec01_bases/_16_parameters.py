@@ -28,8 +28,7 @@ def agradecer(nombre: str, mensaje: str = 'Hi'):
     return f'{mensaje} {nombre}'
 
 
-if __name__ == '__main__':
-
+def main():
     # ejemplo 1, uso de valor default default
     mensaje = agradecer('Rodrigo')
     print(mensaje)
@@ -41,6 +40,12 @@ if __name__ == '__main__':
     # ejemplo 3, parametros con nombre
     mensaje = agradecer(mensaje='Bienvenido', nombre='Rodrigo')
     print(mensaje)
+
+
+if __name__ == '__main__':
+
+    # run application
+    main()
 
     # end message
     input('\nPress any key to continue . . . ')

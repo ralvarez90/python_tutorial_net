@@ -13,7 +13,7 @@ from typing import Tuple
 import random
 
 
-def example_sort_v1():
+def exampleSortV1():
     items = [random.randint(1, 100) for _ in range(10)]
     print(f'items: {items}')
     items.sort()
@@ -23,7 +23,7 @@ def example_sort_v1():
     print(f'items: {items}')
 
 
-def example_sort_v2():
+def exampleSortV2():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -35,7 +35,7 @@ def example_sort_v2():
     print(f'items         : {ordenados}')
 
 
-def example_sort_tuplas():
+def exampleSortTuplas():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -44,30 +44,30 @@ def example_sort_tuplas():
 
     print(f'original: {items}')
 
-    def __desde_nombre(compania_data: Tuple[str, int, float]) -> str:
+    def __fromName(compania_data: Tuple[str, int, float]) -> str:
         return compania_data[0]
 
-    def __desde_anio(compania_data: Tuple[str, int, float]) -> int:
+    def __fromYear(compania_data: Tuple[str, int, float]) -> int:
         return compania_data[1]
 
     items.sort(key=lambda company: company[2])
     print(f'Ordenado por monto: {items}')
 
-    items.sort(key=__desde_nombre)
+    items.sort(key=__fromName)
     print(f'Ordenado por nombre: {items}')
 
-    items.sort(key=__desde_anio)
+    items.sort(key=__fromYear)
     print(f'Ordenado por año  : {items}')
 
 
 def main():
     # ejemplos
-    example_sort_v1()
-    example_sort_v2()
+    exampleSortV1()
+    exampleSortV2()
 
     # ordenamiento de tuplas, usando funciones
     # interans como criterio de ordenamiento
-    example_sort_tuplas()
+    exampleSortTuplas()
 
 
 if __name__ == '__main__':

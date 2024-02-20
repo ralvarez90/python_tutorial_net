@@ -8,14 +8,14 @@ expresiones. Se pueden agregar condiciones.
 """
 
 
-def example_list_comprehensions1():
+def exampleListComprehensions1():
     numbers = [1, 2, 3, 4, 5]
     squares = [n**2 for n in numbers]
     print(f'numbers: {numbers}')
     print(f'squares: {squares}')
 
 
-def example_list_comprehensions2():
+def exampleListComprehensions2():
     mountains = (
         ['Malaku', 8485],
         ['Lhotse', 8516],
@@ -23,16 +23,15 @@ def example_list_comprehensions2():
         ['K2', 8611],
         ['Everest', 8848],
     )
-    higuests_v1 = list(filter(lambda m: m[1] > 8600, mountains))
-    higuests_v2 = [m for m in mountains if m[1] > 8600]
-    print(f'higuest_v1: {higuests_v1}')
-    print(f'higuest_v2: {higuests_v2}')
+    higuests1 = list(filter(lambda m: m[1] > 8600, mountains))
+    higuests2 = [m for m in mountains if m[1] > 8600]
+    print(f'higuest1: {higuests1}')
+    print(f'higuest2: {higuests2}')
 
 
 def main():
-    # run examples
-    example_list_comprehensions1()
-    example_list_comprehensions2()
+    exampleListComprehensions1()
+    exampleListComprehensions2()
 
 
 if __name__ == '__main__':

@@ -5,19 +5,18 @@ al igual que las listas por comprensión. Pueden incluir condiciones.
 """
 
 
-def example_comprenhension_sets():
+def exampleComprenhensionSets():
     tags = {'Django', 'Flask', 'Pandas', 'Flet'}
-    lowercaseTagsV1 = {tag.lower() for tag in tags}
-    lowercaseTagsV2 = set(map(lambda tag: tag.lower(), tags))
-    lowercaseTagsV3 = {tag.upper() for tag in tags if tag != 'Pandas'}
-    print(f'lowercaseTagsV1: {lowercaseTagsV1}')
-    print(f'lowercaseTagsV2: {lowercaseTagsV2}')
-    print(f'lowercaseTagsV3: {lowercaseTagsV3}')
+    lowercaseTags1 = {tag.lower() for tag in tags}
+    lowercaseTags2 = set(map(lambda tag: tag.lower(), tags))
+    lowercaseTags3 = {tag.upper() for tag in tags if tag != 'Pandas'}
+    print(f'lowercaseTags1: {lowercaseTags1}')
+    print(f'lowercaseTags2: {lowercaseTags2}')
+    print(f'lowercaseTags3: {lowercaseTags3}')
 
 
 def main():
-    # run single example
-    example_comprenhension_sets()
+    exampleComprenhensionSets()
 
 
 if __name__ == '__main__':

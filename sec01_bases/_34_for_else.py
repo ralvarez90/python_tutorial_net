@@ -24,10 +24,14 @@ def exampleForElse():
         print(f'{name} not found!')
 
 
-if __name__ == '__main__':
-
-    # run examples
+def main():
     exampleForElse()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue. . . ')

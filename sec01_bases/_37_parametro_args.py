@@ -1,13 +1,11 @@
 """PARÁMETRO *ARGS
 
-Podemos tener funciones que reciban un número
-variable de argumetos. Estos se almacenan en
-una tupla que puede ser utilizada dentro del
-cuerpo de la función. Por convensión a este
-parámetro se le nombre args. Esto también se puede
-utilizar para desempacar tuplas.
+Podemos tener funciones que reciban un número variable de argumetos. Estos se almacenan en
+una tupla que puede ser utilizada dentro del cuerpo de la función. Por convensión a este
+parámetro se le nombre args. Esto también se puede utilizar para desempacar tuplas.
 """
 
+# alias numérico
 number = int | float
 
 
@@ -19,20 +17,24 @@ def getSum(x: number, y: number, *args: tuple[number]) -> number:
     return x+y+sum(args)
 
 
-def unpackingExample1():
+def exampleUnpacking1():
     x, y, *_ = 1, 2, 3, 4, 5, 6, 7, 8, 9
     print(f'x: {x}, y: {y}, otros: {_}')
 
 
-def unpackingExample2():
+def exampleUnpacking2():
     print(f'1 + 2 + ... + 10: {getSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)}')
+
+
+def main():
+    exampleUnpacking1()
+    exampleUnpacking2()
 
 
 if __name__ == '__main__':
 
-    # run examples
-    unpackingExample1()
-    unpackingExample2()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . .')

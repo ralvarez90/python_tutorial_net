@@ -15,25 +15,27 @@ usados como índices.
 """
 
 
-def mostrar_ternario_version1():
+def mostrarTernarioVersion1():
     age = int(input('age: '))
     message = 'Welcome' if age >= 18 else 'Bye!'
     print(f'message_v1: {message}')
 
 
-def mostrar_ternario_version2():
+def mostrarTernarioVersion2():
     age = int(input('age: '))
     message = ('Bye!', 'Welcome')[age >= 18]
     print(f'message_v2: {message}')
 
 
+def main():
+    mostrarTernarioVersion1()
+    mostrarTernarioVersion2()
+
+
 if __name__ == '__main__':
 
-    # v1
-    mostrar_ternario_version1()
+    # run application
+    main()
 
-    # v2
-    mostrar_ternario_version2()
-
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

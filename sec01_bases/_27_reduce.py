@@ -5,14 +5,14 @@ Permite obtener un valor concreto a partir de una secuencia.
 import functools
 
 
-def reduce_example1():
+def reduceExample1():
     numeros = [1, 2, 3, 4, 5]
     total = functools.reduce(lambda x, y: x+y, numeros, 0)
     print(f'sum1: {total}')
     print(f'sum2: {sum(numeros)}')
 
 
-def reduce_example2():
+def reduceExample2():
     def __suma(a: int | float, b: int | float) -> int | float:
         print(f'a={a}, b={b}, {a}+{b} = {a+b}')
         return a+b
@@ -22,9 +22,8 @@ def reduce_example2():
 
 
 def main():
-    # uso de functools.reduce
-    reduce_example1()
-    reduce_example2()
+    reduceExample1()
+    reduceExample2()
 
 
 if __name__ == '__main__':

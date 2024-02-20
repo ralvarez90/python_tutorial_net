@@ -12,17 +12,21 @@ step a utilizar.
 """
 
 
-def range_example():
+def rangeExample():
     total = 0
     for n in range(1, int(input('>>> '))+1):
         total += n
     print(f'total: {total}')
 
 
+def main():
+    rangeExample()
+
+
 if __name__ == '__main__':
 
-    # ejemplo de rango
-    range_example()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

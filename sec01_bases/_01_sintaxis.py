@@ -15,7 +15,7 @@ clases y otros objetos.
 import keyword
 
 
-def list_keywords():
+def listKeywords():
     for kw in keyword.kwlist:
         print(kw)
 
@@ -26,7 +26,7 @@ def main():
     print('Hello World in Python3')
 
     # se muestran palabras reservadas
-    list_keywords()
+    listKeywords()
 
 
 if __name__ == '__main__':
