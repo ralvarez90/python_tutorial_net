@@ -11,10 +11,14 @@ def breakExample():
         break
 
 
-if __name__ == '__main__':
-
-    # break
+def main():
     breakExample()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . . ')

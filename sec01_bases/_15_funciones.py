@@ -1,23 +1,31 @@
 """FUNCIONES
 
-Son bloques de código reutilizables que regresan un
-valor. Si no se especifica el valor a retornar con
-una sentencia return, se retorna un None de forma
-implícita.
+Son bloques de código reutilizables que regresan un valor. Si no se 
+especifica el valor a retornar con una sentencia return, se retorna 
+un None de forma implícita.
 
 Python incluye funciones built-in listas para usar.
 """
 
 
-def greet():
+def agradecer():
     """Display a greeting to users."""
-    print('Hi')
+    print('Nos salvaste, estamos agradecidos')
+
+
+def sayHi():
+    print('Hi!')
+
+
+def main():
+    sayHi()
+    agradecer()
 
 
 if __name__ == '__main__':
 
-    # call function
-    greet()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

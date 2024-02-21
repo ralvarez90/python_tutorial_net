@@ -21,12 +21,16 @@ def connect(**kwargs):
     pprint(kwargs)
 
 
+def main():
+    connect() or print('-'*10)
+    connect(username='ra90', age=33, cp=15_900) or print('-'*10)
+    connect(server='localhost', user='root', password='123admin')
+
+
 if __name__ == '__main__':
 
-    # run examples
-    connect()
-    connect(name='Rodrigo', age=33, cp=15900)
-    connect(server='localhost', user='root', password='Les900310@123')
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

@@ -36,7 +36,7 @@ intersección es vacía.
 """
 
 
-def operacionesEjemplos():
+def ejemploOperacionesSet():
     a = {1, 2, 3}
     b = {2, 3, 4}
     print(f'Si a={a}')
@@ -47,10 +47,14 @@ def operacionesEjemplos():
     print(f'a ^ b -> {a^b}')
 
 
+def main():
+    ejemploOperacionesSet()
+
+
 if __name__ == '__main__':
 
-    # run examples
-    operacionesEjemplos()
+    # run application
+    main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

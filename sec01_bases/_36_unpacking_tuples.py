@@ -1,48 +1,54 @@
 """UNPACKING TUPLES
 
 Podemos desempacar elementos de colecciones empleando *
-en diferentes contextos.
+en diferentes contextos. Es practicamente lo mismo que
+el unpacking con listas
 """
 
+# generamos alias
 number = int | float
 
 
-def getHead(tpl: tuple):
+def obtenerHead(tpl: tuple):
     head, *_ = tpl
     return head
 
 
-def getTail(tpl: tuple) -> tuple:
+def obtenerTail(tpl: tuple) -> tuple:
     _, *tail = tpl
     return tuple(tail)
 
 
-def getSum(*numbers) -> number:
+def obtenerSuma(*numbers) -> number:
     return sum(numbers)
 
 
 def exampleUnpacking1():
-    someTuple = (1, 2, 3)
-    head = getHead(someTuple)
-    tail = getTail(someTuple)
+    someTpl = (1, 2, 3)
+    head = obtenerHead(someTpl)
+    tail = obtenerTail(someTpl)
     print(f'head: {head}')
     print(f'tail: {tail}')
 
 
 def exampleUnpacking2():
-    primerosNumeros = [i for i in range(1, 5)]
-    print(f'1+2+...+100 -> {getSum(*primerosNumeros)}')
+    primeros_numeros = [i for i in range(1, 5)]
+    print(f'1+2+...+100 -> {obtenerSuma(*primeros_numeros)}')
     oddNumbers = (1, 3, 5)
     evenNumbers = (2, 4, 6)
     numbers = (*oddNumbers, *evenNumbers)
     print(f'numbers: {numbers}')
 
 
-if __name__ == '__main__':
-
-    # run examples
+def main():
     exampleUnpacking1()
     exampleUnpacking2()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . .')

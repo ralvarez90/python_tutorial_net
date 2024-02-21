@@ -32,18 +32,18 @@ def runtimeType(obj: object) -> str:
     """Retorna un string del tipo de dato
     del argumento.
 
-    Args:
-        obj (object): Cualquier objeto
+    >>> runtime_type('Hello')
+    'str'
 
-    Returns:
-        str: Tipo del objeto
+    >>> runtime_type(1)
+    'int'
     """
     return str(type(obj))[8:-2]
 
 
 if __name__ == '__main__':
 
-    # some instances
+    # algunas instancias
     instancias = (1, 1.0, 0j, True, 'hola')
 
     # show types

@@ -15,6 +15,9 @@ diccionario[key] = valor
 y eliminamos elementos empleando del diccionario[key]. Podemos iterar
 meidante un for a traves de las keys, values y tuplas (key, value)
 de un diccionario.
+
+Los diccionarios tiene un serie de métodos útiles para manejarlos.
+Esta es una de las estructuras de datos más importantes.
 """
 
 
@@ -53,13 +56,15 @@ def diccionarioEjemplo2():
     print(f'persona: {persona}')
 
 
-if __name__ == '__main__':
-
-    # ejemplo 1
+def main():
     diccionarioEjemplo1()
-
-    # ejemplo 2
     diccionarioEjemplo2()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . . ')

@@ -7,6 +7,11 @@ lenguajes. Se puede simplificar el if-else de dos formas:
 2 (expresion_si_false, expresion_si_true)[condicion]
 
 Son las dos alternativas que brinda python al operador ternario.
+
+Nota:
+- En el caso del segundo 'operador ternario', reconrdemos que los
+booleanos extienden de los enteros por lo cual pueden ser
+usados como índices.
 """
 
 
@@ -22,13 +27,15 @@ def mostrarTernarioVersion2():
     print(f'message_v2: {message}')
 
 
-if __name__ == '__main__':
-
-    # v1
+def main():
     mostrarTernarioVersion1()
-
-    # v2
     mostrarTernarioVersion2()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . . ')

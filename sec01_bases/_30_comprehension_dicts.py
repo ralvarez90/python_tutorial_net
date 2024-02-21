@@ -29,10 +29,14 @@ def ejemploComprehensionDict():
     print(f'newStock:   {newStock}')
 
 
-if __name__ == '__main__':
-
-    # example 1
+def main():
     ejemploComprehensionDict()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end amessage
     input('\nPress any key to continue . . . ')

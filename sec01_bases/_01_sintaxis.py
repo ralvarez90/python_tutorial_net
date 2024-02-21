@@ -15,18 +15,18 @@ clases y otros objetos.
 import keyword
 
 
-def list_keywords():
+def listKeywords():
     for kw in keyword.kwlist:
         print(kw)
 
 
 def main():
 
-    # message 1
+    # mensaje de bienvenida
     print('Hello World in Python3')
 
-    # kewords
-    list_keywords()
+    # se muestran palabras reservadas
+    listKeywords()
 
 
 if __name__ == '__main__':
@@ -34,5 +34,5 @@ if __name__ == '__main__':
     # run app
     main()
 
-    # end application
+    # end message
     input('\nPress any key to continue . . . ')

@@ -24,13 +24,15 @@ def whileExampleV2():
         print(f'Intento {intentos}, encontrado: {numero}')
 
 
-if __name__ == '__main__':
-
-    # while
+def main():
     whileExampleV1()
-
-    # while v2
     whileExampleV2()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . . ')

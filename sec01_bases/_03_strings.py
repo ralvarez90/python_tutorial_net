@@ -5,22 +5,22 @@ bajo el estandard utf8. Son indexables, iterables e inmutables.
 """
 
 
-def getLast(content: str) -> str:
-    assert content != '', 'content string can not be empty'
+def getLastChr(content: str) -> str:
+    assert content != '' and content is not None, 'content string can not be empty or None'
     return content[-1]
 
 
 def getHead(content: str) -> str:
-    assert content != '', 'content string can not be empty'
+    assert content != '' and content is not None, 'content string can not be empty or None'
     return content[0]
 
 
 def getTail(content: str) -> str:
-    assert content != '', 'content string can not be empty'
+    assert content != '' and content is not None, 'content string can not be empty or None'
     return content[1:]
 
 
-def stringExample():
+def stringExampl1():
     msg1 = 'message1'
     msg2 = r'message2,\t esto es un "raw" string'
     msg3 = '''Esto es un texto multilínea:
@@ -31,40 +31,39 @@ def stringExample():
     print(msg3)
 
 
-def concatenacionEjemplo():
-    # forma 1
+def stringConcatExample():
     print('Hello' ' World!')
-
-    # forma 2
     print('Hello ' + 'World!')
+    print(f'{"Hello"} {"World!"}')
+    print('%s %s' % ('Hello', 'World!'))
+    print('{} {}'.format('Hello', 'World!'))
 
 
-def accessingExample():
+def stringIndicesExample():
     message = 'hello_world'
     for i in range(len(message)):
         print(f'message[{i}] -> {message[i]}')
 
 
-def substringsExample():
+def stringSubstringsExample():
     str1 = 'Welcome to the Jungle'
     print(f'head: {getHead(str1)}')
     print(f'tail: {getTail(str1)}')
-    print(f'last: {getLast(str1)}')
+    print(f'last: {getLastChr(str1)}')
+
+
+def main():
+    # se ejecutan los ejemplos
+    stringExampl1()
+    stringConcatExample()
+    stringIndicesExample()
+    stringSubstringsExample()
 
 
 if __name__ == '__main__':
 
-    # str
-    stringExample()
+    # run application
+    main()
 
-    # concat
-    concatenacionEjemplo()
-
-    # accessing
-    accessingExample()
-
-    # substrings
-    substringsExample()
-
-    # end application
+    # end message
     input('\nPress any key to continue. . . ')

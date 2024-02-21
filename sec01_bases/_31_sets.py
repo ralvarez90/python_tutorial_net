@@ -42,7 +42,7 @@ def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def ejemploDefinicion():
+def ejemploSetDefinicion():
     skills = {
         'Python Programming',
         'Databases',
@@ -53,19 +53,19 @@ def ejemploDefinicion():
     print(runtimeType(skills))
 
 
-def ejemploEmpty():
-    empty_set = set()
-    empty_dict = {}
-    print(f'empty_set : {empty_set}')
-    print(f'empty_dict: {empty_dict}')
+def ejemploEmptySet():
+    emptySet = set()
+    emptyDict = {}
+    print(f'emptySet : {emptySet}')
+    print(f'emptyDict: {emptyDict}')
 
 
-def ejemploCaracteres():
+def ejemploCharSet():
     caracteres = set('letter')
     print(f'caracteres: {caracteres}')
 
 
-def ejemploInNotin():
+def ejemploContension():
     rating = 1
     ratings = {1, 2, 3, 4, 5}
     print(f'1     in {ratings} ? {rating in ratings}')
@@ -77,7 +77,6 @@ def ejemploAgregarRemoverDescartar():
     skills.add('Go')
     skills.add('Rust')
     print(f'skills: {skills}')
-
     try:
         skills.remove('Rust')
     except KeyError:
@@ -90,14 +89,14 @@ def ejemploAgregarRemoverDescartar():
     skills.discard('Cobol')
 
 
-def ejemploPop():
+def ejemploMetodoPop():
     skills = {'Problem Solving', 'Algorithms', 'Python Programming'}
     while len(skills) != 0:
         removed = skills.pop()
         print(f'Eliminado: "{removed}", restantes -> {skills}')
 
 
-def ejemploClear():
+def ejemploMetodoClear():
     languages = {
         'python',
         'haskell',
@@ -110,7 +109,7 @@ def ejemploClear():
     print(f'languages: {languages}')
 
 
-def ejemploFrozeenSet():
+def ejemploFrozenset():
     skills = {'Python programming', 'Problem solving', 'Design patterns'}
     skills.add('Django')
     skills = frozenset(skills)
@@ -134,18 +133,22 @@ def ejemploFor():
         print(index, value)
 
 
-if __name__ == '__main__':
-
-    # run examples
-    ejemploDefinicion()
-    ejemploEmpty()
-    ejemploCaracteres()
-    ejemploInNotin()
+def main():
+    ejemploSetDefinicion()
+    ejemploEmptySet()
+    ejemploCharSet()
+    ejemploContension()
     ejemploAgregarRemoverDescartar()
-    ejemploPop()
-    ejemploClear()
-    ejemploFrozeenSet()
+    ejemploMetodoPop()
+    ejemploMetodoClear()
+    ejemploFrozenset()
     ejemploFor()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . .')

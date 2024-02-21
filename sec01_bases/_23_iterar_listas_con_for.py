@@ -28,16 +28,16 @@ def enumerateExample2():
         print(item)
 
 
-if __name__ == '__main__':
-
-    # for
+def main():
     iterateWithForExample()
-
-    # enumerate
     enumerateExample1()
-
-    # enumerate
     enumerateExample2()
 
-    # end application
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
     input('\nPress any key to continue . . . ')

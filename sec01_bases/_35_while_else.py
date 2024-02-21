@@ -1,8 +1,7 @@
 """WHILE ELSE
 
-El bucle while puede tener al igual que un for una
-sentencia else que se ejecuta cuando la condición
-del while es falso.
+El bucle while puede tener al igual que un for una sentencia 
+else que se ejecuta cuando la condición del while es falso.
 """
 
 
@@ -28,10 +27,14 @@ def exampleWhileElse():
         print(basket)
 
 
-if __name__ == '__main__':
-
-    # run example
+def main():
     exampleWhileElse()
 
-    # end application
-input('\Press any key to continue . . . ')
+
+if __name__ == '__main__':
+
+    # run application
+    main()
+
+    # end message
+    input('\nPress any key to continue . . . ')
