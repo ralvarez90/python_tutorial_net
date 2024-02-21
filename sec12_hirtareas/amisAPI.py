@@ -1,6 +1,6 @@
-from typing import Tuple
-from django.conf import settings
-from enum import Enum, auto
+# from typing import Tuple
+# from django.conf import settings
+# from enum import Enum, auto
 import json
 import requests
 from abc import ABC, abstractmethod
@@ -21,87 +21,33 @@ class AMIS:
         )
         self.token = json.loads(self.token.text)['access_token']
 
-    def reportarImpedimento(
-            self,
-            url: str,
-            ramo: int,
-            claveDeCompania: int,
-            fechaDeReporte: str,
-            fechaDeImpedimento: str,
-            claveCie10Oii: str,
-            parametro1: str,
-            parametro2: str,
-            paisImpedimento: int,
-            entidadFederativaImpedimento: int,
-            municipioImpedimento: int,
-            observaciones: str,
-            nombre: str,
-            apellidoPaterno: str,
-            apellidoMaterno: str,
-            fechaDeNacimiento: str,
-            genero: int,
-            rfc: str,
-            curp: str,
-            paisAsegurado: int,
-            entidadFederativaAsegurado: int,
-            municipioAsegurado: int,
-    ) -> requests.Response:
-        """Envía impedimento a registra a AMIS.
-
-        Args:
-                url (str): destino
-                ramo (int): entero del catálogo AM0120
-                claveDeCompania (int): clave de HIR
-                fechaDeReporte (str): fecha de reporte del impedimento
-                fechaDeImpedimento (str): fecha en que sucede el impedemente
-                claveCie10Oii (str): string del catálogo CIE-0LL
-                parametro1 (str): string descriptivo
-                parametro2 (str): string descriptivo
-                paisImpedimento (int): entero del catálogo AM0011
-                entidadFederativaImpedimento (int): entero del catálogo AM0065
-                municipioImpedimento (int): entero del catálogo AM0066
-                observaciones (str): string descriptivo
-                nombre (str): nombre del asegurado
-                apellidoPaterno (str): apellido paterno del asegurado
-                apellidoMaterno (str): apellido materno del asegurado
-                fechaDeNacimiento (str): fecha de nacimiento
-                genero (int): entero del catálogo AM0051
-                rfc (str): rfc del asegurado
-                curp (str): curp del asegurado
-                paisAsegurado (int): entero del catálogo AM0011
-                entidadFederativaAsegurado (int): entero del catálogo AM0065
-                municipioAsegurado (int): entero del catálogo AM0066
-
-        Returns:
-                requests.Response: respuesta HTTP
-        """
-
+    def reportarImpedimento(self, url: str, data: dict) -> requests.Response:
         # diccionario de datos
         datosAEnviar = {
             'impedimento': {
-                'ramo': ramo,
-                'claveDeCompania': claveDeCompania,
-                'fechaDeReporte': fechaDeReporte,
-                'fechaDeImpedimento': fechaDeImpedimento,
-                'claveCie10Oii': claveCie10Oii,
-                'parametro1': parametro1,
-                'parametro2': parametro2,
-                'pais': paisImpedimento,
-                'entidadFederativa': entidadFederativaImpedimento,
-                'municipio': municipioImpedimento,
-                'observaciones': observaciones,
+                'ramo': data['ramo'],
+                'claveDeCompania': data['claveDeCompania'],
+                'fechaDeReporte': data['fechaDeReporte'],
+                'fechaDeImpedimento': data['fechaDeImpedimento'],
+                'claveCie10Oii': data['claveCie10Oii'],
+                'parametro1': data['parametro1'],
+                'parametro2': data['parametro2'],
+                'pais': data['paisImpedimento'],
+                'entidadFederativa': data['entidadFederativaImpedimento'],
+                'municipio': data['municipioImpedimento'],
+                'observaciones': data['observaciones'],
             },
             'asegurado': {
-                'nombre': nombre,
-                'apellidoPaterno': apellidoPaterno,
-                'apellidoMaterno': apellidoMaterno,
-                'fechaDeNacimiento': fechaDeNacimiento,
-                'genero': genero,
-                'rfc': rfc,
-                'curp': curp,
-                'pais': paisAsegurado,
-                'entidadFederativa': entidadFederativaAsegurado,
-                'municipio': municipioAsegurado,
+                'nombre': data['nombre'],
+                'apellidoPaterno': data['apellidoPaterno'],
+                'apellidoMaterno': data['apellidoMaterno'],
+                'fechaDeNacimiento': data['fechaDeNacimiento'],
+                'genero': data['genero'],
+                'rfc': data['rfc'],
+                'curp': data['curp'],
+                'pais': data['paisAsegurado'],
+                'entidadFederativa': data['entidadFederativaAsegurado'],
+                'municipio': data['municipioAsegurado'],
             }
         }
 
@@ -123,19 +69,19 @@ class AMIS:
 
         return response
 
-    def registrarSiniestroAP():
+    def registrarSiniestroAP(self, url: str, data: dict) -> requests.Response:
         pass
 
-    def registrarSiniestroVida():
+    def registrarSiniestroVida(self, url: str, data: dict) -> requests.Response:
         pass
 
-    def existeRegistroSiniestroAP(self, noDePoliza: str, noCertificado: str, noSiniestro: str) -> bool:
+    def verificarExistenciaRegistroSiniestroAP(self, data: dict) -> bool:
         url = self.URL_SINIESTROS
 
         data = {
-            'numeroDePoliza': noDePoliza,
-            'noCertificado': noCertificado,
-            'numeroDeSiniestro': noSiniestro,
+            'numeroDePoliza': data['noDePoliza'],
+            'noCertificado': data['noCertificado'],
+            'numeroDeSiniestro': data['noSiniestro'],
         }
 
         headers = {
@@ -153,44 +99,8 @@ class AMIS:
             return True
 
         # se ejecuta en casocontrarios
-        print(response.json(), response.status_code)
         print(
-            f'poliza: {noDePoliza}, noCertificado: {noCertificado}, noSiniestro: {noSiniestro}')
-        return False
-
-    def existeRegistroSiniestroVida(self, noDePoliza: str, noCertificado: str, noSiniestro: str, nombre: str, apellidoPaterno: str, apellidoMaterno: str, fechaDeNacimiento: str, genero: int, rfc: str):
-        url = self.URL_SINIESTROS
-
-        data = {
-            'noDePoliza': noDePoliza,
-            'noDeCertificado': noCertificado,
-            'numeroDeSiniestro': noSiniestro,
-            'nombre': nombre,
-            'apellidoPaterno': apellidoPaterno,
-            'apellidoMaterno': apellidoMaterno,
-            'fechaDeNacimiento': fechaDeNacimiento,
-            'genero': genero,
-            'rfc': rfc,
-        }
-
-        headers = {
-            'Authorization': f'Bearer {self.token}',
-        }
-
-        response = requests.post(
-            url=url,
-            json=data,
-            headers=headers,
-            verify=False,
-        )
-
-        if response.status_code == 200 and 'siniestro' in response.json().keys():
-            return True
-
-        # se ejecuta en casocontrarios
-        print(response.json(), response.status_code)
-        print(
-            f'poliza: {noDePoliza}, noCertificado: {noCertificado}, noSiniestro: {noSiniestro}')
+            f'Sin registro en amis: poliza: {data["noDePoliza"]}, noCertificado: {data["noCertificado"]}, noSiniestro: {data["noSiniestro"]}')
         return False
 
 
@@ -198,65 +108,182 @@ class SiniestroBuilder(ABC):
 
     def __init__(self) -> None:
         self.estaRegistradoEnAmis = False
-        self.estaAnalizado = False
-
-    def establecerEstatusRegistroManual(self, status: bool):
-        self.estaRegistradoEnAmis = status
-
-    @abstractmethod
-    def establecerEstatusDeRegistroRemoto(self):
-        raise NotImplementedError('Sin implementación')
+        self.partes = {}
 
     @abstractmethod
     def obtenerDiccionarioParaConsulta(self):
-        raise NotImplementedError('Sin implemetanción')
+        pass
 
     @abstractmethod
     def obtenerDiccionarioParaRegistro(self):
-        raise NotImplementedError('Sin implemetanción')
-
-    @abstractmethod
-    def construirObjeto(self):
-        raise NotImplementedError('Sin implemetanción')
-
-
-class AP(SiniestroBuilder):
-
-    def __init__(self) -> None:
         pass
 
-    def establecerEstatusDeRegistroRemoto(self):
-        pass
 
-    def establecerDatosGenerales(
-        self,
-        noPoliza: str,
-        numeroDeSiniestro: str,
-        numeroDeReclamacion: str,
-        ramoSubramo: int,
-        tipoCoberturaOProducto: int,
-        noCertificado: str,
-        fechaAntiguiedadDelAfectado: str,
-        nombreDelAfectado: str,
-        apellidoPaternoDelAfectado: str,
-        apellidoMaternoDelAfectado: str,
-        fechaNacimientoDelAfectado: str,
-        generoDelAfectado: int,
-        rfcDelAfectado: str,
-        rfcDelReceptor: str,
-        cie10DelPadecimiento: str,
-        cpt4Procedimiento: int,
-        fechaIngresoHospitalatio
+class SiniestroAP(SiniestroBuilder):
 
-    ):
-        self.nombreDelAfectado = nombreDelAfectado
-        return self
+    def construirDatosGenerales(self, data: dict):
+        self.partes['General'] = {k: v for k, v in data.items()}
+
+    def construirDatosTitular(self, data: dict):
+        self.partes['Titular'] = {k: v for k, v in data.items()}
+
+    def construirDatosDelProveedor(self, data: dict):
+        self.partes['Proveedor'] = {k: v for k, v in data.items()}
+
+    def obtenerDiccionarioParaConsulta(self):
+        return {
+            'numeroDePoliza': self.partes['General']['noPoliza'],
+            'noCertificado': self.partes['General']['noCertificado'],
+            'numeroDeSiniestro': self.partes['General']['numeroDeSiniestro'],
+        }
+
+    def obtenerDiccionarioParaRegistro(self):
+        return self.partes
 
 
-class Vida(SiniestroBuilder):
+class SiniestroVida(SiniestroBuilder):
 
-    def __init__(self) -> None:
-        pass
+    def construirDatosSiniestro(self, data: dict):
+        self.partes['siniestro'] = {k: v for k, v in data.items()}
 
-    def establecerEstatusDeRegistroRemoto(self):
-        return
+    def construirDateosAsegurado(self, data: dict):
+        self.partes['asegurado'] = {k: v for k, v in data.items()}
+
+    def construirDatosBeneficiario(self, data: dict):
+        self.partes['beneficiario'] = {k: v for k, v in data.items()}
+
+    def construirDatosContratante(self, data: dict):
+        self.partes['contratante'] = {k: v for k, v in data.items()}
+
+    def construirDatosTipoMovimiento(self, data: int):
+        self.partes['tipoDeMovimiento'] = data
+
+    def obtenerDiccionarioParaConsulta(self):
+        return {
+            'noDePoliza': self.partes['siniestro']['poliza']['noDePoliza'],
+            'noDeCertificado': self.partes['siniestro']['poliza']['noDeCertificado'],
+            'numeroDeSiniestro': self.partes['siniestro']['generales']['identificadorDelSiniestro'],
+            'nombre': self.partes['asegurado']['generales']['nombre'],
+            'apellidoPaterno': self.partes['asegurado']['generales']['apellidoPaterno'],
+            'apellidoMaterno': self.partes['asegurado']['generales']['apellidoMaterno'],
+            'genero': self.partes['asegurado']['generales']['genero'],
+            'rfc': self.partes['asegurado']['generales']['rfcAsegurado']
+        }
+
+    def obtenerDiccionarioParaRegistro(self):
+        return self.partes
+
+
+if __name__ == '__main__':
+    from pprint import pprint
+
+    # test siniestroAP
+    # s1 = SiniestroAP()
+    # s1.construirDatosGenerales({
+    #     'noPoliza': '12321',
+    #     'numeroDeSiniestro': '0f0asf0',
+    #     'numeroDeReclamacion': 'otroreclamo',
+    #     'ramoSubramo': 1,
+    #     'tipoCoberturaOProducto': 164,
+    #     'noCertificado': '1232kf',
+    #     'fechaAntiguedadDelAfectado': '10/03/2000',
+    #     'nombreDelAfectado': 'John',
+    #     'apellidoPaternoDelAfectado': 'Wick',
+    #     'apellidoMaternoDelAfectado': 'Adan',
+    #     'fechaNacimientoDelAfectado': '10/03/1990',
+    #     'generoDelAfectado': 2,
+    #     'rfcDelAfectado': 'AAHR900310GV2',
+    #     'rfcDelReceptor': 'AA00AA00AA00A',
+    # })
+
+    # s1.construirDatosTitular({
+    #     'cuentaBancariaClabe': 123421241,
+    #     'banco': 1,
+    #     'nombreTitularCuentaClabe': 'JUan Perez',
+    # })
+
+    # # pprint(s1.obtenerDiccionarioParaConsulta())
+    # pprint(s1.obtenerDiccionarioParaRegistro())
+
+    # test siniestroVida
+    sVida = SiniestroVida()
+    sVida.construirDatosSiniestro({
+        'poliza': {
+            'bancaseguro': 0,
+            'ramo_subramo': 0,
+            'noDePoliza': 0,
+            'noDeCertificado': 0,
+            'fechaDeContratacion': 'none',
+            'fechaDeInicioDeVigencia': '',
+            'fechaDeFinDeVigencia': '',
+        },
+        'generales': {
+            'formaDePago': 0,
+            'medioDePago': 0,
+            'identificadorDelSiniestro': 0,
+            'causa': '',
+            'causaEspecial': 0,
+            'entidadFederativa': 0,
+            'municipio': 0,
+            'fechaDeOcurrido': 0,
+        },
+        'coberturas': {
+            'fechaDeReclamacion': '',
+            'estatus': 0,
+            'saAlcanzadaBeneficio1': 0,
+            'saAlcanzadaBeneficio2': 0,
+            'saAlcanzadaBeneficio3': 0,
+            'saAlcanzadaBeneficio4': 0,
+            'saAlcanzadaBeneficio5': 0,
+            'saAlcanzadaBeneficio6': 0,
+            'saAlcanzadaBeneficio7': 0,
+        },
+        'agente': {
+            'saAlcanzadaBeneficio8': 0,
+            'saAlcanzadaBeneficio9': 0,
+            'nombre': '',
+            'apellidoPaterno': '',
+            'apellidoMaterno': '',
+        },
+    })
+
+    sVida.construirDateosAsegurado({
+        'generales': {
+            'claveDelAgente': 0,
+            'rfcDelAgente': '',
+            'nombre': '',
+            'apellidoPaterno': '',
+            'apellidoMaterno': '',
+            'fechaDeNacimiento': '',
+            'genero': 0,
+            'rfcAsegurado': '',
+            'curp': '',
+            'telefonoFIjoDelAsegurado': '',
+            'telefonoMovilDelAsegurado': '',
+        },
+        'direccion': {
+            'ocupacion': '',
+            'estadoCivil': '',
+            'calle': '',
+            'noExterior': '',
+            'noInterior': '',
+            'codigoPostal': '',
+            'entidadFederativa': 0,
+            'municipio': 0,
+            'colonia': 0,
+        }
+    })
+
+    sVida.construirDatosBeneficiario({
+        'telefonoFijo': 0,
+        'fisicaCn1': {
+            'telefonoMovil': 0,
+            'tipoDePersona': 0,
+        }
+    })
+
+    # sVida.construirDatosContratante({
+
+    # })
+
+    pprint(sVida.partes)
