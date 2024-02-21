@@ -117,7 +117,10 @@ class SiniestroBuilder(ABC):
     @abstractmethod
     def obtenerDiccionarioParaRegistro(self):
         pass
-
+    
+    @abstractmethod
+    def establecerEstatusDeRegistro(self):
+        pass
 
 class SiniestroAP(SiniestroBuilder):
 

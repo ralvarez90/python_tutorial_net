@@ -109,32 +109,34 @@ def reportarImpedimentosAMIS(parametros: dict) -> dict:
 
         # instancia de clase AMIS
         reporteAMIS = amisAPI.AMIS()
+
+        data = {
+            'ramo': ramo,
+            'claveDeCompania': claveDeCompania,
+            'fechaDeReporte': fechaDeReporte,
+            'fechaDeImpedimento': fechaDeImpedimento,
+            'claveCie10Oii': claveCie10Oii,
+            'parametro1': parametro1,
+            'parametro2': parametro2,
+            'paisImpedimento': paisImpedimento,
+            'entidadFederativaImpedimento': entidadImpedimento,
+            'municipioImpedimento': municipioImpedimento,
+            'observaciones': observaciones,
+            'nombre': nombre,
+            'apellidoPaterno': apellidoPaterno,
+            'apellidoMaterno': apellidoMaterno,
+            'fechaDeNacimiento': fechaDeNacimiento,
+            'genero': genero,
+            'rfc': rfc,
+            'curp': curp,
+            'paisAsegurado': paisAsegurado,
+            'entidadFederativaAsegurado': entidadAsegurado,
+            'municipioAsegurado': municipioAsegurado,
+        }
+
         codigoRespuestaTemporal = None
         try:
-            response = reporteAMIS.reportarImpedimento(
-                url=url,
-                ramo=ramo,
-                claveDeCompania=claveDeCompania,
-                fechaDeReporte=fechaDeReporte,
-                fechaDeImpedimento=fechaDeImpedimento,
-                claveCie10Oii=claveCie10Oii,
-                parametro1=parametro1,
-                parametro2=parametro2,
-                paisImpedimento=paisImpedimento,
-                entidadFederativaImpedimento=entidadImpedimento,
-                municipioImpedimento=municipioImpedimento,
-                observaciones=observaciones,
-                nombre=nombre,
-                apellidoPaterno=apellidoPaterno,
-                apellidoMaterno=apellidoMaterno,
-                fechaDeNacimiento=fechaDeNacimiento,
-                genero=genero,
-                rfc=rfc,
-                curp=curp,
-                paisAsegurado=paisAsegurado,
-                entidadFederativaAsegurado=entidadAsegurado,
-                municipioAsegurado=municipioAsegurado,
-            )
+            response = reporteAMIS.reportarImpedimento(url, data)
 
             # copia código para tener alcance al bloque de excepción
             codigoRespuestaTemporal = response.status_code
@@ -540,6 +542,9 @@ def registrarSiniestroAMIS(parametros: dict) -> dict:
             siniestro.fechaComprobante = (
                 (str(row[13])).split(' ')[0]).replace('-', '/')
             siniestrosAEnviar.append(siniestro)
+
+        
+    
     elif tipoSiniestro == 'Vida':
         numeroDeSiniestro = 0
         for row in results:
