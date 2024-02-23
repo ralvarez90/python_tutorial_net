@@ -33,6 +33,10 @@ todos los elementos de un conjunto están dentro del segundo.
 isdisjoint
 Verifica si dos conjuntos son disjuntos, es decir, si su
 intersección es vacía.
+
+Los operadores de conjuntos se pueden 'concatenar' de la forma
+set1 op set2 op ... op setn 
+donde op está en |, & entre otros.
 """
 
 
@@ -41,10 +45,11 @@ def ejemploOperacionesSet():
     b = {2, 3, 4}
     print(f'Si a={a}')
     print(f'Si b={b}')
-    print(f'a | b -> {a|b}')
-    print(f'a & b -> {a&b}')
-    print(f'a - b -> {a-b}')
-    print(f'a ^ b -> {a^b}')
+    print(f'a | b     -> {a|b}')
+    print(f'a & b     -> {a&b}')
+    print(f'a - b     -> {a-b}')
+    print(f'a ^ b     -> {a^b}')
+    print(f'a | b & a -> {a | b & a}')
 
 
 def main():
