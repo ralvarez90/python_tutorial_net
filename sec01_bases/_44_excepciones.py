@@ -37,14 +37,17 @@ except:
     ...
 else:
     Se ejecuta en el momento que no ocurre una excepción.
+    
+Podemo combinar try-except-else-finally de forma que el
+else se ejecuta solo si no hay excepciones y el finally siempre.
 """
 
 
-def calcularIMC(height: float, weight: float):
+def calcular_imc(height: float, weight: float):
     return weight/height**2
 
 
-def tryExample1():
+def excepciones_ejemplo1():
     try:
         # ingreso datos
         print('Enter the net sales for:')
@@ -62,16 +65,20 @@ def tryExample1():
         print('Esto SIEMPRE se ejecuta...')
 
 
-def tryExample2():
+def excepciones_ejemplo2():
     try:
         height = float(input('Enter your height: '))
         weight = float(input('Enter your weight: '))
-    except ValueError as e:
-        pass
+    except ValueError as error:
+        print(error)
+    else:
+        bmi = round(calcular_imc(height, weight))
+        print('BMI: %.2f' % (bmi))
 
 
 def main():
-    tryExample1()
+    excepciones_ejemplo1()
+    excepciones_ejemplo2()
 
 
 if __name__ == '__main__':
