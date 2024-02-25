@@ -22,7 +22,29 @@ si no existe.
 startswith, endswith
 Retorna booleanos indicando si un string inicia o finaliza con determinado
 substring.
-
-...
 """
 # TODO - Agregar descripción y ejemplos de métodos de los strings
+
+
+def joinMethodExample():
+    elements = ('red', 'green', 'blue')
+    rgb = ', '.join(elements)
+    print(f'rgb: {rgb}')
+
+
+def splitMethodExample():
+    s = 'Python String Split'
+    print(s.split())
+    print(s.split(maxsplit=1))
+
+
+def main():
+    joinMethodExample()
+    splitMethodExample()
+    return
+
+
+if __name__ == '__main__':
+
+    # run application
+    main() or input('\nPress any key to continue . . .')
