@@ -1,4 +1,6 @@
 """ATRIBUTOS
+
+Son campos dentro de una clase. Puede haber de instancia o de clase.
 """
 from pprint import pprint
 import json
@@ -6,8 +8,10 @@ import json
 
 class Person:
 
+    # class attribute
     __counter: int = 0
 
+    # initial state
     def __init__(self, name: str, age: int) -> None:
         Person.__counter += 1
         self.name = name
@@ -18,6 +22,7 @@ class Person:
             'isAlive': None,
         }
 
+    # función dentro de una clase
     def getTotalPersons():
         return Person.__counter
 
