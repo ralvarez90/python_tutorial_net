@@ -14,7 +14,9 @@ clase y el nombreDeLaClase() para generar una instancia.
 En Python todo es un objeto por lo que las clases también
 son objetos, es decir son instancias de de clases.
 
-Las clases son instancias de la clase type.
+Las clases son instancias de la clase type. Los objetos type
+tienen una propiedad __name__ que retorna el nombre de la
+clase.
 """
 
 
