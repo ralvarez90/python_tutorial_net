@@ -24,7 +24,7 @@ class Person:
         self.name = name
         self.age = age
 
-    def showNamespaceDict(self):
+    def show_namespace_dict(self):
         print(self.__dict__)
 
 
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     print(f'I am {person.name}. I am {person.age} years old')
 
     # ejemplo 2
-    person.showNamespaceDict()
+    person.show_namespace_dict()
 
     # end message
     input('\nPress any key to continue . . .')
