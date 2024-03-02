@@ -13,17 +13,20 @@ def agradecer():
     print('Nos salvaste, estamos agradecidos')
 
 
-def sayHi():
+def say_hi():
     print('Hi!')
 
 
-def main():
-    sayHi()
+def show_example():
+    say_hi()
     agradecer()
 
 
-if __name__ == '__main__':
+def main():
+    show_example()
 
+
+if __name__ == '__main__':
     # run application
     main()
 

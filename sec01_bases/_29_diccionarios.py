@@ -21,11 +21,11 @@ Esta es una de las estructuras de datos más importantes.
 """
 
 
-def runtimeType(item: object) -> str:
+def runtime_type(item: object) -> str:
     return str(type(item))[8:-2]
 
 
-def diccionarioEjemplo1():
+def show_example_1():
     persona = {
         'firstName': 'Rodrigo',
         'lastName': 'Alvarez',
@@ -34,7 +34,7 @@ def diccionarioEjemplo1():
     }
 
     print(f'Persona: {persona}')
-    print(runtimeType(persona))
+    print(runtime_type(persona))
 
     # iteración de keys
     for k in persona:
@@ -44,7 +44,7 @@ def diccionarioEjemplo1():
     print(persona.get('nombre', 'sin-nombre'))
 
 
-def diccionarioEjemplo2():
+def show_example_2():
     persona = {
         'firstName': 'rodrigo',
         'lastName': 'alvarez',
@@ -57,12 +57,11 @@ def diccionarioEjemplo2():
 
 
 def main():
-    diccionarioEjemplo1()
-    diccionarioEjemplo2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

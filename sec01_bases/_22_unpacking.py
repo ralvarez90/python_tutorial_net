@@ -13,36 +13,35 @@ v1, v2, ..., vn = [e1, e2, ..., en]
 from typing import List
 
 
-def getHead(items: List):
+def get_head(items: List):
     head, *_ = items
     print(f'head: {head}')
 
 
-def getTail(items: List):
+def get_tail(items: List):
     _, *tail = items
     print(f'tail: {tail}')
 
 
-def exampleUnpackingListV1():
+def show_example_1():
     colors = 'red blue green'.split()
     print(f'colors: {colors}')
     r, g, b = colors
     print(r, g, b)
 
 
-def exampleUnpackingListV2():
+def show_example_2():
     items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    getHead(items)
-    getTail(items)
+    get_head(items)
+    get_tail(items)
 
 
 def main():
-    exampleUnpackingListV1()
-    exampleUnpackingListV2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

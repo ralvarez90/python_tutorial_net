@@ -11,7 +11,7 @@ pueden emplear las expresiones lambdas.
 """
 
 
-def lambdasExamples():
+def show_example():
 
     # declare and invoque in same line
     print(
@@ -29,11 +29,10 @@ def lambdasExamples():
 
 
 def main():
-    lambdasExamples()
+    show_example()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

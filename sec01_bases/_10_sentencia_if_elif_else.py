@@ -9,13 +9,13 @@ una mezcla entre if-else y por último el else.
 """
 
 
-def exampleIf():
+def show_example_1():
     age = int(input('Enter your age: '))
     if age >= 18:
         print('You are elegible to vote.')
 
 
-def exampleIfElse():
+def show_example_2():
     age = int(input('Enter your age: '))
     if age >= 18:
         print('You are elegible to vote.')
@@ -23,7 +23,7 @@ def exampleIfElse():
         print('You are not elegible to vote.')
 
 
-def exampleIfElifElse():
+def show_example_3():
     age = int(input('Enter your age: '))
     if age < 5:
         ticketPrice = 5
@@ -35,19 +35,13 @@ def exampleIfElifElse():
 
 
 def main():
-    # ejemplo 1, if
-    exampleIf()
-
-    # ejemplo 2, if-else
-    exampleIfElse()
-
-    # ejemplo 3, if-elif-else
-    exampleIfElifElse()
+    show_example_1()
+    show_example_2()
+    show_example_3()
 
 
 if __name__ == '__main__':
-
-    # run app
+    # run application
     main()
 
     # end message

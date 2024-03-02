@@ -5,14 +5,14 @@ seleccionar algunos de ellos según criterios específicos.
 """
 
 
-def filterExample1():
+def show_example_1():
     scores = [70, 60, 80, 80, 50]
     filtered = list(filter(lambda score: score >= 70, scores))
     print(f'scores: {scores}')
     print(f'filter: {filtered}')
 
 
-def filterExample2():
+def show_example_2():
     countries = [
         ['China', 1394015977],
         ['United States', 329877505],
@@ -33,12 +33,11 @@ def filterExample2():
 
 
 def main():
-    filterExample1()
-    filterExample2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

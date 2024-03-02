@@ -8,7 +8,7 @@ verificar la existencia con os.exists.
 import os
 
 
-def eliminarArchivo(filename: str) -> bool:
+def eliminar_archivo(filename: str) -> bool:
     try:
         os.remove(filename)
     except Exception as error:
@@ -18,12 +18,15 @@ def eliminarArchivo(filename: str) -> bool:
     return False
 
 
+def show_example_1():
+    print(eliminar_archivo('asdasd'))
+
+
 def main():
-    print(eliminarArchivo('asdasd'))
+    show_example_1()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

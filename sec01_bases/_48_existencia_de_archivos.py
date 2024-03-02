@@ -11,5 +11,4 @@ Verifica si su argumento es un directorio.
 
 os.path.isfile
 Verifica asi su argumento es un archivo.
-
 """

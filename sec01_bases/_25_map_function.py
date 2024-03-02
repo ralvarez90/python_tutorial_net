@@ -15,7 +15,7 @@ def square(number: int | float) -> int | float:
     return number**2
 
 
-def mapFunctionExample1():
+def show_example_1():
     bonuses = [100, 200, 300]
     doubles = list(map(square, bonuses))
     negatives = list(map(lambda n: -n, bonuses))
@@ -24,7 +24,7 @@ def mapFunctionExample1():
     print(f'negatives: {negatives}')
 
 
-def mapFunctionExample2():
+def show_example_2():
     names = ['david', 'peter', 'jenifer']
     title_names = list(map(lambda name: name.title(), names))
     print(f'names: {names}')
@@ -32,12 +32,11 @@ def mapFunctionExample2():
 
 
 def main():
-    mapFunctionExample1()
-    mapFunctionExample2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

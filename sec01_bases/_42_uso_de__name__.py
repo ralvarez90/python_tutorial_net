@@ -16,11 +16,11 @@ nombre del módulo en la variable __name__.
 """
 
 
-def calculateTax(price: float, tax: float) -> float:
+def calculate_tax(price: float, tax: float) -> float:
     return price*tax
 
 
-def printBillingDoc():
+def print_billing_doc():
     taxrate = 0.1
 
     products = [
@@ -30,17 +30,20 @@ def printBillingDoc():
 
     print(f'Name\tPrice\tTax')
     for p in products:
-        tax = calculateTax(p['price'], taxrate)
+        tax = calculate_tax(p['price'], taxrate)
         print(f'{p["name"]}\t{p["price"]}\t{tax}')
 
 
+def show_example():
+    print_billing_doc()
+
+
 def main():
-    printBillingDoc()
+    show_example()
 
 
 # uso de __name__
 if __name__ == '__main__':
-
     # run application
     main()
 

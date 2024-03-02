@@ -28,7 +28,7 @@ import os
 import time
 
 
-def ejemploObtenerYCambiarDeDirectorio():
+def show_example_1():
     # home de usuario
     userPath = Path.home()
 
@@ -44,7 +44,7 @@ def ejemploObtenerYCambiarDeDirectorio():
     [print(f) for f in homeFiles if not f.startswith('.')]
 
 
-def ejemploPathSplitYJoin():
+def show_example_2():
     homePath = Path.home()
     completePath = os.path.join(homePath, 'snap')
     print(f'{completePath}')
@@ -52,16 +52,16 @@ def ejemploPathSplitYJoin():
     print(directoriosDelPath)
 
 
-def isDirectory(path: str) -> bool:
+def is_directory(path: str) -> bool:
     return os.path.exists(path) or os.path.isdir(path)
 
 
-def testIsDirectory():
+def show_example_3():
     snapDirPath = os.path.join(Path.home(), 'snap')
-    print(f'{snapDirPath} is a directory: {isDirectory(snapDirPath)}')
+    print(f'{snapDirPath} is a directory: {is_directory(snapDirPath)}')
 
 
-def crearEliminarDirectorio():
+def show_example_4():
     dirActual = os.getcwd()
     dirTemporal = os.path.join(dirActual, 'temporal')
 
@@ -76,14 +76,13 @@ def crearEliminarDirectorio():
 
 
 def main():
-    # ejemploObtenerYCambiarDeDirectorio()
-    ejemploPathSplitYJoin()
-    testIsDirectory()
-    crearEliminarDirectorio()
+    # show_example_1()
+    show_example_2()
+    show_example_3()
+    show_example_4()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

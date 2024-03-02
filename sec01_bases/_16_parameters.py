@@ -28,7 +28,7 @@ def agradecer(nombre: str, mensaje: str = 'Hi'):
     return f'{mensaje} {nombre}'
 
 
-def main():
+def show_example():
     # ejemplo 1, uso de valor default default
     mensaje = agradecer('Rodrigo')
     print(mensaje)
@@ -42,8 +42,11 @@ def main():
     print(mensaje)
 
 
-if __name__ == '__main__':
+def main():
+    show_example()
 
+
+if __name__ == '__main__':
     # run application
     main()
 

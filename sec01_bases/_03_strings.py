@@ -5,22 +5,22 @@ bajo el estandard utf8. Son indexables, iterables e inmutables.
 """
 
 
-def getLastChr(content: str) -> str:
+def get_last_char(content: str) -> str:
     assert content != '' and content is not None, 'content string can not be empty or None'
     return content[-1]
 
 
-def getHead(content: str) -> str:
+def get_head(content: str) -> str:
     assert content != '' and content is not None, 'content string can not be empty or None'
     return content[0]
 
 
-def getTail(content: str) -> str:
+def get_tail(content: str) -> str:
     assert content != '' and content is not None, 'content string can not be empty or None'
     return content[1:]
 
 
-def stringExampl1():
+def show_example_1():
     msg1 = 'message1'
     msg2 = r'message2,\t esto es un "raw" string'
     msg3 = '''Esto es un texto multilínea:
@@ -31,7 +31,7 @@ def stringExampl1():
     print(msg3)
 
 
-def stringConcatExample():
+def show_example_2():
     print('Hello' ' World!')
     print('Hello ' + 'World!')
     print(f'{"Hello"} {"World!"}')
@@ -39,29 +39,27 @@ def stringConcatExample():
     print('{} {}'.format('Hello', 'World!'))
 
 
-def stringIndicesExample():
+def show_example_3():
     message = 'hello_world'
     for i in range(len(message)):
         print(f'message[{i}] -> {message[i]}')
 
 
-def stringSubstringsExample():
+def show_example_4():
     str1 = 'Welcome to the Jungle'
-    print(f'head: {getHead(str1)}')
-    print(f'tail: {getTail(str1)}')
-    print(f'last: {getLastChr(str1)}')
+    print(f'head: {get_head(str1)}')
+    print(f'tail: {get_tail(str1)}')
+    print(f'last: {get_last_char(str1)}')
 
 
 def main():
-    # se ejecutan los ejemplos
-    stringExampl1()
-    stringConcatExample()
-    stringIndicesExample()
-    stringSubstringsExample()
+    show_example_1()
+    show_example_2()
+    show_example_3()
+    show_example_4()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

@@ -6,51 +6,54 @@ cuando ya no invocarse.
 """
 
 
-def countDown1(n: int):
+def count_down_1(n: int):
     assert n >= 0 and n is not None, 'n can not be < 0 or None'
     if n == 0:
         print('Adios!')
     else:
         print(n)
-        countDown1(n-1)
+        count_down_1(n-1)
 
 
-def countDown2(n: int):
+def count_down_2(n: int):
     assert n >= 0 and n is not None, 'n can not be < 0 or None'
     print(n)
     next = n-1
     if next > 0:
-        countDown2(next)
+        count_down_2(next)
 
 
-def getSum1(n: int) -> int:
+def get_sum_1(n: int) -> int:
     """sum(n) = 1+2+...+n
     sum(n) = n + sum(n-1)"""
     if n > 0:
-        return n + getSum1(n-1)
+        return n + get_sum_1(n-1)
     return 0
 
 
-def getSum2(n: int) -> int:
+def get_sum_2(n: int) -> int:
     assert n >= 0 and n is not None, 'n can not be a negative or None'
-    return n + getSum2(n-1) if n > 0 else 0
+    return n + get_sum_2(n-1) if n > 0 else 0
 
 
-def main():
+def show_example():
     # ejemplo 1
-    countDown1(10)
+    count_down_1(10)
     print()
 
     # ejemplo 2
-    countDown2(10)
+    count_down_2(10)
     print()
 
     # ejemplo 3
-    print(f'sum(1+2+...+5000) -> {getSum1(500)}')
+    print(f'sum(1+2+...+5000) -> {get_sum_1(500)}')
+
+
+def main():
+    show_example()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

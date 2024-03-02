@@ -17,7 +17,7 @@ sublista = lista[inicio:fin:step]
 """
 
 
-def obtenerCola(lst: list) -> list:
+def obtener_cola(lst: list) -> list:
     """Retoran la cola de una lista.
     >>> get_tail([1, 2, 3])
     [2, 3]
@@ -31,7 +31,7 @@ def obtenerCola(lst: list) -> list:
     return lst[0] if len(lst) == 1 else lst[1:]
 
 
-def exampleListas():
+def show_example_1():
     coordenadas = [
         [0, 0],
         [100, 100],
@@ -44,7 +44,7 @@ def exampleListas():
             print(f'coordinates[{i}][{j}] -> {coordenadas[i][j]}')
 
 
-def exampleSlicing():
+def show_example_2():
     colors = [
         'red',
         'orange',
@@ -60,25 +60,24 @@ def exampleSlicing():
     print(f'colors[1:4] -> {subcolors}')
 
 
-def exampleSlicingYObtenerCola():
+def show_example_3():
     someLst = [i for i in range(1, 1)]
     print(f'someLst: {someLst}')
-    print(f'tail of  : {obtenerCola([1])}')
+    print(f'tail of  : {obtener_cola([1])}')
 
 
 def main():
     # ejemplo 1, listas e iteracion con range
-    exampleListas()
+    show_example_1()
 
     # ejemplo 2, sublistas
-    exampleSlicing()
+    show_example_2()
 
     # ejemplo 3, sublista
-    exampleSlicingYObtenerCola()
+    show_example_3()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

@@ -12,7 +12,7 @@ step a utilizar.
 """
 
 
-def rangeExample():
+def show_example():
     total = 0
     for n in range(1, int(input('>>> '))+1):
         total += n
@@ -20,11 +20,10 @@ def rangeExample():
 
 
 def main():
-    rangeExample()
+    show_example()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

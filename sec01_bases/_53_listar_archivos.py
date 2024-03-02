@@ -8,7 +8,7 @@ from time import perf_counter
 import os
 
 
-def walkObtenerRutasImagenes():
+def walk_obtener_rutas_imagenes():
     # home del usuario
     homePath = Path.home()
 
@@ -25,17 +25,24 @@ def walkObtenerRutasImagenes():
     print(f'total de imágenes: {len(pngImages)}')
 
 
-def main():
+def show_example_1():
     # conteo de inicio
     inicio = perf_counter()
 
     # ejecuta algorigmo
-    walkObtenerRutasImagenes()
+    walk_obtener_rutas_imagenes()
 
     # reporte
     print(f'Tiempo de ejecución: {perf_counter()-inicio:.2f}')
 
 
+def main():
+    show_example_1()
+
+
 if __name__ == '__main__':
     # run application
-    main() or input('\nPress any key to continue . . .')
+    main()
+
+    # end message
+    input('\nPress any key to continue . . .')

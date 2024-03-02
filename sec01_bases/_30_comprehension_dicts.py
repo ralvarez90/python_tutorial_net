@@ -9,8 +9,7 @@ De forma general la sintaxis es:
 from copy import deepcopy
 
 
-def ejemploComprehensionDict():
-
+def show_example_1():
     stoks = {
         'APLN': 121,
         'AMZN': 3389,
@@ -30,11 +29,10 @@ def ejemploComprehensionDict():
 
 
 def main():
-    ejemploComprehensionDict()
+    show_example_1()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

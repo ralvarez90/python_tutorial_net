@@ -38,11 +38,11 @@ objetos mediante un ciclo for.
 import types
 
 
-def runtimeType(obj: object) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def ejemploSetDefinicion():
+def show_example_1():
     skills = {
         'Python Programming',
         'Databases',
@@ -50,29 +50,29 @@ def ejemploSetDefinicion():
     }
 
     print(f'skills: {skills}')
-    print(runtimeType(skills))
+    print(runtime_type(skills))
 
 
-def ejemploEmptySet():
+def show_example_2():
     emptySet = set()
     emptyDict = {}
     print(f'emptySet : {emptySet}')
     print(f'emptyDict: {emptyDict}')
 
 
-def ejemploCharSet():
+def show_example_3():
     caracteres = set('letter')
     print(f'caracteres: {caracteres}')
 
 
-def ejemploContension():
+def show_example_4():
     rating = 1
     ratings = {1, 2, 3, 4, 5}
     print(f'1     in {ratings} ? {rating in ratings}')
     print(f'1 not in {ratings} ? {rating not in ratings}')
 
 
-def ejemploAgregarRemoverDescartar():
+def show_example_5():
     skills = {'Python', 'Java', 'Perl'}
     skills.add('Go')
     skills.add('Rust')
@@ -89,14 +89,14 @@ def ejemploAgregarRemoverDescartar():
     skills.discard('Cobol')
 
 
-def ejemploMetodoPop():
+def show_example_6():
     skills = {'Problem Solving', 'Algorithms', 'Python Programming'}
     while len(skills) != 0:
         removed = skills.pop()
         print(f'Eliminado: "{removed}", restantes -> {skills}')
 
 
-def ejemploMetodoClear():
+def show_example_7():
     languages = {
         'python',
         'haskell',
@@ -109,15 +109,15 @@ def ejemploMetodoClear():
     print(f'languages: {languages}')
 
 
-def ejemploFrozenset():
+def show_example_8():
     skills = {'Python programming', 'Problem solving', 'Design patterns'}
     skills.add('Django')
     skills = frozenset(skills)
-    print(f'type of {skills} -> {runtimeType(skills)} ')
+    print(f'type of {skills} -> {runtime_type(skills)} ')
     # skills.add('REST Framework') lana error
 
 
-def ejemploFor():
+def show_example_9():
     languages = {
         'python',
         'haskell',
@@ -134,19 +134,18 @@ def ejemploFor():
 
 
 def main():
-    ejemploSetDefinicion()
-    ejemploEmptySet()
-    ejemploCharSet()
-    ejemploContension()
-    ejemploAgregarRemoverDescartar()
-    ejemploMetodoPop()
-    ejemploMetodoClear()
-    ejemploFrozenset()
-    ejemploFor()
+    show_example_1()
+    show_example_2()
+    show_example_3()
+    show_example_4()
+    show_example_5()
+    show_example_6()
+    show_example_7()
+    show_example_8()
+    show_example_9()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

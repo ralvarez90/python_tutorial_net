@@ -5,18 +5,17 @@ bucles.
 """
 
 
-def breakExample():
+def show_example():
     while True:
         print('Hello from while')
         break
 
 
 def main():
-    breakExample()
+    show_example()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

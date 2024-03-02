@@ -16,17 +16,16 @@ def multiplicar(a: number, b: number) -> number:
     return a*b
 
 
-def partialExample():
+def show_example_1():
     double = partial(multiplicar, b=2)
     print(f'Doble de 10: {double(10)}')
 
 
 def main():
-    partialExample()
+    show_example_1()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

@@ -47,7 +47,7 @@ def calcular_imc(height: float, weight: float):
     return weight/height**2
 
 
-def excepciones_ejemplo1():
+def show_example_1():
     try:
         # ingreso datos
         print('Enter the net sales for:')
@@ -65,7 +65,7 @@ def excepciones_ejemplo1():
         print('Esto SIEMPRE se ejecuta...')
 
 
-def excepciones_ejemplo2():
+def show_example_2():
     try:
         height = float(input('Enter your height: '))
         weight = float(input('Enter your weight: '))
@@ -77,12 +77,11 @@ def excepciones_ejemplo2():
 
 
 def main():
-    excepciones_ejemplo1()
-    excepciones_ejemplo2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

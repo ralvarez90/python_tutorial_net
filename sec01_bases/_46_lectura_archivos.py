@@ -12,7 +12,7 @@ import os
 import random
 
 
-def obtenerListaDeArchivos(path: str = './') -> list[str]:
+def obtener_lista_de_archivos(path: str = './') -> list[str]:
     """Obtiene lista de archivos del directorio actual por default. Puede
     espeficicar cualquier path del sistema.
     """
@@ -22,8 +22,8 @@ def obtenerListaDeArchivos(path: str = './') -> list[str]:
     return []
 
 
-def main():
-    archivos = sorted(obtenerListaDeArchivos())
+def show_example_1():
+    archivos = sorted(obtener_lista_de_archivos())
     unArchivo = random.choice(archivos)
     if unArchivo != '':
         with open(file=unArchivo, mode='r', encoding='utf-8') as f:
@@ -33,8 +33,11 @@ def main():
         print('Sin archivos en directorio: %s' % (unArchivo))
 
 
-if __name__ == '__main__':
+def main():
+    show_example_1()
 
+
+if __name__ == '__main__':
     # run application
     main()
 

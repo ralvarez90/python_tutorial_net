@@ -13,7 +13,7 @@ from typing import Tuple
 import random
 
 
-def exampleSortV1():
+def show_example_1():
     items = [random.randint(1, 100) for _ in range(10)]
     print(f'items: {items}')
     items.sort()
@@ -23,7 +23,7 @@ def exampleSortV1():
     print(f'items: {items}')
 
 
-def exampleSortV2():
+def show_example_2():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -35,7 +35,7 @@ def exampleSortV2():
     print(f'items         : {ordenados}')
 
 
-def exampleSortTuplas():
+def show_example_3():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -61,17 +61,12 @@ def exampleSortTuplas():
 
 
 def main():
-    # ejemplos
-    exampleSortV1()
-    exampleSortV2()
-
-    # ordenamiento de tuplas, usando funciones
-    # interans como criterio de ordenamiento
-    exampleSortTuplas()
+    show_example_1()
+    show_example_2()
+    show_example_3()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

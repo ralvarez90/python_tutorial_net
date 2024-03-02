@@ -20,20 +20,20 @@ Muestra el número con notación exponencial.
 """
 
 
-def formatStringExample1():
+def show_example_1():
     print(f'{"hello".upper()} WORLD!')
     print('{} WORLD!'.format('hello'.upper()))
     print('%s WORLD!' % ('hello'.upper()))
 
 
-def formatStringExample2():
+def show_example_2():
     fname = 'John'
     lname = 'Wick'
     fullname = F'Hello, {" ".join((fname, lname))}!'
     print(fullname)
 
 
-def formatStringExample3():
+def show_example_3():
     name = 'John Wick'
     site = 'www.johnwick.com'
     message = (
@@ -43,11 +43,11 @@ def formatStringExample3():
     print(message)
 
 
-def formatStringExample4():
+def show_example_4():
     print(f'Curly braces: {{}}')
 
 
-def formatStringExample5():
+def show_example_5():
     number = 0.01
     print(f'{number:e}')
     print(f'{number:E}')
@@ -62,15 +62,16 @@ def formatStringExample5():
 
 
 def main():
-    formatStringExample1()
-    formatStringExample2()
-    formatStringExample3()
-    formatStringExample4()
-    formatStringExample5()
-    return
+    show_example_1()
+    show_example_2()
+    show_example_3()
+    show_example_4()
+    show_example_5()
 
 
 if __name__ == '__main__':
-
     # run application
-    main() or input('\nPress any key to continue . . .')
+    main()
+
+    # end message
+    input('\nPress any key to continue . . .')

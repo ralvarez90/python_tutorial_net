@@ -8,14 +8,14 @@ expresiones. Se pueden agregar condiciones.
 """
 
 
-def exampleListComprehensions1():
+def show_example_1():
     numbers = [1, 2, 3, 4, 5]
     squares = [n**2 for n in numbers]
     print(f'numbers: {numbers}')
     print(f'squares: {squares}')
 
 
-def exampleListComprehensions2():
+def show_example_2():
     mountains = (
         ['Malaku', 8485],
         ['Lhotse', 8516],
@@ -30,12 +30,11 @@ def exampleListComprehensions2():
 
 
 def main():
-    exampleListComprehensions1()
-    exampleListComprehensions2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 
