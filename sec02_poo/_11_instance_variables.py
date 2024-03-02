@@ -6,7 +6,9 @@ tiene su propia copia de dichas variables de instancia.
 Se pueden agregar variables de instancia de forma dinámica, afectando
 a solo las instancias a las que se les agreguen o eliminen.
 
-Se les dicen atributos a las las variables de instancia.
+Se les dicen atributos a las las variables de instancia. Recordar que
+python almacena todas las variables de instancia en el atributo
+__dict__ de la instancia.
 """
 from pprint import pprint
 
