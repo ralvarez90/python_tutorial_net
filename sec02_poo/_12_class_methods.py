@@ -53,6 +53,7 @@ def ejemplo2():
 
 def main():
     ejemplo1()
+    ejemplo2()
 
 
 if __name__ == '__main__':
