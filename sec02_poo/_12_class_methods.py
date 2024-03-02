@@ -14,6 +14,10 @@ las instnacias.
 Los métodos de clase reciben un atributo que hace referencia a la misma
 clase contenedora. Esto nos permite acceder a las variables de instancia
 de dicha clase. Por convensión ese parámetro se nombre cls.
+
+Un método estático no puede acceder a las atributos de instancia. Pero
+puede acceder a los atributos de clase via la variable cls, que es la 
+referencia de la clase en cuestión.
 """
 
 
@@ -30,9 +34,9 @@ class Person:
     def introduce(self):
         print(f"Hi. I'am {self.getfullname()}. I'm {self.age} years old.")
 
-    @staticmethod
+    @classmethod
     def create_anonymous(cls):
-        print(f'type of cls: {type(cls)}')
+        # print(f'type of cls: {type(cls)}') retorna type
         return Person('John', 'Doe', 44)
 
 
@@ -47,8 +51,8 @@ def ejemplo1():
 def ejemplo2():
     """Invocando métodos de clase.
     """
-    p1 = Person('John', 'Perez', 34)
     p2 = Person.create_anonymous()
+    p2.introduce()
 
 
 def main():
