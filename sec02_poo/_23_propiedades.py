@@ -1,4 +1,4 @@
-"""PROPIEDAES
+"""PROPIEDADES
 
 Recordemos que dentro de las clases tenemoes variables de instancia y 
 de clase. Estos de denominan miembros o campos.
@@ -17,6 +17,21 @@ implementar y controlar el acceso, la asignación y la eliminación de atributos
 de una clase de una manera más controlada y flexible. Se utiliza para crear
 propiedades gestionadas por métodos específicos para establecer, obtener y
 eliminar valores de un atributos.
+
+La clase property tiene los siguientes parámetros en su constructor
+fget
+    función que retorna el valor del atributo
+fset
+    función setter que establece el estado de un atributo
+fdel
+    función que elimina un atribito
+doc
+    Es un docstring
+    
+Al utilizar la clase property(), podemos agregar una propiedad a una 
+clase manteniendo la compatibilidad con versiones anteriores. En la práctica, 
+primero definirá los atributos. Más adelante, podrá agregar la propiedad a 
+la clase si es necesario.
 """
 
 
@@ -44,7 +59,6 @@ def show_example_1():
     john = Person('John Wick', 45)
     john.age = 35
     print(john)
-    print(Person.__dict__)
 
 
 def main():
