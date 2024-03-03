@@ -19,13 +19,19 @@ class HtmlDocument:
         print('Rendering the Html document...')
 
 
-if __name__ == '__main__':
-
-    # mostrmos __dict__ de la clase
+def show_example_1():
     pprint(HtmlDocument.__dict__)
-
-    # instancia
     index = HtmlDocument()
-    
-    # callable variable class
     HtmlDocument.render()
+
+
+def main():
+    show_example_1()
+
+
+if __name__ == '__main__':
+    # run application
+    main()
+
+    # end message
+    input('\nPress any key to continue . . .')

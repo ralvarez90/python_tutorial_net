@@ -28,15 +28,20 @@ class Person:
         print(self.__dict__)
 
 
-# run application
-if __name__ == '__main__':
-
-    # ejemplo 1
+def show_example_1():
     person = Person('John Wick', 25)
     print(f'I am {person.name}. I am {person.age} years old')
-
-    # ejemplo 2
     person.show_namespace_dict()
+
+
+def main():
+    show_example_1()
+
+
+# run application
+if __name__ == '__main__':
+    # run application
+    main()
 
     # end message
     input('\nPress any key to continue . . .')

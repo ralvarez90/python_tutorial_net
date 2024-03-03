@@ -40,7 +40,7 @@ class Person:
         return Person('John', 'Doe', 44)
 
 
-def ejemplo1():
+def show_example_1():
     """Invocando métodos de instancia
     """
     p = Person('Rodrigo', 'Álvarez', 33)
@@ -48,7 +48,7 @@ def ejemplo1():
     Person.introduce(p)
 
 
-def ejemplo2():
+def show_example_2():
     """Invocando métodos de clase.
     """
     p2 = Person.create_anonymous()
@@ -56,12 +56,11 @@ def ejemplo2():
 
 
 def main():
-    ejemplo1()
-    ejemplo2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':
-
     # run application
     main()
 

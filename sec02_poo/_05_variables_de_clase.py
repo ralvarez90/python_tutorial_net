@@ -22,9 +22,7 @@ class HtmlDocument:
     version = '5'
 
 
-if __name__ == '__main__':
-
-    # objeto creado
+def show_example_1():
     print(f'{HtmlDocument.__name__}')
 
     # test de instancia
@@ -36,6 +34,15 @@ if __name__ == '__main__':
     print(HtmlDocument.version)
     print(indexDoc.extension)
     print(indexDoc.version)
+
+
+def main():
+    show_example_1()
+
+
+if __name__ == '__main__':
+    # run application
+    main()
 
     # end message
     input('\nPress any key to continue . . .')

@@ -14,8 +14,7 @@ class HmtlDocument:
     extension = 'html'
 
 
-if __name__ == '__main__':
-
+def show_example_1():
     # accedemos a atribitos
     print(f'Extension document: {HmtlDocument.extension}')
 
@@ -28,3 +27,15 @@ if __name__ == '__main__':
 
     # eliminamos atributo
     delattr(HmtlDocument, 'filename')
+
+
+def main():
+    show_example_1()
+
+
+if __name__ == '__main__':
+    # run application
+    main()
+
+    # end message
+    input('\nPress any key to continue . . .')

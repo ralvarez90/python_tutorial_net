@@ -48,7 +48,7 @@ class Contador:
         self._current = 0
 
 
-def ejemplo1():
+def show_example_1():
     # generamos instancia
     counter = Counter()
     counter.increment()
@@ -57,7 +57,7 @@ def ejemplo1():
     print(f'counter.value() -> {counter.value()}')
 
 
-def ejemplo2():
+def show_example_2():
     contador = Contador()
     contador.increment()
     contador.increment()
@@ -67,8 +67,8 @@ def ejemplo2():
 
 
 def main():
-    ejemplo1()
-    ejemplo2()
+    show_example_1()
+    show_example_2()
 
 
 if __name__ == '__main__':

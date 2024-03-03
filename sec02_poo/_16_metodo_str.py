@@ -17,13 +17,13 @@ class Person:
         return f'Person{self.__dict__}'
 
 
-def show_example():
+def show_example_1():
     person = Person('John', 'Wick', 45)
     print(person)
 
 
 def main():
-    show_example()
+    show_example_1()
 
 
 if __name__ == '__main__':

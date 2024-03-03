@@ -1,5 +1,4 @@
-"""ALMACENAMIENTO DE VARIABLES
-DE CLASE
+"""ALMACENAMIENTO DE VARIABLES DE CLASE
 
 Python almacena las variables de clase dentro de
 una clase dentro de su atributo __dict__ del
@@ -18,9 +17,20 @@ class HtmlDocument:
     version = 5
 
 
-# extenemos con propiedad
-HtmlDocument.mediaType = 'text/html'
-
-if __name__ == '__main__':
+def show_example_1():
+    # extenemos con propiedad
+    HtmlDocument.media_type = 'text/html'
     pprint('HtmlDocument.__dict__')
     pprint(HtmlDocument.__dict__)
+
+
+def main():
+    show_example_1()
+
+
+if __name__ == '__main__':
+    # run application
+    main()
+
+    # end message
+    input('\nPress any key to continue . . .')

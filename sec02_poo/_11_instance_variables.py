@@ -20,8 +20,7 @@ class HtmlDocument:
     version = 5
 
 
-def main():
-
+def show_example_1():
     # mostramos variables de clase y dict
     pprint(HtmlDocument.__dict__)
 
@@ -34,8 +33,11 @@ def main():
     print(home.__dict__)
 
 
-if __name__ == '__main__':
+def main():
+    show_example_1()
 
+
+if __name__ == '__main__':
     # run application
     main()
 

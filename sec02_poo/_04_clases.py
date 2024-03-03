@@ -24,8 +24,7 @@ class Person:
     pass
 
 
-if __name__ == '__main__':
-
+def show_example_1():
     # instancia y id
     p1 = Person()
     print(f'id(p1): {hex(id(p1))}')
@@ -33,3 +32,15 @@ if __name__ == '__main__':
     # propiedad __name__
     print(Person.__name__)
     print(isinstance(Person, type))
+
+
+def main():
+    show_example_1()
+
+
+if __name__ == '__main__':
+    # run application
+    main()
+
+    # end message
+    input('\nPress any key to continue . . .')
