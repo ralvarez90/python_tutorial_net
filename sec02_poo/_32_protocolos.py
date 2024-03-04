@@ -18,6 +18,8 @@ y grazna como un pato, entonces debe ser un pato.
 En la práctica, cuando escribes una función que acepta entradas, te preocupas 
 más por el comportamiento y las propiedades de la entrada, no por su 
 tipo explícito.
+
+En resumen, se emplean para definir interfaces implícitas.
 """
 from typing import List, Protocol
 
