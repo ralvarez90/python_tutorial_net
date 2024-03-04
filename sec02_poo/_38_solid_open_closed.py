@@ -1,0 +1,3 @@
+"""PRINCIPIO OPEN-CLOSED
+
+"""
