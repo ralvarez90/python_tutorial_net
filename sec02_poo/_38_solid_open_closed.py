@@ -8,7 +8,6 @@ El proposito de este principio es hacer más fácil el agregar nuevas
 características o casos de uso al sistema sin modificaar directamente
 el código existente.
 """
-import json
 from abc import ABC, abstractmethod
 
 
@@ -22,28 +21,34 @@ class Person:
 
 
 class PersonStorage(ABC):
+
     @abstractmethod
     def save(self, person: Person):
         pass
 
 
 class PersonDB(PersonStorage):
+
     def save(self, person: Person):
         print(f'Saving the {person} to database')
 
 
 class PersonJSON(PersonStorage):
+
     def save(self, person: Person):
         print(f'Saving the {person} to a json file')
 
 
 class PersonXML(PersonStorage):
+
     def save(self, person: Person):
         print(f'Saving the {person} to an xml file')
 
 
 def show_example_1():
-    pass
+    person: Person = Person('John Wick')
+    storage = PersonXML()
+    storage.save(person)
 
 
 def main():
