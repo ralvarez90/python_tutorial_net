@@ -19,19 +19,19 @@ sublista = lista[inicio:fin:step]
 
 def obtener_cola(lst: list) -> list:
     """Retoran la cola de una lista.
-    >>> get_tail([1, 2, 3])
+    >>> obtener_cola([1, 2, 3])
     [2, 3]
 
-    >>> get_tail([])
+    >>> obtener_cola([])
     []
 
-    >>> get_tail([True])
+    >>> obtener_cola([True])
     [True]
     """
     return lst[0] if len(lst) == 1 else lst[1:]
 
 
-def show_example_1():
+def show_example_01():
     coordenadas = [
         [0, 0],
         [100, 100],
@@ -44,7 +44,7 @@ def show_example_1():
             print(f'coordinates[{i}][{j}] -> {coordenadas[i][j]}')
 
 
-def show_example_2():
+def show_example_02():
     colors = [
         'red',
         'orange',
@@ -56,25 +56,25 @@ def show_example_2():
     ]
 
     print(f'colors: {colors}')
-    subcolors = colors[1:4]
-    print(f'colors[1:4] -> {subcolors}')
+    sub_colors = colors[1:4]
+    print(f'colors[1:4] -> {sub_colors}')
 
 
-def show_example_3():
-    someLst = [i for i in range(1, 1)]
-    print(f'someLst: {someLst}')
+def show_example_03():
+    some_lst = [i for i in range(1, 1)]
+    print(f'some_lst: {some_lst}')
     print(f'tail of  : {obtener_cola([1])}')
 
 
 def main():
-    # ejemplo 1, listas e iteracion con range
-    show_example_1()
+    # ejemplo 1, listas e iteración con range
+    show_example_01()
 
     # ejemplo 2, sublistas
-    show_example_2()
+    show_example_02()
 
     # ejemplo 3, sublista
-    show_example_3()
+    show_example_03()
 
 
 if __name__ == '__main__':

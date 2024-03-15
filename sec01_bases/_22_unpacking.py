@@ -23,22 +23,22 @@ def get_tail(items: List):
     print(f'tail: {tail}')
 
 
-def show_example_1():
+def show_example_01():
     colors = 'red blue green'.split()
     print(f'colors: {colors}')
     r, g, b = colors
     print(r, g, b)
 
 
-def show_example_2():
+def show_example_02():
     items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     get_head(items)
     get_tail(items)
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

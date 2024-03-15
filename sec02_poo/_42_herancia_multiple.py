@@ -1,7 +1,7 @@
 """HERENCIA MÚLTIPLE
 
 Cuando una clase hereda únicamente de otra clase se denomina 
-herancia múltiple. Python permite heredar de múltiples clases.
+heréncia múltiple. Python permite heredar de múltiples clases.
 
 Si una clase hereda de dos o más clases se denomina herencia
 múltiple.
@@ -27,14 +27,14 @@ class FlyingCar(Flyable, Car):
     pass
 
 
-def run_example_1():
+def show_example_01():
     fc = FlyingCar()
     fc.go()
     fc.fly()
 
 
 def main():
-    run_example_1()
+    show_example_01()
 
 
 if __name__ == '__main__':

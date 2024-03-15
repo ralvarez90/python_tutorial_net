@@ -13,7 +13,7 @@ from typing import Tuple
 import random
 
 
-def show_example_1():
+def show_example_01():
     items = [random.randint(1, 100) for _ in range(10)]
     print(f'items: {items}')
     items.sort()
@@ -23,7 +23,7 @@ def show_example_1():
     print(f'items: {items}')
 
 
-def show_example_2():
+def show_example_02():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -35,7 +35,7 @@ def show_example_2():
     print(f'items         : {ordenados}')
 
 
-def show_example_3():
+def show_example_03():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -61,9 +61,9 @@ def show_example_3():
 
 
 def main():
-    show_example_1()
-    show_example_2()
-    show_example_3()
+    show_example_01()
+    show_example_02()
+    show_example_03()
 
 
 if __name__ == '__main__':

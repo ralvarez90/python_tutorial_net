@@ -1,6 +1,6 @@
 """NÚMEROS
 
-Tenemos diversis tipos de números. Extienden de object y son
+Tenemos diversos tipos de números. Extienden de object y son
 int, float, complex.
 """
 
@@ -9,7 +9,7 @@ def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_1():
+def show_example_01():
     # int
     number = 1
     print(f'number {number} is an instance of {runtime_type(number)}')
@@ -19,12 +19,12 @@ def show_example_1():
     print(f'number {number} is an instance of {runtime_type(number)}')
 
     # complex
-    number = 1+0j
+    number = 1 + 0j
     print(f'number {number} is an instance of {runtime_type(number)}')
 
 
 def main():
-    show_example_1()
+    show_example_01()
 
 
 if __name__ == '__main__':

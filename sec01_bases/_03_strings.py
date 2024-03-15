@@ -20,7 +20,7 @@ def get_tail(content: str) -> str:
     return content[1:]
 
 
-def show_example_1():
+def show_example_01():
     msg1 = 'message1'
     msg2 = r'message2,\t esto es un "raw" string'
     msg3 = '''Esto es un texto multilínea:
@@ -31,7 +31,7 @@ def show_example_1():
     print(msg3)
 
 
-def show_example_2():
+def show_example_02():
     print('Hello' ' World!')
     print('Hello ' + 'World!')
     print(f'{"Hello"} {"World!"}')
@@ -39,13 +39,13 @@ def show_example_2():
     print('{} {}'.format('Hello', 'World!'))
 
 
-def show_example_3():
+def show_example_03():
     message = 'hello_world'
     for i in range(len(message)):
         print(f'message[{i}] -> {message[i]}')
 
 
-def show_example_4():
+def show_example_04():
     str1 = 'Welcome to the Jungle'
     print(f'head: {get_head(str1)}')
     print(f'tail: {get_tail(str1)}')
@@ -53,10 +53,10 @@ def show_example_4():
 
 
 def main():
-    show_example_1()
-    show_example_2()
-    show_example_3()
-    show_example_4()
+    show_example_01()
+    show_example_02()
+    show_example_03()
+    show_example_04()
 
 
 if __name__ == '__main__':

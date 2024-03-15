@@ -1,6 +1,6 @@
 """BOOLEANOS
 
-Extienden de int y son instancias de bool. Permiten efectuar operacioes
+Extienden de int y son instancias de bool. Permiten efectuar operaciones
 booleanas y solo pueden tener alguno de los siguientes valores True
 o False.
 
@@ -25,21 +25,21 @@ class User:
         """
         self.name = name
         self.roll = roll
-        self.isActive = True
+        self.is_active = True
 
     def deactivate(self):
-        assert self.isActive, 'The user is not active'
-        self.isActive = False
+        assert self.is_active, 'The user is not active'
+        self.is_active = False
 
     @staticmethod
-    def checkstatus(user: 'User'):
-        if user.isActive:
+    def check_status(user: 'User'):
+        if user.is_active:
             print('OK')
             return
         print('ERROR')
 
 
-def show_example_1():
+def show_example_01():
     # instancias
     user1 = User('Rodrigo Álvarez', Roll.ADMIN)
     user2 = User('Aldo Caldo', Roll.NORMAL)
@@ -47,13 +47,13 @@ def show_example_1():
     # cambio de estado de user2
     user2.deactivate()
 
-    # verificación de estatis
-    User.checkstatus(user1)
-    User.checkstatus(user2)
+    # verificación de estatus
+    User.check_status(user1)
+    User.check_status(user2)
 
 
 def main():
-    show_example_1()
+    show_example_01()
 
 
 if __name__ == '__main__':

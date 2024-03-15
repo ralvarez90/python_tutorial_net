@@ -8,14 +8,14 @@ expresiones. Se pueden agregar condiciones.
 """
 
 
-def show_example_1():
+def show_example_01():
     numbers = [1, 2, 3, 4, 5]
-    squares = [n**2 for n in numbers]
+    squares = [n ** 2 for n in numbers]
     print(f'numbers: {numbers}')
     print(f'squares: {squares}')
 
 
-def show_example_2():
+def show_example_02():
     mountains = (
         ['Malaku', 8485],
         ['Lhotse', 8516],
@@ -30,8 +30,8 @@ def show_example_2():
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

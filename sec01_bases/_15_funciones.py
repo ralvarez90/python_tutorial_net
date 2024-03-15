@@ -17,13 +17,13 @@ def say_hi():
     print('Hi!')
 
 
-def show_example():
+def show_example_01():
     say_hi()
     agradecer()
 
 
 def main():
-    show_example()
+    show_example_01()
 
 
 if __name__ == '__main__':

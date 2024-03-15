@@ -27,17 +27,17 @@ def show_welcome_message(username: str, gender: Gender = Gender.OTHER):
     print(WELCOME_MESSAGE_FORMAT.format(prefix, username))
 
 
-def show_example():
+def show_example_01():
     # se ingresa nombre
     name = input('name1: ')
     show_welcome_message(name)
 
-    # se establece genero masculino
+    # se establece género masculino
     show_welcome_message('Rodrigo', Gender.MALE)
 
 
 def main():
-    show_example()
+    show_example_01()
 
 
 if __name__ == '__main__':

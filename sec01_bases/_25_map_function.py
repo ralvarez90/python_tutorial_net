@@ -6,16 +6,16 @@ que contenga el elemento transformado. Para esto se emplea la
 función map, que recibe una función que se invocará por cada
 uno de los elementos del iterable que reciba como argumento.
 
-La función que recine como primer argumento puede ser externa o una 
+La función que recibe como primer argumento puede ser externa o una
 expresión lambda.
 """
 
 
 def square(number: int | float) -> int | float:
-    return number**2
+    return number ** 2
 
 
-def show_example_1():
+def show_example_01():
     bonuses = [100, 200, 300]
     doubles = list(map(square, bonuses))
     negatives = list(map(lambda n: -n, bonuses))
@@ -24,7 +24,7 @@ def show_example_1():
     print(f'negatives: {negatives}')
 
 
-def show_example_2():
+def show_example_02():
     names = ['david', 'peter', 'jenifer']
     title_names = list(map(lambda name: name.title(), names))
     print(f'names: {names}')
@@ -32,8 +32,8 @@ def show_example_2():
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

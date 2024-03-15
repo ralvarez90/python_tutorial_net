@@ -7,7 +7,7 @@ cuando la condición se deja de cumplir.
 import random
 
 
-def show_example_1():
+def show_example_01():
     command = ''
     while command.lower() != 'quit':
         command = input('>>> ')
@@ -15,7 +15,7 @@ def show_example_1():
     print()
 
 
-def show_example_2():
+def show_example_02():
     intentos = 0
     while (numero := random.randint(1, 100)) != 10:
         intentos += 1
@@ -25,8 +25,8 @@ def show_example_2():
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

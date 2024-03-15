@@ -20,7 +20,7 @@ def list_keywords():
         print(kw)
 
 
-def show_example():
+def show_example_01():
     # mensaje de bienvenida
     print('Hello World in Python3')
 
@@ -29,7 +29,7 @@ def show_example():
 
 
 def main():
-    show_example()
+    show_example_01()
 
 
 if __name__ == '__main__':

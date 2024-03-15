@@ -8,13 +8,13 @@ nombre_variable = valor
 """
 
 
-def show_example():
+def show_example_01():
     message: str = 'Hello World in Python3'
     print(f'message: {message}')
 
 
 def main():
-    show_example()
+    show_example_01()
 
 
 if __name__ == '__main__':

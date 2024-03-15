@@ -41,7 +41,7 @@ def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example():
+def show_example_01():
     # algunas instancias
     instancias = (1, 1.0, 0j, True, 'hola')
 
@@ -51,7 +51,7 @@ def show_example():
 
 
 def main():
-    show_example()
+    show_example_01()
 
 
 if __name__ == '__main__':
