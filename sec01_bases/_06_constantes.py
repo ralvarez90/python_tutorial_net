@@ -1,11 +1,12 @@
 """CONSTANTES
 
 Son objetos que permanecerán con su mismo estado durante
-la ejecución del programa. Por convensión sus nombres son
+la ejecución del programa. Por conveniencia sus nombres son
 en mayúsculas.
 
-En python no existe un mecanismo de para definir constantes,
-pero por la convensión anterior se asumen como constantes.
+En python no existe un mecanismo de para definir constantes
+son variables que simulan el comportamiento de las constantes
+en otros lenguajes de programación.
 """
 from enum import Enum, auto
 

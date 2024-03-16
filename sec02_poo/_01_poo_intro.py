@@ -12,12 +12,13 @@ objeto =  C()
 donde objeto podrá acceder a sus miembros de instancia y miembros de clase.
 
 Podemos agregar propiedades de instancia a un objeto de forma dinámica,
-aunque estás solo existirán en objetos concretos y no serán compartidoas
+aunque estás solo existirán en objetos concretos y no serán compartidos
 por las demás instancias.
 """
 
 
 class Person:
+
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
@@ -26,11 +27,11 @@ class Person:
         print(f"Hi, it's {self.name}")
 
 
-def runtime_type(obj: object) -> str:
+def runtime_type(obj: object7u6y) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_1():
+def show_example_01():
     p1 = Person('John Wick', 45)
     p1.job = 'Killer'
 
@@ -46,7 +47,7 @@ def show_example_1():
 
 
 def main():
-    show_example_1()
+    show_example_01()
 
 
 if __name__ == '__main__':

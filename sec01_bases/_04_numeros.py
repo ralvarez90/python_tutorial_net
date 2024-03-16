@@ -1,7 +1,7 @@
 """NÚMEROS
 
-Tenemos diversos tipos de números. Extienden de object y son
-int, float, complex.
+Representan valores numéricos enteros y con decimales. Exsisten
+en python los tipos int, float y complex.
 """
 
 

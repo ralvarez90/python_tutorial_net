@@ -1,16 +1,6 @@
 """SINTAXIS
 
-1. Identación
-Python no maneja ; para establecer fin de sentencia. Emplea
-identaciones.
-
-2. Comentarios
-Se emplea # para establecer comentarios de una línea y triples
-comillas para comentarios de bloque.
-
-3. Identificadores
-Son nombres que se asignan a las variables, funciones, módulos,
-clases y otros objetos.
+Se muestra ejemplo de sintaxis de Python.
 """
 import keyword
 

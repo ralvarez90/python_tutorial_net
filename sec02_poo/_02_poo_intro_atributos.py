@@ -1,13 +1,12 @@
 """ATRIBUTOS
 
-Son campos dentro de una clase. Puede haber de instancia o de clase.
+Son campos dentro de una clase. Puede haber de instancias o de clase.
 """
 from pprint import pprint
 import json
 
 
 class Person:
-
     # class attribute
     __counter: int = 0
 

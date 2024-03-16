@@ -25,7 +25,7 @@ from typing import List, Protocol
 
 
 class Item(Protocol):
-    """Cualquier objeto que tenga las propiedaes y métodos de este protocolo,
+    """Cualquier objeto que tenga las propiedades y métodos de este protocolo,
     es decir, que cumplan con este protocolo cumplirán la relación 'es un' Item.
     """
     quantity: int

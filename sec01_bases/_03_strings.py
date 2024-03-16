@@ -1,7 +1,8 @@
 """STRINGS
 
-Instancias de la clase str, son secuencias de caracteres 
-bajo el estandard utf8. Son indexables, iterables e inmutables.
+Instancias de la clase str, son secuencias de caracteres utf8. Cada
+elemento se puede obtener mediante índices. Otra característica es
+que son inmutables e iterables.
 """
 
 
