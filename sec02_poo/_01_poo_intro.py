@@ -27,7 +27,7 @@ class Person:
         print(f"Hi, it's {self.name}")
 
 
-def runtime_type(obj: object7u6y) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
