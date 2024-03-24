@@ -55,19 +55,19 @@ class PaymentStatus(Enum):
         return False
 
 
-def show_example_1():
+def showExample01():
     print('Example 1. Show custom PaymentStatus members:')
     for ps in PaymentStatus:
         print(ps, end=', ')
     print()
 
 
-def show_example_2():
+def showExample02():
     print('Example 2. Use __eq__ overloading operator:')
     print(PaymentStatus.PENDING == 1)
 
 
-def show_example_3():
+def showExample03():
     status = 1
     if status < PaymentStatus.COMPLETED:
         print('The payment has not completed')
@@ -76,22 +76,19 @@ def show_example_3():
         print('The payment is not pending')
 
 
-def show_example_4():
+def showExample04():
     for member in PaymentStatus:
         print(member, bool(member))
 
 
 def main():
     # run examples
-    show_example_1()
-    show_example_2()
-    show_example_3()
-    show_example_4()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

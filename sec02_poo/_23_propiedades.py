@@ -38,36 +38,33 @@ la clase si es necesario.
 class Person:
     def __init__(self, name: str, age: int) -> None:
         self.name = name
-        self.__setage(age)
+        self._setAge(age)
 
-    def __setage(self, age: int):
+    def _setAge(self, age: int):
         if age < 0:
             raise ValueError('The age cannot be a negative integer.')
         self.__age = age
 
-    def __getage(self) -> int:
+    def _getAge(self) -> int:
         return self.__age
 
     def __str__(self) -> str:
         return f'Person{self.__dict__}'
 
     # creamos propiedad
-    age = property(fget=__getage, fset=__setage)
+    age = property(fget=_getAge, fset=_setAge)
 
 
-def show_example_1():
+def showExample01():
     john = Person('John Wick', 45)
     john.age = 35
     print(john)
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

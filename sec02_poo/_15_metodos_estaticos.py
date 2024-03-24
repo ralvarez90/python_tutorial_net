@@ -24,28 +24,28 @@ class TemperatureConverter:
     CELSIUS = 'C'
 
     @staticmethod
-    def celsius_to_fahrenheit(c_amount: float) -> float:
-        return 9*c_amount/5 + 32
+    def celsiusToFahrenheit(cAmount: float) -> float:
+        return 9*cAmount/5 + 32
 
     @staticmethod
-    def fahrenheit_to_celsius(f_amount: float) -> float:
-        return 5*(f_amount-32)/9
+    def fahrenheitToCelsius(fAmount: float) -> float:
+        return 5*(fAmount-32)/9
 
     @staticmethod
-    def celsius_to_kelvin(c_amount: float) -> float:
-        return c_amount + 273.15
+    def celsiusToKelvin(cAmount: float) -> float:
+        return cAmount + 273.15
 
     @staticmethod
-    def kelvin_to_celsius(k_amount: float) -> float:
-        return k_amount - 273.15
+    def kelvinToCelsius(kAmount: float) -> float:
+        return kAmount - 273.15
 
     @staticmethod
-    def fahrenheit_to_kelvin(f_amount: float) -> float:
-        return 5*(f_amount+459.67)/9
+    def fahrenheitToKelvin(fAmount: float) -> float:
+        return 5*(fAmount+459.67)/9
 
     @staticmethod
-    def kelvin_to_fahrenheit(k_amount: float) -> float:
-        return 9*k_amount/5 - 459.67
+    def kelvinToFahrenheit(kAmount: float) -> float:
+        return 9*kAmount/5 - 459.67
 
     @staticmethod
     def format(value: float, unit: str) -> str:
@@ -61,18 +61,15 @@ class TemperatureConverter:
         return f'{value} {symbol}'
 
 
-def show_example_1():
-    f = TemperatureConverter.celsius_to_fahrenheit(35)
+def showExmaple01():
+    f = TemperatureConverter.celsiusToFahrenheit(35)
     print(TemperatureConverter.format(f, TemperatureConverter.FAHRENHEIT))
 
 
 def main():
-    show_example_1()
+    showExmaple01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

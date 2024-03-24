@@ -53,7 +53,7 @@ class NotificationManager:
         self.notification.notify(message)
 
 
-def show_example_1():
+def showExample01():
     # instancia de contacto
     contact = Contact('John Wick', 'johnwick@killer.com', '+525632140588')
 
@@ -71,12 +71,9 @@ def show_example_1():
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

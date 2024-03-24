@@ -27,18 +27,18 @@ class Person:
         print(f"Hi, it's {self.name}")
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_01():
+def showExample01():
     p1 = Person('John Wick', 45)
     p1.job = 'Killer'
 
     # agregamos función dinámica clase.
     Person.show_job = lambda p: print(p.job)
     Person.show_job(p1)
-    print(runtime_type(Person.show_job))
+    print(runtimeType(Person.show_job))
 
     # invocamos método de instancia
     p1.greet()
@@ -47,12 +47,9 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

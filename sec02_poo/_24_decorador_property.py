@@ -61,27 +61,24 @@ class Circle:
         return 'Circle{radius: %s, area: %.2f u^2}' % (self.radius, self.area)
 
 
-def show_example_1():
+def showExample01():
     p1 = Person(name='John Wick', age=45)
     p1.age += 1
     p1.name = 'Juan Wick'
     print(p1)
 
 
-def show_example_2():
+def showExample02():
     c = Circle(10)
     print(f'Area: {c.area} u^2')
     print(c)
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

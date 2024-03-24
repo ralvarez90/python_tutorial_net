@@ -18,7 +18,7 @@ class Employee:
         self.basepay = basepay
         self.bonus = bonus
 
-    def getpay(self) -> float:
+    def getPay(self) -> float:
         return self.basepay + self.bonus
 
 
@@ -28,25 +28,22 @@ class SalesEmployee(Employee):
         assert sales_incentive >= 0, 'Sales incentive cannot be a negative number'
         self.sales_incentive = sales_incentive
 
-    def getpay(self) -> float:
-        return super().getpay() + self.sales_incentive
+    def getPay(self) -> float:
+        return super().getPay() + self.sales_incentive
 
     def __str__(self) -> str:
         return f'SalesEmployee{self.__dict__}'
 
 
-def show_example_1():
+def showExample01():
     emp1: Employee = SalesEmployee('John Wick', 1_000_000, 10_000, 1000)
-    print(f'Total payment: ${emp1.getpay():,.2f}')
+    print(f'Total payment: ${emp1.getPay():,.2f}')
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

@@ -30,7 +30,7 @@ class Person:
         print('__del__ was called...')
 
 
-def run_example():
+def showExample01():
     p1 = Person('John Wick', 45)
     p1 = None
     p2 = Person('Juan Güic', 45)
@@ -38,12 +38,9 @@ def run_example():
 
 
 def main():
-    run_example()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

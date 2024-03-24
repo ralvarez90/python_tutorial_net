@@ -19,19 +19,16 @@ class HtmlDocument:
         print('Rendering the Html document...')
 
 
-def show_example_1():
+def showExample01():
     pprint(HtmlDocument.__dict__)
     index = HtmlDocument()
     HtmlDocument.render()
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

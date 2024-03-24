@@ -29,28 +29,28 @@ class Person:
 
     def __init__(self, name: str, age: int) -> None:
         assert name != '' and age >= 0, 'Name cannot be an empty string and age cannot be a negative integer.'
-        self.__name = name
-        self.__age = age
+        self._name = name
+        self._age = age
 
     @property
     def age(self) -> int:
-        return self.__age
+        return self._age
 
     @property
     def name(self) -> str:
-        return self.__name
+        return self._name
 
     def __hash__(self) -> int:
-        return hash((self.__name, self.__age))
+        return hash((self._name, self._age))
 
     def __eq__(self, __other: object) -> bool:
-        return isinstance(__other, Person) and self.__name == __other.__name and self.__age == __other.__age
+        return isinstance(__other, Person) and self._name == __other._name and self._age == __other._age
 
     def __str__(self) -> str:
         return f'Person{self.__dict__} with hash: {hash(self)}'
 
 
-def show_example_1():
+def showExample01():
     p1 = Person('John Wick', 45)
     p2 = Person('John Wick', 45)
     print(p1)
@@ -65,7 +65,7 @@ def show_example_1():
         print(p)
 
 
-def show_example_2():
+def showExample02():
     john_doe: Person = Person('John Doe', 33)
     print(john_doe.name)
     print(john_doe.age)
@@ -73,13 +73,10 @@ def show_example_2():
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue. . .')

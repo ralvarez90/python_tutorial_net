@@ -27,19 +27,16 @@ class FlyingCar(Flyable, Car):
     pass
 
 
-def show_example_01():
+def showExample01():
     fc = FlyingCar()
     fc.go()
     fc.fly()
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

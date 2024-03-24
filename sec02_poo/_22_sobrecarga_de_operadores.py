@@ -78,7 +78,7 @@ class Cart:
         return '\n'.join([str(item) for item in self.items])
 
 
-def run_example_1():
+def showExample01():
     i = Point2D(1, 0)
     j = Point2D(0, 1)
     unit_point = i+j
@@ -87,7 +87,7 @@ def run_example_1():
     print(f'i + j -> {unit_point} with lenght: {unit_point.length:.2f}')
 
 
-def run_example_2():
+def showExample02():
     cart = Cart()
     cart += Item(name='Apple', qty=5, price=2)
     cart += Item(name='Banana', qty=20, price=1)
@@ -98,13 +98,10 @@ def run_example_2():
 
 
 def main():
-    run_example_1()
-    run_example_2()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

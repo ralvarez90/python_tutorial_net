@@ -3,8 +3,6 @@
 Cuando clase padres de una clase hija tienen métodos con el mismo nombre y 
 la clase secundaria llama al método, Python usa el método mro para buscar 
 el método correcto para llamar.
-
-El método mro es 
 """
 
 

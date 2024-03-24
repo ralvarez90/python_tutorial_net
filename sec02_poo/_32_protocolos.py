@@ -48,12 +48,12 @@ class Stock:
         self.price = price
 
 
-def calculate_total(items: list[Item]) -> float:
+def calculateTotal(items: list[Item]) -> float:
     return sum([item.quantity*item.price for item in items])
 
 
-def show_example_1():
-    total = calculate_total([
+def showExample01():
+    total = calculateTotal([
         Product('Product1', 10, 100),
         Product('Product2', 20, 100),
         Product('Product3', 30, 100),
@@ -64,8 +64,8 @@ def show_example_1():
     print(f'Total: ${total:,.2f}')
 
 
-def show_example_2():
-    total = calculate_total([
+def showExample02():
+    total = calculateTotal([
         Stock('Tablet', 5, 950),
         Stock('Laptop', 10, 850),
     ])
@@ -74,13 +74,10 @@ def show_example_2():
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')
