@@ -13,7 +13,7 @@ from typing import Tuple
 import random
 
 
-def show_example_01():
+def showExample01():
     items = [random.randint(1, 100) for _ in range(10)]
     print(f'items: {items}')
     items.sort()
@@ -23,7 +23,7 @@ def show_example_01():
     print(f'items: {items}')
 
 
-def show_example_02():
+def showExample02():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -35,7 +35,7 @@ def show_example_02():
     print(f'items         : {ordenados}')
 
 
-def show_example_03():
+def showExample03():
     items = [
         ('Google', 2019, 134.81),
         ('Apple', 2019, 260.2),
@@ -44,31 +44,28 @@ def show_example_03():
 
     print(f'original: {items}')
 
-    def __fromName(compania_data: Tuple[str, int, float]) -> str:
+    def helperFromName(compania_data: Tuple[str, int, float]) -> str:
         return compania_data[0]
 
-    def __fromYear(compania_data: Tuple[str, int, float]) -> int:
+    def helperFromYear(compania_data: Tuple[str, int, float]) -> int:
         return compania_data[1]
 
     items.sort(key=lambda company: company[2])
     print(f'Ordenado por monto: {items}')
 
-    items.sort(key=__fromName)
+    items.sort(key=helperFromName)
     print(f'Ordenado por nombre: {items}')
 
-    items.sort(key=__fromYear)
+    items.sort(key=helperFromYear)
     print(f'Ordenado por año  : {items}')
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
+    showExample01()
+    showExample02()
+    showExample03()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end messages
     input('\nPress any key to continue . . . ')

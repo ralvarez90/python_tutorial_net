@@ -10,33 +10,30 @@ argumento.
 """
 
 
-def show_example_01():
+def shoExample01():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for c in cities:
         print(c)
 
 
-def show_example_02():
+def showExample02():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for item in enumerate(cities):
         print(item)
 
 
-def show_example_03():
+def showExample03():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for item in enumerate(cities, 1):
         print(item)
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
+    shoExample01()
+    showExample02()
+    showExample03()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

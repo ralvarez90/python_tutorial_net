@@ -26,26 +26,23 @@ substring.
 # TODO - Agregar descripción y ejemplos de métodos de los strings
 
 
-def show_example_1():
+def showExample01():
     elements = ('red', 'green', 'blue')
     rgb = ', '.join(elements)
     print(f'rgb: {rgb}')
 
 
-def show_example_2():
+def showExample02():
     s = 'Python String Split'
     print(s.split())
     print(s.split(maxsplit=1))
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

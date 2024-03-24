@@ -37,36 +37,33 @@ Integer = int
 Numeric = Complex | Double | Integer
 
 
-def say_hi(name: str):
+def sayHi(name: str):
     print(f'Hello {name}')
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def obtener_suma(x: int | float, y: int | float) -> int | float:
+def obtenerSuma(x: int | float, y: int | float) -> int | float:
     return x+y
 
 
-def obtener_producto(x: Numeric, y: Numeric) -> Numeric:
+def obtenerProducto(x: Numeric, y: Numeric) -> Numeric:
     return x*y
 
 
-def show_example_1():
-    print(runtime_type(None))
-    say_hi(name=input('nombre: '))
-    print(f'5+6 = {obtener_suma(5, 6)}')
-    print(f'5*6 = {obtener_producto(5, 6)}')
+def showExample01():
+    print(runtimeType(None))
+    sayHi(name=input('nombre: '))
+    print(f'5+6 = {obtenerSuma(5, 6)}')
+    print(f'5*6 = {obtenerProducto(5, 6)}')
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end application
     input('\nPress any key to continue . . .')

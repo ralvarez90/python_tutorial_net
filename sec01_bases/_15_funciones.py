@@ -8,27 +8,24 @@ Python incluye funciones built-in listas para usar.
 """
 
 
-def agradecer():
+def greeting():
     """Display a greeting to users."""
     print('Nos salvaste, estamos agradecidos')
 
 
-def say_hi():
+def sayHi():
     print('Hi!')
 
 
-def show_example_01():
-    say_hi()
-    agradecer()
+def showExample01():
+    sayHi()
+    greeting()
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

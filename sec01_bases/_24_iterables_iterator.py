@@ -24,14 +24,14 @@ cada elemento de su interior este se elimina.
 """
 
 
-def show_example_1():
+def showExample01():
     colors = ['red', 'green', 'blue']
     colors_iter = iter(colors)
     for _ in range(len(colors)):
         print(next(colors_iter))
 
 
-def show_example_2():
+def showExample02():
     colors = ['red', 'green', 'blue']
     colors_iter = iter(colors)
     for item in colors_iter:
@@ -39,13 +39,10 @@ def show_example_2():
 
 
 def main():
-    show_example_1()
-    show_example_2()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

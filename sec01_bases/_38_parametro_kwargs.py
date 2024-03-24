@@ -12,28 +12,25 @@ Se puede usar un *args y **kwargs como paraámetros en una misma función.
 from pprint import pprint
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
 def connect(**kwargs):
-    print(runtime_type(kwargs))
+    print(runtimeType(kwargs))
     pprint(kwargs)
 
 
-def show_example_1():
+def showExample01():
     connect() or print('-'*10)
     connect(username='ra90', age=33, cp=15_900) or print('-'*10)
     connect(server='localhost', user='root', password='123admin')
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

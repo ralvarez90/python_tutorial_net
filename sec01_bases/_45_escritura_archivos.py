@@ -42,7 +42,7 @@ leer y escribir.
 import textwrap
 
 
-def crear_zen_python_file():
+def createPythonZenFile():
 
     s = textwrap.dedent(
         """\
@@ -87,17 +87,14 @@ def crear_zen_python_file():
     #     f.write(resultados)
 
 
-def show_example_1():
-    crear_zen_python_file()
+def showExample01():
+    createPythonZenFile()
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

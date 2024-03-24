@@ -38,11 +38,11 @@ objetos mediante un ciclo for.
 import types
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_1():
+def showExample01():
     skills = {
         'Python Programming',
         'Databases',
@@ -50,29 +50,29 @@ def show_example_1():
     }
 
     print(f'skills: {skills}')
-    print(runtime_type(skills))
+    print(runtimeType(skills))
 
 
-def show_example_2():
+def showExample02():
     emptySet = set()
     emptyDict = {}
     print(f'emptySet : {emptySet}')
     print(f'emptyDict: {emptyDict}')
 
 
-def show_example_3():
+def showExample03():
     caracteres = set('letter')
     print(f'caracteres: {caracteres}')
 
 
-def show_example_4():
+def showExample04():
     rating = 1
     ratings = {1, 2, 3, 4, 5}
     print(f'1     in {ratings} ? {rating in ratings}')
     print(f'1 not in {ratings} ? {rating not in ratings}')
 
 
-def show_example_5():
+def showExample05():
     skills = {'Python', 'Java', 'Perl'}
     skills.add('Go')
     skills.add('Rust')
@@ -89,14 +89,14 @@ def show_example_5():
     skills.discard('Cobol')
 
 
-def show_example_6():
+def showExample06():
     skills = {'Problem Solving', 'Algorithms', 'Python Programming'}
     while len(skills) != 0:
         removed = skills.pop()
         print(f'Eliminado: "{removed}", restantes -> {skills}')
 
 
-def show_example_7():
+def showExample07():
     languages = {
         'python',
         'haskell',
@@ -109,15 +109,15 @@ def show_example_7():
     print(f'languages: {languages}')
 
 
-def show_example_8():
+def showExample08():
     skills = {'Python programming', 'Problem solving', 'Design patterns'}
     skills.add('Django')
     skills = frozenset(skills)
-    print(f'type of {skills} -> {runtime_type(skills)} ')
+    print(f'type of {skills} -> {runtimeType(skills)} ')
     # skills.add('REST Framework') lana error
 
 
-def show_example_9():
+def showExample09():
     languages = {
         'python',
         'haskell',
@@ -134,20 +134,17 @@ def show_example_9():
 
 
 def main():
-    show_example_1()
-    show_example_2()
-    show_example_3()
-    show_example_4()
-    show_example_5()
-    show_example_6()
-    show_example_7()
-    show_example_8()
-    show_example_9()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
+    showExample05()
+    showExample06()
+    showExample07()
+    showExample08()
+    showExample09()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

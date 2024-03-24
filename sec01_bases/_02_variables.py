@@ -8,18 +8,15 @@ nombre_variable = valor
 """
 
 
-def show_example_01():
+def showExample01():
     message: str = 'Hello World in Python3'
     print(f'message: {message}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

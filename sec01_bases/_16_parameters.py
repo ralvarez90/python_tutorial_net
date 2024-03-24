@@ -15,7 +15,7 @@ parámetro.
 """
 
 
-def agradecer(nombre: str, mensaje: str = 'Hi'):
+def greeting(nombre: str, mensaje: str = 'Hi'):
     """Retorna mensaje de agradecimiento.
 
     Args:
@@ -28,27 +28,24 @@ def agradecer(nombre: str, mensaje: str = 'Hi'):
     return f'{mensaje} {nombre}'
 
 
-def show_example_01():
+def showExample01():
     # ejemplo 1, uso de valor default default
-    mensaje = agradecer('Rodrigo')
+    mensaje = greeting('Rodrigo')
     print(mensaje)
 
     # ejemplo 2, parámetros posicionales requeridos
-    mensaje = agradecer('Rodrigo', 'Hola')
+    mensaje = greeting('Rodrigo', 'Hola')
     print(mensaje)
 
     # ejemplo 3, parámetros con nombre
-    mensaje = agradecer(mensaje='Bienvenido', nombre='Rodrigo')
+    mensaje = greeting(mensaje='Bienvenido', nombre='Rodrigo')
     print(mensaje)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

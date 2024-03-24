@@ -32,14 +32,14 @@ class User:
         self.is_active = False
 
     @staticmethod
-    def check_status(user: 'User'):
+    def checkStatus(user: 'User'):
         if user.is_active:
             print('OK')
             return
         print('ERROR')
 
 
-def show_example_01():
+def showExample01():
     # instancias
     user1 = User('Rodrigo Álvarez', Roll.ADMIN)
     user2 = User('Aldo Caldo', Roll.NORMAL)
@@ -48,17 +48,14 @@ def show_example_01():
     user2.deactivate()
 
     # verificación de estatus
-    User.check_status(user1)
-    User.check_status(user2)
+    User.checkStatus(user1)
+    User.checkStatus(user2)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

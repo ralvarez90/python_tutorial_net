@@ -28,22 +28,19 @@ from nombreModulo import objeto1
 import sys
 
 
-def mostrar_modulos_python():
+def showPythonModules():
     for path in sys.path:
         print(path)
 
 
-def show_example_1():
-    mostrar_modulos_python()
+def showExample01():
+    showPythonModules()
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')

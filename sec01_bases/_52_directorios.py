@@ -28,7 +28,7 @@ import os
 import time
 
 
-def show_example_1():
+def showExample01():
     # home de usuario
     userPath = Path.home()
 
@@ -44,7 +44,7 @@ def show_example_1():
     [print(f) for f in homeFiles if not f.startswith('.')]
 
 
-def show_example_2():
+def showExample02():
     homePath = Path.home()
     completePath = os.path.join(homePath, 'snap')
     print(f'{completePath}')
@@ -52,16 +52,16 @@ def show_example_2():
     print(directoriosDelPath)
 
 
-def is_directory(path: str) -> bool:
+def isDirectory(path: str) -> bool:
     return os.path.exists(path) or os.path.isdir(path)
 
 
-def show_example_3():
+def showExample03():
     snapDirPath = os.path.join(Path.home(), 'snap')
-    print(f'{snapDirPath} is a directory: {is_directory(snapDirPath)}')
+    print(f'{snapDirPath} is a directory: {isDirectory(snapDirPath)}')
 
 
-def show_example_4():
+def showExample04():
     dirActual = os.getcwd()
     dirTemporal = os.path.join(dirActual, 'temporal')
 
@@ -77,14 +77,11 @@ def show_example_4():
 
 def main():
     # show_example_1()
-    show_example_2()
-    show_example_3()
-    show_example_4()
+    showExample02()
+    showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue. . .')

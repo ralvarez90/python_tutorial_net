@@ -12,20 +12,26 @@ step a utilizar.
 """
 
 
-def show_example_01():
+def showExample01():
     total = 0
     for n in range(1, int(input('>>> ')) + 1):
         total += n
-    print(f'total: {total}')
+    print(f'Total: {total}')
+
+
+def showExample02():
+    total = 0
+    for n in range(1, int(input('>>> '))+1):
+        total += n
+    else:
+        print(f'Total: {total}')
 
 
 def main():
-    show_example_01()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . . ')
