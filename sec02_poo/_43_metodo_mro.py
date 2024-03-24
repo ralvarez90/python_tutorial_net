@@ -30,22 +30,16 @@ class FlyingCar(Flyable, Car):
         return super().start()
 
 
-def show_example_1():
+def showExample01():
     car = FlyingCar()
     car.start()
-
-
-def show_example_2():
-    pass
+    print(f'FlyingCar.__mro__: {FlyingCar.__mro__}')
 
 
 def main():
-    show_example_1()
+    showExample01()
 
 
 if __name__ == '__main__':
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')
