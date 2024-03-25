@@ -20,12 +20,11 @@ módulo
 from ctypes import c_long
 
 
-def ref_counter(address: int):
+def refCounter(address: int) -> int:
     return c_long.from_address(address).value
 
 
-def main():
-
+def showExample01():
     # referencia a entero
     counter1: int = 100
     counter2: int = counter1
@@ -36,25 +35,25 @@ def main():
     numbers = [1, 2, 3]
     id_numbers = id(numbers)
     print(
-        f'El arreglo numbers está referenciado en memoria {ref_counter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
 
     rank = numbers
     print(
-        f'El arreglo numbers está referenciado en memoria {ref_counter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
 
     rank = None
     print(
-        f'El arreglo numbers está referenciado en memoria {ref_counter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
 
     numbers = None
     print(
-        f'El arreglo numbers está referenciado en memoria {ref_counter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
+
+
+def main():
+    showExample01()
 
 
 if __name__ == '__main__':
-
-    # run lesson
     main()
-
-    # end application
     input('\nPress any key to continue . . . ')

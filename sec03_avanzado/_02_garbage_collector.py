@@ -18,19 +18,18 @@ import gc
 import ctypes
 
 
-def ref_count(id_obj: int) -> int:
+def refCounter(id_obj: int) -> int:
     return ctypes.c_long.from_address(id_obj).value
 
 
-def object_exists(id_obj: int) -> bool:
+def objectExists(id_obj: int) -> bool:
     for object in gc.get_objects():
         if id(object) == id_obj:
             return True
     return False
 
 
-def main():
-
+def showExample01():
     # primer clase
     class A:
         def __init__(self) -> None:
@@ -52,42 +51,42 @@ def main():
     b_id = id(a.b)
 
     # mostramos contadores
-    print(f'ref_count(a): {ref_count(a_id)}')
-    print(f'ref_count(b): {ref_count(b_id)}')
+    print(f'ref_count(a): {refCounter(a_id)}')
+    print(f'ref_count(b): {refCounter(b_id)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {object_exists(a_id)}')
-    print(f'object_exists(b): {object_exists(b_id)}')
+    print(f'object_exists(a): {objectExists(a_id)}')
+    print(f'object_exists(b): {objectExists(b_id)}')
 
     # separador
     print('-'*50)
 
     # eliminamos objetos
     a = None
-    print(f'ref_count(a): {ref_count(a_id)}')
-    print(f'ref_count(b): {ref_count(b_id)}')
+    print(f'ref_count(a): {refCounter(a_id)}')
+    print(f'ref_count(b): {refCounter(b_id)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {object_exists(a_id)}')
-    print(f'object_exists(b): {object_exists(b_id)}')
+    print(f'object_exists(a): {objectExists(a_id)}')
+    print(f'object_exists(b): {objectExists(b_id)}')
 
     # ejecturamos recolector
     gc.collect()
     print('-'*50)
 
     # mostramos contadores
-    print(f'ref_count(a): {ref_count(a_id)}')
-    print(f'ref_count(b): {ref_count(b_id)}')
+    print(f'ref_count(a): {refCounter(a_id)}')
+    print(f'ref_count(b): {refCounter(b_id)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {object_exists(a_id)}')
-    print(f'object_exists(b): {object_exists(b_id)}')
+    print(f'object_exists(a): {objectExists(a_id)}')
+    print(f'object_exists(b): {objectExists(b_id)}')
+
+
+def main():
+    showExample01()
 
 
 if __name__ == '__main__':
-
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue . . .')
