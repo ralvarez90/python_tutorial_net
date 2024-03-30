@@ -6,22 +6,22 @@ que son inmutables e iterables.
 """
 
 
-def getLastChar(content: str) -> str:
+def get_last_char(content: str) -> str:
     assert content != '' and content is not None, 'content string can not be empty or None'
     return content[-1]
 
 
-def getHead(content: str) -> str:
+def get_head(content: str) -> str:
     assert content != '' and content is not None, 'content string can not be empty or None'
     return content[0]
 
 
-def getTail(content: str) -> str:
+def get_tail(content: str) -> str:
     assert content != '' and content is not None, 'content string can not be empty or None'
     return content[1:]
 
 
-def showExample01():
+def show_example_01():
     msg1 = 'message1'
     msg2 = r'message2,\t esto es un "raw" string'
     msg3 = '''Esto es un texto multilínea:
@@ -32,7 +32,7 @@ def showExample01():
     print(msg3)
 
 
-def showExample02():
+def show_example_02():
     print('Hello' ' World!')
     print('Hello ' + 'World!')
     print(f'{"Hello"} {"World!"}')
@@ -40,24 +40,23 @@ def showExample02():
     print('{} {}'.format('Hello', 'World!'))
 
 
-def showExample03():
+def show_example_03():
     message = 'hello_world'
     for i in range(len(message)):
         print(f'message[{i}] -> {message[i]}')
 
 
-def showExample04():
+def show_example_04():
     str1 = 'Welcome to the Jungle'
-    print(f'head: {getHead(str1)}')
-    print(f'tail: {getTail(str1)}')
-    print(f'last: {getLastChar(str1)}')
-
+    print(f'head: {get_head(str1)}')
+    print(f'tail: {get_tail(str1)}')
+    print(f'last: {get_last_char(str1)}')
 
 def main():
-    showExample01()
-    showExample02()
-    showExample03()
-    showExample04()
+    show_example_01()
+    show_example_02()
+    show_example_03()
+    show_example_04()
 
 
 if __name__ == '__main__':

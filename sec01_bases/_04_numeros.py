@@ -5,26 +5,26 @@ en python los tipos int, float y complex.
 """
 
 
-def runtimeType(obj: object) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def showExample01():
+def show_example_01():
     # int
     number = 1
-    print(f'number {number} is an instance of {runtimeType(number)}')
+    print(f'number {number} is an instance of {runtime_type(number)}')
 
     # float
     number = 1.0
-    print(f'number {number} is an instance of {runtimeType(number)}')
+    print(f'number {number} is an instance of {runtime_type(number)}')
 
     # complex
     number = 1 + 0j
-    print(f'number {number} is an instance of {runtimeType(number)}')
+    print(f'number {number} is an instance of {runtime_type(number)}')
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

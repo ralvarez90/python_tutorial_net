@@ -23,22 +23,22 @@ class Gender(Enum):
     OTHER = auto()
 
 
-def showWelcomeMessage(username: str, gender: Gender = Gender.OTHER):
+def show_welcome_message(username: str, gender: Gender = Gender.OTHER):
     prefix = 'Mr.' if gender is Gender.MALE else 'Ms.' if gender is Gender.FEMALE else ''
     print(WELCOME_MESSAGE_FORMAT.format(prefix, username))
 
 
-def showExample01():
+def show_example_01():
     # se ingresa nombre
     name = input('name1: ')
-    showWelcomeMessage(name)
+    show_welcome_message(name)
 
     # se establece género masculino
-    showWelcomeMessage('Rodrigo', Gender.MALE)
+    show_welcome_message('Rodrigo', Gender.MALE)
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

@@ -5,21 +5,21 @@ Se muestra ejemplo de sintaxis de Python.
 import keyword
 
 
-def listKeywords():
+def list_keywords():
     for kw in keyword.kwlist:
         print(kw)
 
 
-def showExample01():
+def shoe_example_01():
     # mensaje de bienvenida
     print('Hello World in Python3')
 
     # se muestran palabras reservadas
-    listKeywords()
+    list_keywords()
 
 
 def main():
-    showExample01()
+    shoe_example_01()
 
 
 if __name__ == '__main__':
