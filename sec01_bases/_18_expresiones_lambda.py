@@ -11,7 +11,7 @@ pueden emplear las expresiones lambdas.
 """
 
 
-def showExample01():
+def show_example_01():
     # declare and invoque in same line
     print(
         (lambda fname, lname: f'{fname}, {lname}')('Rodrigo', 'Álvarez')
@@ -28,7 +28,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

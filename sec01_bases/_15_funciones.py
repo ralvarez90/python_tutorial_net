@@ -13,17 +13,17 @@ def greeting():
     print('Nos salvaste, estamos agradecidos')
 
 
-def sayHi():
+def say_hi():
     print('Hi!')
 
 
-def showExample01():
-    sayHi()
+def show_example_01():
+    say_hi()
     greeting()
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

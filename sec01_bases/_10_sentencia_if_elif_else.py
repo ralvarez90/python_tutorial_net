@@ -9,13 +9,13 @@ una mezcla entre if-else y por último el else.
 """
 
 
-def showExample01():
+def show_example_01():
     age = int(input('Enter your age: '))
     if age >= 18:
         print('You are elegible to vote.')
 
 
-def showExample02():
+def show_example_02():
     age = int(input('Enter your age: '))
     if age >= 18:
         print('You are elegible to vote.')
@@ -23,7 +23,7 @@ def showExample02():
         print('You are not elegible to vote.')
 
 
-def showExample03():
+def show_example_03():
     age = int(input('Enter your age: '))
     if age < 5:
         ticketPrice = 5
@@ -35,9 +35,9 @@ def showExample03():
 
 
 def main():
-    showExample01()
-    showExample02()
-    showExample03()
+    show_example_01()
+    show_example_02()
+    show_example_03()
 
 
 if __name__ == '__main__':
