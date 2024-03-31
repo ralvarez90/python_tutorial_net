@@ -9,26 +9,26 @@ parámetro se le nombre args. Esto también se puede utilizar para desempacar tu
 number = int | float
 
 
-def runtimeType(obj: object) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(object))[8:-2]
 
 
-def getSum(x: number, y: number, *args: tuple[number]) -> number:
+def obtener_suma(x: number, y: number, *args: tuple[number]) -> number:
     return x+y+sum(args)
 
 
-def showExample01():
+def show_example_01():
     x, y, *_ = 1, 2, 3, 4, 5, 6, 7, 8, 9
     print(f'x: {x}, y: {y}, otros: {_}')
 
 
-def showExample02():
-    print(f'1 + 2 + ... + 10: {getSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)}')
+def show_example_02():
+    print(f'1 + 2 + ... + 10: {obtener_suma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)}')
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

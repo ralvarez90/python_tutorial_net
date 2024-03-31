@@ -10,28 +10,28 @@ argumento.
 """
 
 
-def shoExample01():
+def show_example_01():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for c in cities:
         print(c)
 
 
-def showExample02():
+def show_example_02():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for item in enumerate(cities):
         print(item)
 
 
-def showExample03():
+def show_example_03():
     cities = ['New York', 'Beiging', 'Cairo', 'Mumbai', 'México ']
     for item in enumerate(cities, 1):
         print(item)
 
 
 def main():
-    shoExample01()
-    showExample02()
-    showExample03()
+    show_example_01()
+    show_example_02()
+    show_example_03()
 
 
 if __name__ == '__main__':

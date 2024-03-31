@@ -40,20 +40,20 @@ donde op está en |, & entre otros.
 """
 
 
-def showExample01():
+def show_example_01():
     a = {1, 2, 3}
     b = {2, 3, 4}
     print(f'Si a={a}')
     print(f'Si b={b}')
-    print(f'a | b     -> {a|b}')
-    print(f'a & b     -> {a&b}')
+    print(f'a | b     -> {a | b}')
+    print(f'a & b     -> {a & b}')
     print(f'a - b     -> {a-b}')
-    print(f'a ^ b     -> {a^b}')
+    print(f'a ^ b     -> {a ^ b}')
     print(f'a | b & a -> {a | b & a}')
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

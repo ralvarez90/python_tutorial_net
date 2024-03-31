@@ -5,43 +5,43 @@ tenemos en python para concatener strings.
 """
 
 
-def showExample01():
+def show_example_01():
     s = 'Esto' ' es un string concatenado1'
     print(s)
 
 
-def showExample02():
+def show_example_02():
     s = 'Esto' + ' es un string concatenado2'
     print(s)
 
 
-def showExample03():
+def show_example_03():
     s = ' '.join(['Esto', 'es un string concatenado3'])
     print(s)
 
 
-def showExample04():
+def show_example_04():
     s = '%s %s' % ('Esto', 'es un string concatenado4')
     print(s)
 
 
-def showExample05():
+def show_example_05():
     s = f'{"Esto"} {"es un string concatenado5"}'
     print(s)
 
 
-def showExample06():
+def show_example_06():
     s = '{} {}'.format('Esto', 'es un string concatenado6')
     print(s)
 
 
 def main():
-    showExample01()
-    showExample02()
-    showExample03()
-    showExample04()
-    showExample05()
-    showExample06()
+    show_example_01()
+    show_example_02()
+    show_example_03()
+    show_example_04()
+    show_example_05()
+    show_example_06()
 
 
 if __name__ == '__main__':

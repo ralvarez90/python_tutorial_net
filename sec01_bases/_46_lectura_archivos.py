@@ -12,29 +12,29 @@ import os
 import random
 
 
-def getFileList(path: str = './') -> list[str]:
+def get_file_list(path: str = './') -> list[str]:
     """Obtiene lista de archivos del directorio actual por default. Puede
     espeficicar cualquier path del sistema.
     """
-    actualPath = (os.getcwd(), path)[path != '']
-    if os.path.isdir(actualPath):
-        return os.listdir(actualPath)
+    actual_path = (os.getcwd(), path)[path != '']
+    if os.path.isdir(actual_path):
+        return os.listdir(actual_path)
     return []
 
 
-def showExample01():
-    archivos = sorted(getFileList())
-    unArchivo = random.choice(archivos)
-    if unArchivo != '':
-        with open(file=unArchivo, mode='r', encoding='utf-8') as f:
+def show_example_01():
+    archivos = sorted(get_file_list())
+    un_archivo = random.choice(archivos)
+    if un_archivo != '':
+        with open(file=un_archivo, mode='r', encoding='utf-8') as f:
             for line in f:
                 print(line.strip())
     else:
-        print('Sin archivos en directorio: %s' % (unArchivo))
+        print('Sin archivos en directorio: %s' % (un_archivo))
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

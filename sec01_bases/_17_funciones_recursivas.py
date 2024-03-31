@@ -15,12 +15,12 @@ def count_down_01(n: int):
         count_down_01(n - 1)
 
 
-def count_down_03(n: int):
+def count_down_02(n: int):
     assert n >= 0 and n is not None, 'n can not be < 0 or None'
     print(n)
     next = n - 1
     if next > 0:
-        count_down_03(next)
+        count_down_02(next)
 
 
 def get_sum_01(n: int) -> int:
@@ -42,7 +42,7 @@ def show_example_01():
     print()
 
     # ejemplo 2
-    count_down_03(10)
+    count_down_02(10)
     print()
 
     # ejemplo 3

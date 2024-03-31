@@ -8,36 +8,36 @@ from time import perf_counter
 import os
 
 
-def walkObtenerRutasImagenes():
+def walk_obtener_rutas_imagenes():
     # home del usuario
     homePath = Path.home()
 
     # lista de imagenes
-    pngImages = []
+    png_imagenes = []
 
     # recorremos cada uno de los directorios
     for dirpath, dirnames, filenames in os.walk(homePath):
         for filename in filenames:
             if filename.endswith('.png') or filename.endswith('.jpg'):
-                pngImages.append(os.path.join(dirpath, filename))
+                png_imagenes.append(os.path.join(dirpath, filename))
 
     # listamos archivos png
-    print(f'total de imágenes: {len(pngImages)}')
+    print(f'total de imágenes: {len(png_imagenes)}')
 
 
-def showExample01():
+def show_example_01():
     # conteo de inicio
     inicio = perf_counter()
 
     # ejecuta algorigmo
-    walkObtenerRutasImagenes()
+    walk_obtener_rutas_imagenes()
 
     # reporte
     print(f'Tiempo de ejecución: {perf_counter()-inicio:.2f}')
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

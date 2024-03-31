@@ -9,7 +9,7 @@ De forma general la sintaxis es:
 from copy import deepcopy
 
 
-def showExample01():
+def show_example_01():
     stoks = {
         'APLN': 121,
         'AMZN': 3389,
@@ -29,7 +29,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

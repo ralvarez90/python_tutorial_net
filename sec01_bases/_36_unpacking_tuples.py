@@ -9,31 +9,31 @@ el unpacking con listas
 number = int | float
 
 
-def getHead(tpl: tuple):
+def obtener_cabecera(tpl: tuple):
     head, *_ = tpl
     return head
 
 
-def getTail(tpl: tuple) -> tuple:
+def obtener_cola(tpl: tuple) -> tuple:
     _, *tail = tpl
     return tuple(tail)
 
 
-def getSum(*numbers) -> number:
+def obtener_suma(*numbers) -> number:
     return sum(numbers)
 
 
-def showExample01():
+def show_example_01():
     someTpl = (1, 2, 3)
-    head = getHead(someTpl)
-    tail = getTail(someTpl)
+    head = obtener_cabecera(someTpl)
+    tail = obtener_cola(someTpl)
     print(f'head: {head}')
     print(f'tail: {tail}')
 
 
-def showExample02():
+def show_example_02():
     primeros_numeros = [i for i in range(1, 5)]
-    print(f'1+2+...+100 -> {getSum(*primeros_numeros)}')
+    print(f'1+2+...+100 -> {obtener_suma(*primeros_numeros)}')
     oddNumbers = (1, 3, 5)
     evenNumbers = (2, 4, 6)
     numbers = (*oddNumbers, *evenNumbers)
@@ -41,8 +41,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

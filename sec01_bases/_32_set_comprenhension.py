@@ -5,7 +5,7 @@ al igual que las listas por comprensión. Pueden incluir condiciones.
 """
 
 
-def showExample01():
+def show_example_01():
     tags = {'Django', 'Flask', 'Pandas', 'Flet'}
     lowercaseTags1 = {tag.lower() for tag in tags}
     lowercaseTags2 = set(map(lambda tag: tag.lower(), tags))
@@ -16,7 +16,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

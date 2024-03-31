@@ -8,7 +8,7 @@ verificar la existencia con os.exists.
 import os
 
 
-def deleteFile(filename: str) -> bool:
+def delete_file(filename: str) -> bool:
     try:
         os.remove(filename)
     except Exception as error:
@@ -18,12 +18,12 @@ def deleteFile(filename: str) -> bool:
     return False
 
 
-def showExample01():
-    print(deleteFile('asdasd'))
+def show_example_01():
+    print(delete_file('asdasd'))
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

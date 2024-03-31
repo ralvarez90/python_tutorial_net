@@ -38,11 +38,11 @@ objetos mediante un ciclo for.
 import types
 
 
-def runtimeType(obj: object) -> str:
+def rintime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def showExample01():
+def show_example_01():
     skills = {
         'Python Programming',
         'Databases',
@@ -50,29 +50,29 @@ def showExample01():
     }
 
     print(f'skills: {skills}')
-    print(runtimeType(skills))
+    print(rintime_type(skills))
 
 
-def showExample02():
+def show_example_02():
     emptySet = set()
     emptyDict = {}
     print(f'emptySet : {emptySet}')
     print(f'emptyDict: {emptyDict}')
 
 
-def showExample03():
+def show_example_03():
     caracteres = set('letter')
     print(f'caracteres: {caracteres}')
 
 
-def showExample04():
+def show_example_04():
     rating = 1
     ratings = {1, 2, 3, 4, 5}
     print(f'1     in {ratings} ? {rating in ratings}')
     print(f'1 not in {ratings} ? {rating not in ratings}')
 
 
-def showExample05():
+def show_example_05():
     skills = {'Python', 'Java', 'Perl'}
     skills.add('Go')
     skills.add('Rust')
@@ -89,14 +89,14 @@ def showExample05():
     skills.discard('Cobol')
 
 
-def showExample06():
+def show_example_06():
     skills = {'Problem Solving', 'Algorithms', 'Python Programming'}
     while len(skills) != 0:
         removed = skills.pop()
         print(f'Eliminado: "{removed}", restantes -> {skills}')
 
 
-def showExample07():
+def show_example_07():
     languages = {
         'python',
         'haskell',
@@ -109,15 +109,15 @@ def showExample07():
     print(f'languages: {languages}')
 
 
-def showExample08():
+def show_example_08():
     skills = {'Python programming', 'Problem solving', 'Design patterns'}
     skills.add('Django')
     skills = frozenset(skills)
-    print(f'type of {skills} -> {runtimeType(skills)} ')
+    print(f'type of {skills} -> {rintime_type(skills)} ')
     # skills.add('REST Framework') lana error
 
 
-def showExample09():
+def show_example_09():
     languages = {
         'python',
         'haskell',
@@ -134,15 +134,15 @@ def showExample09():
 
 
 def main():
-    showExample01()
-    showExample02()
-    showExample03()
-    showExample04()
-    showExample05()
-    showExample06()
-    showExample07()
-    showExample08()
-    showExample09()
+    show_example_01()
+    show_example_02()
+    show_example_03()
+    show_example_04()
+    show_example_05()
+    show_example_06()
+    show_example_07()
+    show_example_08()
+    show_example_09()
 
 
 if __name__ == '__main__':
