@@ -22,24 +22,24 @@ class Person:
         }
 
     # función dentro de una clase
-    def getTotalPersons():
+    def get_total_count_persons():
         return Person._counter
 
 
-def showExample01():
+def show_example_01():
     # instancia
     p1 = Person('John Wick', 33)
     print(json.dumps(p1.__dict__))
 
     # total de personas
-    print(Person.getTotalPersons())
+    print(Person.get_total_count_persons())
 
     pprint(p1.__dict__)
     pprint(Person.__dict__)
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

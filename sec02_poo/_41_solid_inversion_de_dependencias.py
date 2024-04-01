@@ -44,21 +44,21 @@ class App:
         self.converter.convert('EUR', 'USD', 100)
 
 
-def showExample01():
+def show_example_01():
     converter: CurrencyConverter = FXConverter()
     app = App(converter)
     app.start()
 
 
-def showExample02():
+def show_example_02():
     converter: CurrencyConverter = AlphaConverter()
     app = App(converter)
     app.start()
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

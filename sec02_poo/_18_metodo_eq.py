@@ -14,18 +14,18 @@ si dos objetos tiena o apuntan a la misma referencia.
 
 class Person:
 
-    def __init__(self, firstName: str, lastName: str, age: int) -> None:
-        self.firstName = firstName
-        self.lastName = lastName
+    def __init__(self, firstname: str, lastname: str, age: int) -> None:
+        self.firstname = firstname
+        self.lastname = lastname
         self.age = age
 
     def __eq__(self, __other: object) -> bool:
         if isinstance(__other, Person):
-            return self.firstName == __other.firstName and self.lastName == __other.lastName and self.age == __other.age
+            return self.firstname == __other.firstname and self.lastname == __other.lastname and self.age == __other.age
         return False
 
 
-def showExample01():
+def show_example_01():
     p1 = Person('John', 'Doe', 45)
     p2 = Person('John', 'Doe', 45)
     print(f'p1 is p2: {p1 is p2}')
@@ -33,7 +33,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

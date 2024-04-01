@@ -30,7 +30,7 @@ class Person:
         print('__del__ was called...')
 
 
-def showExample01():
+def show_example_01():
     p1 = Person('John Wick', 45)
     p1 = None
     p2 = Person('Juan Güic', 45)
@@ -38,7 +38,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

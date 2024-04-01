@@ -28,19 +28,19 @@ class Person:
         self.lastName = lastName
         self.age = age
 
-    def getfullname(self) -> str:
+    def get_fullname(self) -> str:
         return f'{self.firstName} {self.lastName}'
 
     def introduce(self):
-        print(f"Hi. I'am {self.getfullname()}. I'm {self.age} years old.")
+        print(f"Hi. I'am {self.get_fullname()}. I'm {self.age} years old.")
 
     @classmethod
-    def createAnonymous(cls):
+    def create_anonymous(cls):
         # print(f'type of cls: {type(cls)}') retorna type
         return Person('John', 'Doe', 44)
 
 
-def showExample01():
+def show_example_01():
     """Invocando métodos de instancia
     """
     p = Person('Rodrigo', 'Álvarez', 33)
@@ -48,16 +48,16 @@ def showExample01():
     Person.introduce(p)
 
 
-def showExample02():
+def show_example_02():
     """Invocando métodos de clase.
     """
-    p2 = Person.createAnonymous()
+    p2 = Person.create_anonymous()
     p2.introduce()
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

@@ -48,22 +48,22 @@ class Coordenada2D(Shape):
         self.y = y
 
 
-def showExample01():
+def show_example_01():
     point = Point3D(10, 20, 30)
     point.x = 1
     print(point.__slots__)
     print(point)
 
 
-def showExample02():
+def show_example_02():
     point = Coordenada2D(10, 20)
     print(point.__dict__)
     print(point.__slots__)
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

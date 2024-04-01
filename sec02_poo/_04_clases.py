@@ -24,7 +24,7 @@ class Person:
     pass
 
 
-def showExample01():
+def show_example_01():
     # instancia y id
     p1 = Person()
     print(f'id(p1): {hex(id(p1))}')
@@ -35,7 +35,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

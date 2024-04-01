@@ -67,7 +67,7 @@ class Day(Enum):
     SUN = 'Sunday'
 
 
-def showExample01():
+def show_example_01():
     response = '''{
         "status":"fulfilled"   
     }'''
@@ -83,30 +83,30 @@ def showExample01():
         print(error)
 
 
-def showExample02():
+def show_example_02():
     print(f'Color enumeration:')
     print(Color.RED is Color.CRIMSON)
     print(Color.SALMON is Color.SALMON)
 
 
-def showExample03():
+def show_example_03():
     print('Main Color(1) is: ', Color(2))
     for c in Color:
         print(f'{c}', end=', ')
     print()
 
 
-def showExample04():
+def show_example_04():
     print(f'Color.__members__ : {Color.__members__}')
 
 
-def showExample05():
+def show_example_05():
     code = 'OK'
     if EstatusRespuesta[code] is EstatusRespuesta.SUCCESS:
         print('The request completed successfully')
 
 
-def showExample06():
+def show_example_06():
     for day in Day:
         print(day, end=', ')
     print()
@@ -114,12 +114,12 @@ def showExample06():
 
 def main():
     # run examples
-    showExample01()
-    showExample02()
-    showExample03()
-    showExample04()
-    showExample05()
-    showExample06()
+    show_example_01()
+    show_example_02()
+    show_example_03()
+    show_example_04()
+    show_example_05()
+    show_example_06()
 
 
 if __name__ == '__main__':

@@ -50,7 +50,7 @@ class Person:
         return f'Person{self.__dict__} with hash: {hash(self)}'
 
 
-def showExample01():
+def show_example_01():
     p1 = Person('John Wick', 45)
     p2 = Person('John Wick', 45)
     print(p1)
@@ -65,7 +65,7 @@ def showExample01():
         print(p)
 
 
-def showExample02():
+def show_example_02():
     john_doe: Person = Person('John Doe', 33)
     print(john_doe.name)
     print(john_doe.age)
@@ -73,8 +73,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

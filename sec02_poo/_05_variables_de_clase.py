@@ -22,7 +22,7 @@ class HtmlDocument:
     version = '5'
 
 
-def showExample01():
+def show_example_01():
     print(f'{HtmlDocument.__name__}')
 
     # test de instancia
@@ -37,7 +37,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

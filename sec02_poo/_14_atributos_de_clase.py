@@ -26,17 +26,17 @@ class Product:
         self.price = price
         self.discount = Product.default_discount
 
-    def setDiscount(self, discount: float):
+    def set_discount(self, discount: float):
         self.discount = discount
 
-    def netprice(self) -> float:
+    def get_netprice(self) -> float:
         return self.price * (1-self.discount)
 
 
 class Circle:
     # atributos de clase
     PI = 3.14159
-    circlesList = []
+    circles = []
 
     def __init__(self, radius: float = 0) -> None:
         assert radius >= 0, 'radius value cannot be a negative number'
@@ -44,7 +44,7 @@ class Circle:
         self.radius = radius
 
         # add the instance to the circle lsit
-        self.circlesList.append(self)
+        self.circles.append(self)
 
     def area(self) -> float:
         return self.PI * self.radius ** 2
@@ -73,7 +73,7 @@ def showExample01():
         Circle(radius=10*r)
 
     # show all circles
-    for c in Circle.circlesList:
+    for c in Circle.circles:
         print(c)
 
 
@@ -89,10 +89,10 @@ def showExample03():
 
 def showExample04():
     p1 = Product(2000)
-    print(f'p1.netprice() -> ${p1.netprice():,.2f}')
+    print(f'p1.netprice() -> ${p1.get_netprice():,.2f}')
     p2 = Product(2000)
-    p2.setDiscount(0.05)
-    print(f'p2.netprice() -> ${p2.netprice():,.2f}')
+    p2.set_discount(0.05)
+    print(f'p2.netprice() -> ${p2.get_netprice():,.2f}')
 
 
 def main():

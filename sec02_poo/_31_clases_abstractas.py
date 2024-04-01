@@ -31,7 +31,7 @@ class Employee(ABC):
         return f'{self.firstname} {self.lastname}'
 
     @abstractmethod
-    def getSalary(self):
+    def getsalary(self):
         pass
 
 
@@ -41,7 +41,7 @@ class FulltimeEmployee(Employee):
         super().__init__(firstname, lastname)
         self.salary = salary
 
-    def getSalary(self):
+    def getsalary(self):
         return self.salary
 
 
@@ -52,7 +52,7 @@ class HourlyEmployee(Employee):
         self.worked_hours = worked_hours
         self.rate = rate
 
-    def getSalary(self):
+    def getsalary(self):
         return self.worked_hours * self.rate
 
 
@@ -67,10 +67,10 @@ class Payroll:
 
     def print(self):
         for e in self.employees:
-            print(f'{e.fullname} \t ${e.getSalary():,.2f}')
+            print(f'{e.fullname} \t ${e.getsalary():,.2f}')
 
 
-def showExample01():
+def show_example_01():
     # nomina y empleados
     payroll = Payroll()
     payroll \
@@ -85,7 +85,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

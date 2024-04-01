@@ -44,14 +44,14 @@ class Employee(Person):
         return f'Employee{self.__dict__}'
 
 
-def showExample01():
+def show_example_01():
     employee_1 = Employee(name='John Wick', job_title='Killer')
     person_1 = Person('Juan Güic')
     print(f'employee_1: {employee_1}')
     print(f'person_1  : {person_1}')
 
 
-def showExample02():
+def show_example_02():
     e1 = Employee(name='Peter Parker', job_title='Super hero')
     p1 = Person(name='Van Dame')
     print(f'e1 is a Person  : {isinstance(e1, Person)}  ')
@@ -60,15 +60,15 @@ def showExample02():
     print(f'p1 is a Employee: {isinstance(p1, Employee)}')
 
 
-def showExample03():
+def show_example_03():
     print(f'Employee issubclass of Person : {issubclass(Employee, Person)}')
     print(f'Person issubclass of Employee : {issubclass(Person, Employee)}')
 
 
 def main():
-    showExample01()
-    showExample02()
-    showExample03()
+    show_example_01()
+    show_example_02()
+    show_example_03()
 
 
 if __name__ == '__main__':

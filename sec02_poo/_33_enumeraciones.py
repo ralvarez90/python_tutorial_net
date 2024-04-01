@@ -41,22 +41,22 @@ class Color(Enum):
     BLUE = 3
 
 
-def runtimeType(obj: object) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(obj))
 
 
-def showExample01():
-    print(runtimeType(Color))
-    print(runtimeType(Color.RED))
+def show_example_01():
+    print(runtime_type(Color))
+    print(runtime_type(Color.RED))
     print(isinstance(Color.RED, Color))
 
 
-def showExample02():
+def show_example_02():
     print(f'Color.RED.name  -> {Color.RED.name}')
     print(f'Color.RED.value -> {Color.RED.value}')
 
 
-def showExample03():
+def show_example_03():
     if Color.RED in Color:
         print(
             f'El color {Color.RED} se encuentra dentro de la enumeración {Color}')
@@ -67,7 +67,7 @@ def showExample03():
         print(f'{Color.RED} is not {Color.BLUE}')
 
 
-def showExample04():
+def show_example_04():
     rgb = {
         Color.RED: '#ff0000',
         Color.BLUE: '#00ff00',
@@ -77,20 +77,20 @@ def showExample04():
     print(f'rgb dict: {rgb}')
 
 
-def showExample05():
+def show_example_05():
     print(Color['RED'])
     print(Color['BLUE'])
     print(Color['GREEN'])
 
 
-def showExample06():
+def show_example_06():
     print(Color(1))
     print(Color(2))
     print(Color(3))
     print(Color(1) is Color['RED'])  # true
 
 
-def showExample07():
+def show_example_07():
     for color in Color:
         print(color, end=', ')
     print()
@@ -100,13 +100,13 @@ def showExample07():
 
 def main():
     # run examples
-    showExample01()
-    showExample02()
-    showExample03()
-    showExample04()
-    showExample05()
-    showExample06()
-    showExample07()
+    show_example_01()
+    show_example_02()
+    show_example_03()
+    show_example_04()
+    show_example_05()
+    show_example_06()
+    show_example_07()
 
 
 if __name__ == '__main__':

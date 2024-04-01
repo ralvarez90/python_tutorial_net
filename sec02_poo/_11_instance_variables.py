@@ -20,7 +20,7 @@ class HtmlDocument:
     version = 5
 
 
-def showExample01():
+def show_example_01():
     # mostramos variables de clase y dict
     pprint(HtmlDocument.__dict__)
 
@@ -29,12 +29,12 @@ def showExample01():
     print(home.__dict__)
 
     # agregamos variable de instancia
-    home.mediaType = 'text/html'
+    home.media_type = 'text/html'
     print(home.__dict__)
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

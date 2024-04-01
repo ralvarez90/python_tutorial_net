@@ -45,14 +45,14 @@ class PersonXML(PersonStorage):
         print(f'Saving the {person} to an xml file')
 
 
-def showExample01():
+def show_example_01():
     person: Person = Person('John Wick')
     storage = PersonXML()
     storage.save(person)
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

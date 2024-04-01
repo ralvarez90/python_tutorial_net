@@ -24,18 +24,18 @@ class Person:
         self.name = name
         self.age = age
 
-    def showNamespaceDict(self):
+    def show_namespace_dict(self):
         print(self.__dict__)
 
 
-def showExample01():
+def show_example_01():
     person = Person('John Wick', 25)
     print(f'I am {person.name}. I am {person.age} years old')
-    person.showNamespaceDict()
+    person.show_namespace_dict()
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 # run application

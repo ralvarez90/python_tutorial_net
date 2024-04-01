@@ -19,14 +19,14 @@ class HtmlDocument:
         print('Rendering the Html document...')
 
 
-def showExample01():
+def show_example_01():
     pprint(HtmlDocument.__dict__)
     index = HtmlDocument()
     HtmlDocument.render()
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

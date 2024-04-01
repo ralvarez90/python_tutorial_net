@@ -27,14 +27,14 @@ class FlyingCar(Flyable, Car):
     pass
 
 
-def showExample01():
+def show_example_01():
     fc = FlyingCar()
     fc.go()
     fc.fly()
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

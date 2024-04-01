@@ -36,21 +36,21 @@ class Person:
         self.db.save(self)
 
 
-def showExample01():
+def show_example_01():
     p = Person('John Wick', 45)
     print(p)
     db = PersonDB()
     db.save(p)
 
 
-def showExample02():
+def show_example_02():
     p = Person('John Wick', 45)
     p.save()
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

@@ -32,7 +32,7 @@ class Person:
         return 'Person{name=%s}' % (self.name)
 
 
-def showExample01():
+def show_example_01():
     p1 = Person(name='John Wick')
     p1.name = 'Juan Güick'
     print(p1)
@@ -40,7 +40,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

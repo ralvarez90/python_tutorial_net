@@ -38,7 +38,7 @@ class Point2DV2:
         return f'({self.x}, {self.y})'
 
 
-def showExample01():
+def show_example_01():
     coordenadas = []
     point = Point2DV1(0, 0)
     print(point)
@@ -55,7 +55,7 @@ def showExample01():
     print(f'Tiempo estimado: {delta_t:.2f} seg')
 
 
-def showExample02():
+def show_example_02():
     coordenadas = []
     point = Point2DV2(0, 0)
 
@@ -71,8 +71,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

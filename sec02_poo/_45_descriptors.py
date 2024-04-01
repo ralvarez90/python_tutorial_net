@@ -60,14 +60,14 @@ class MyClase:
     descriptor = Descriptor("initial descriptor")
 
 
-def showExample01():
+def show_example_01():
     obj = MyClase()
     print(obj.descriptor)
     obj.descriptor = 'new descriptor'
     print(obj.descriptor)
 
 
-def showExample02():
+def show_example_02():
     try:
         p = Person()
         p.firstname = ''
@@ -76,8 +76,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

@@ -20,13 +20,13 @@ class State(Enum):
         return f'{self.name}({self.value})'
 
 
-def showExample01():
+def show_example_01():
     for state in State:
         print(state.name, state.value, state)
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

@@ -35,7 +35,7 @@ class Payroll:
         return f'Payroll{self.__dict__}'
 
 
-def showExample01():
+def show_example_01():
     p1 = Person(name='Persona1', age=10)
     p2 = Person(name='Persona2', age=75)
     p3 = Person(name='Persona3', age=35)
@@ -43,7 +43,7 @@ def showExample01():
         print(p, bool(p))
 
 
-def showExample02():
+def show_example_02():
     p1 = Payroll(123)
     p2 = Payroll(0)
     for p in (p1, p2):
@@ -51,8 +51,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

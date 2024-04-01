@@ -24,27 +24,27 @@ class TemperatureConverter:
     CELSIUS = 'C'
 
     @staticmethod
-    def celsiusToFahrenheit(cAmount: float) -> float:
+    def celsius_to_fahrenheit(cAmount: float) -> float:
         return 9*cAmount/5 + 32
 
     @staticmethod
-    def fahrenheitToCelsius(fAmount: float) -> float:
+    def fahrenheit_to_celsius(fAmount: float) -> float:
         return 5*(fAmount-32)/9
 
     @staticmethod
-    def celsiusToKelvin(cAmount: float) -> float:
+    def celsius_to_kelvin(cAmount: float) -> float:
         return cAmount + 273.15
 
     @staticmethod
-    def kelvinToCelsius(kAmount: float) -> float:
+    def kelvin_to_celsius(kAmount: float) -> float:
         return kAmount - 273.15
 
     @staticmethod
-    def fahrenheitToKelvin(fAmount: float) -> float:
+    def fahrenheit_to_kelvin(fAmount: float) -> float:
         return 5*(fAmount+459.67)/9
 
     @staticmethod
-    def kelvinToFahrenheit(kAmount: float) -> float:
+    def kelvin_to_fahrenheit(kAmount: float) -> float:
         return 9*kAmount/5 - 459.67
 
     @staticmethod
@@ -61,13 +61,13 @@ class TemperatureConverter:
         return f'{value} {symbol}'
 
 
-def showExmaple01():
-    f = TemperatureConverter.celsiusToFahrenheit(35)
+def show_example_01():
+    f = TemperatureConverter.celsius_to_fahrenheit(35)
     print(TemperatureConverter.format(f, TemperatureConverter.FAHRENHEIT))
 
 
 def main():
-    showExmaple01()
+    show_example_01()
 
 
 if __name__ == '__main__':

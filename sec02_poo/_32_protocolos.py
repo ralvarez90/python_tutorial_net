@@ -42,18 +42,18 @@ class Product:
 
 class Stock:
 
-    def __init__(self, product_name: str, quantity: int, price: float) -> None:
-        self.product_name = product_name
+    def __init__(self, productname: str, quantity: int, price: float) -> None:
+        self.productname = productname
         self.quantity = quantity
         self.price = price
 
 
-def calculateTotal(items: list[Item]) -> float:
+def gettotal(items: list[Item]) -> float:
     return sum([item.quantity*item.price for item in items])
 
 
-def showExample01():
-    total = calculateTotal([
+def show_example_01():
+    total = gettotal([
         Product('Product1', 10, 100),
         Product('Product2', 20, 100),
         Product('Product3', 30, 100),
@@ -64,8 +64,8 @@ def showExample01():
     print(f'Total: ${total:,.2f}')
 
 
-def showExample02():
-    total = calculateTotal([
+def show_example_02():
+    total = gettotal([
         Stock('Tablet', 5, 950),
         Stock('Laptop', 10, 850),
     ])
@@ -74,8 +74,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

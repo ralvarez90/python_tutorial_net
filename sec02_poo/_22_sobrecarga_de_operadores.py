@@ -78,7 +78,7 @@ class Cart:
         return '\n'.join([str(item) for item in self.items])
 
 
-def showExample01():
+def show_example_01():
     i = Point2D(1, 0)
     j = Point2D(0, 1)
     unit_point = i+j
@@ -87,7 +87,7 @@ def showExample01():
     print(f'i + j -> {unit_point} with lenght: {unit_point.length:.2f}')
 
 
-def showExample02():
+def show_example_02():
     cart = Cart()
     cart += Item(name='Apple', qty=5, price=2)
     cart += Item(name='Banana', qty=20, price=1)
@@ -98,8 +98,8 @@ def showExample02():
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

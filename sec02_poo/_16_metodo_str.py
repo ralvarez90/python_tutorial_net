@@ -8,22 +8,22 @@ métod dentro de la clase correspondiente.
 
 class Person:
 
-    def __init__(self, firstName: str, lastName: str, age: int) -> None:
-        self.firstName = firstName
-        self.lastName = lastName
+    def __init__(self, firstname: str, lastname: str, age: int) -> None:
+        self.firstname = firstname
+        self.lastname = lastname
         self.age = age
 
     def __str__(self) -> str:
         return f'Person{self.__dict__}'
 
 
-def showExample01():
+def show_example_01():
     person = Person('John', 'Wick', 45)
     print(person)
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

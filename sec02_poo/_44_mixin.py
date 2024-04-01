@@ -29,10 +29,10 @@ class Person:
 
 class DictMixin:
 
-    def toDict(self):
-        return self._traverseDict(self.__dict__)
+    def todict(self):
+        return self._traverse_dict(self.__dict__)
 
-    def _traverseDict(self, attributes: dict):
+    def _traverse_dict(self, attributes: dict):
         result = {}
         for k, v in attributes.items():
             result[k] = self._traverse(k, v)
@@ -40,13 +40,13 @@ class DictMixin:
 
     def _traverse(self, key, value):
         if isinstance(value, DictMixin):
-            return value.toDict()
+            return value.todict()
         elif isinstance(value, dict):
-            return self._traverseDict(value)
+            return self._traverse_dict(value)
         elif isinstance(value, list):
             return [self._traverse(key, v) for v in value]
         elif hasattr(value, '__dict__'):
-            return self._traverseDict(value.__dict__)
+            return self._traverse_dict(value.__dict__)
         else:
             return value
 
@@ -64,17 +64,17 @@ class Employee(DictMixin, JSONMixin, Person):
         self.dependents = dependents
 
 
-def showExample01():
+def show_example_01():
     from pprint import pprint
     e = Employee(
         name='John Wick',
         skills=['Karate', 'Guns', 'Kick Ass'],
         dependents={'wife': 'Mary Jane', 'children': ['Dog', 'Cat']}
     )
-    print(e.toDict())
+    print(e.todict())
     print(e.toJson())
 
 
 if __name__ == '__main__':
-    showExample01()
+    show_example_01()
     input('\nPress any key to continue . . .')

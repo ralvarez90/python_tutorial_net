@@ -26,7 +26,7 @@ class Person:
         print(f'Hi, it is {self.name}')
 
     @classmethod
-    def obtenerAnonimo(cls):
+    def obtener_anonimo(cls):
         return Person(name='Anonymous', age=22)
 
     def __str__(self) -> str:
@@ -36,32 +36,32 @@ class Person:
 class TemperatureConverter:
 
     @staticmethod
-    def celsiusToFahrenheit(c: float) -> float:
+    def celsius_to_fahrenheit(c: float) -> float:
         return 9 * c/5 + 32
 
     @staticmethod
-    def fahrenheitToCelsius(f: float) -> float:
+    def fahrenheit_to_celsius(f: float) -> float:
         return 5 * (f-32)/9
 
 
-def showExample01():
+def show_example_01():
     # ejemplo 1
     p1 = Person(name='John Wick', age=33)
-    p2 = Person.obtenerAnonimo()
+    p2 = Person.obtener_anonimo()
     print(p1) or print(p2)
     print('-'*50)
 
 
-def showExample02():
-    r1 = TemperatureConverter.celsiusToFahrenheit(1)
-    r2 = TemperatureConverter.fahrenheitToCelsius(1)
+def show_example_02():
+    r1 = TemperatureConverter.celsius_to_fahrenheit(1)
+    r2 = TemperatureConverter.fahrenheit_to_celsius(1)
     print(r1)
     print(r2)
 
 
 def main():
-    showExample01()
-    showExample02()
+    show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':

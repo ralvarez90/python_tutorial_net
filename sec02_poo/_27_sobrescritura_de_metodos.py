@@ -22,7 +22,7 @@ class Employee:
         self.name = name
         self.basepay = basepay
 
-    def getPay(self) -> float:
+    def getpay(self) -> float:
         return self.basepay
 
     def __str__(self) -> str:
@@ -35,8 +35,8 @@ class SalesEmployee(Employee):
         super().__init__(name, basepay)
         self.incentive = incentive
 
-    def getPay(self) -> float:
-        return super().getPay() + self.incentive
+    def getpay(self) -> float:
+        return super().getpay() + self.incentive
 
     def __str__(self) -> str:
         return f'SalesEmployee{self.__dict__}'
@@ -72,29 +72,29 @@ class UKParser(Parser):
     phonePattern = r'(\+\d{1}-\d{3}-\d{3}-\d{4})'
 
 
-def showExample01():
+def show_example_01():
     emp1: Employee = Employee('John Wick1', 1_000_000)
     emp2: Employee = SalesEmployee('John Wick2', 1_000_000, 100_000)
-    print(f'emp1 has a pay: ${emp1.getPay():,.2f}')
-    print(f'emp2 has a pay: ${emp2.getPay():,.2f}')
+    print(f'emp1 has a pay: ${emp1.getpay():,.2f}')
+    print(f'emp2 has a pay: ${emp2.getpay():,.2f}')
 
 
-def showExample02():
+def show_example_02():
     s = 'Contact us via 408-205-5663 or email@test.com'
     parser: Parser = Parser(text=s)
     print(parser.parse())
 
 
-def showExample03():
+def show_example_03():
     s = 'Contact me via +1-650-453-3456 or email@test.co.uk'
     parser: Parser = UKParser(text=s)
     print(parser.parse())
 
 
 def main():
-    showExample01()
-    showExample02()
-    showExample03()
+    show_example_01()
+    show_example_02()
+    show_example_03()
 
 
 if __name__ == '__main__':

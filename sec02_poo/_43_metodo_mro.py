@@ -30,14 +30,14 @@ class FlyingCar(Flyable, Car):
         return super().start()
 
 
-def showExample01():
+def show_example_01():
     car = FlyingCar()
     car.start()
     print(f'FlyingCar.__mro__: {FlyingCar.__mro__}')
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

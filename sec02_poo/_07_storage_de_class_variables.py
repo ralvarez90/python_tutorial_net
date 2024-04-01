@@ -17,7 +17,7 @@ class HtmlDocument:
     version = 5
 
 
-def showExample01():
+def show_example_01():
     # extenemos con propiedad
     HtmlDocument.media_type = 'text/html'
     pprint('HtmlDocument.__dict__')
@@ -25,7 +25,7 @@ def showExample01():
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':
