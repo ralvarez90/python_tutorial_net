@@ -16,13 +16,16 @@ parámetros del método __init__.
 
 Cuando defines una nueva clase, esa clase hereda implícitamente 
 de la clase de objeto. Significa que puedes anular el método estático 
-__new__ y hacer algo antes y después de crear una nueva instancia de la clase.
+__new__ y hacer algo antes y después de crear una nueva instancia de 
+la clase.
+
+En la práctica, utiliza el método __new__() cuando desea modificar el 
+objeto en el momento de la instancia.
 """
 
 
 class Person:
-    def __new__(cls, name: str):
-        print(f'Creating a new {cls.__name__} object...')
+    def __new__(cls, firstname: str, lastname: str):
         self = object.__new__(cls)
         return self
 
@@ -34,13 +37,25 @@ class Person:
         return f'Person2{self.__dict__}'
 
 
+class SquareNumber(int):
+    def __new__(cls, value: int):
+        # el __new__ de la clase padre invoca al __init__
+        return super().__new__(cls, value**2)
+
+
 def show_example_01():
     p = Person(name='Person1')
     print(p)
 
 
+def show_example_02():
+    x = SquareNumber(3)
+    print(x, isinstance(x, int))
+
+
 def main():
     show_example_01()
+    show_example_02()
 
 
 if __name__ == '__main__':
