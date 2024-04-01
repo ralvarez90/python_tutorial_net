@@ -20,15 +20,7 @@ __new__ y hacer algo antes y después de crear una nueva instancia de la clase.
 """
 
 
-class Person1:
-    def __init__(self, name: str) -> None:
-        self.name = name
-
-    def __str__(self) -> str:
-        return f'Person1{self.__dict__}'
-
-
-class Person2:
+class Person:
     def __new__(cls, name: str):
         print(f'Creating a new {cls.__name__} object...')
         self = object.__new__(cls)
@@ -43,18 +35,12 @@ class Person2:
 
 
 def show_example_01():
-    p = Person1(name='Person1')
-    print(p)
-
-
-def show_example_02():
-    p = Person2(name='John Wick')
+    p = Person(name='Person1')
     print(p)
 
 
 def main():
     show_example_01()
-    show_example_02()
 
 
 if __name__ == '__main__':
