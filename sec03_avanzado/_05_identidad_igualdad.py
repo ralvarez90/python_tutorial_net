@@ -20,9 +20,8 @@ Es equivalente a la negación del operador de identidad.
 """
 
 
-def main():
-
-    # identidad idéntica
+def show_example_01():
+    # identidad
     a = 100
     b = 100
     print(f'a: {a}, with id: {hex(id(a))}')
@@ -42,10 +41,10 @@ def main():
     print(f'list_a == list_b ? {list_a == list_b}')
 
 
+def main():
+    show_example_01()
+
+
 if __name__ == '__main__':
-
-    # run application
     main()
-
-    # end messag
     input('\nPress any key to continue . . .')

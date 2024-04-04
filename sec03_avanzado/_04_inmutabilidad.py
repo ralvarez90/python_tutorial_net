@@ -23,8 +23,7 @@ ser mutables o inmutables.
 """
 
 
-def main():
-
+def show_example_01():
     # objeto inmutable
     some_int = 123
     print(f'some_int: {some_int}, with id: {hex(id(some_int))}')
@@ -38,10 +37,10 @@ def main():
     print(f'some_list: {some_list}, with id: {hex(id(some_list))}')
 
 
+def main():
+    show_example_01()
+
+
 if __name__ == '__main__':
-
-    # run app
     main()
-
-    # end message
     input('\nPress any key to continue. . . ')

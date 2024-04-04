@@ -16,12 +16,12 @@ def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def main():
-
+def show_example_01():
     # ejemplo 1, entero
     some_number: int = 128
     print(f'{some_number} with type: {runtime_type(some_number)}')
-    print(f'sys.getsizeof(', some_number, '): ', sys.getsizeof(some_number), '\n')
+    print(f'sys.getsizeof(', some_number, '): ',
+          sys.getsizeof(some_number), '\n')
 
     # ejemplo 2, entero más largo
     other_integer = 1_000_000_000
@@ -29,12 +29,14 @@ def main():
 
     # ejemplo 3, otro entero
     other_integer = 2**32
-    print('sys.getsizeof(', other_integer, 'with size:', sys.getsizeof(other_integer))
+    print('sys.getsizeof(', other_integer,
+          'with size:', sys.getsizeof(other_integer))
+
+
+def main():
+    show_example_01()
+
 
 if __name__ == '__main__':
-
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue. . .')

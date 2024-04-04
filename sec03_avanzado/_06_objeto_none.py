@@ -25,8 +25,7 @@ def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def main():
-
+def show_example_01():
     # info del objeto None
     print(
         f'The object {None} has a id: {hex(id(None))} and type: {runtime_type(None)}')
@@ -49,10 +48,10 @@ def main():
     print(a1 == 'Hello World!')
 
 
+def main():
+    show_example_01()
+
+
 if __name__ == '__main__':
-
-    # run application
     main()
-
-    # end message
     input('\nPress any key to continue. . . ')

@@ -30,25 +30,23 @@ def get_time(total_seconds: int) -> int:
     }
 
 
-def main():
-
+def show_example_01():
     # test de paridad
     n: int = int(input('Ingrese un entero: '))
     print(f'{n} es par' if is_even(n) else f'{n} es impar')
 
-    # separador
-    print('-'*50)
 
-    # uso de operador módulo
+def show_example_02():
     some_seconds = 93_750
     print(f'Conversión de {some_seconds} segundos')
     print(get_time(some_seconds))
 
 
+def main():
+    show_example_01()
+    show_example_02()
+
+
 if __name__ == '__main__':
-
-    # run app
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

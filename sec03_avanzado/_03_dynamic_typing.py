@@ -9,11 +9,11 @@ a partir del cual se construye.
 """
 
 
-def get_runtimetype(obj: object) -> str:
+def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def main():
+def show_example_01():
     some_objects: list[object] = [
         1,
         True,
@@ -23,13 +23,13 @@ def main():
     ]
 
     for obj in some_objects:
-        print(get_runtimetype(obj))
+        print(runtime_type(obj))
+
+
+def main():
+    show_example_01()
 
 
 if __name__ == '__main__':
-
-    # run app
     main()
-
-    # end message
     input('\nPress any key to continue . . .')

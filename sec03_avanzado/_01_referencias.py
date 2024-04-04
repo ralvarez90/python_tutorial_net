@@ -15,16 +15,16 @@ por ninguna variable el garbage collector se encarga de eliminar
 dicha referencia.
 
 Para obtener el número de referencias de un objeto empleamos el
-módulo 
+módulo ctypes.
 """
 from ctypes import c_long
 
 
-def refCounter(address: int) -> int:
+def refcounter(address: int) -> int:
     return c_long.from_address(address).value
 
 
-def showExample01():
+def show_example_01():
     # referencia a entero
     counter1: int = 100
     counter2: int = counter1
@@ -35,23 +35,23 @@ def showExample01():
     numbers = [1, 2, 3]
     id_numbers = id(numbers)
     print(
-        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refcounter(id_numbers)} veces')
 
     rank = numbers
     print(
-        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refcounter(id_numbers)} veces')
 
     rank = None
     print(
-        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refcounter(id_numbers)} veces')
 
     numbers = None
     print(
-        f'El arreglo numbers está referenciado en memoria {refCounter(id_numbers)} veces')
+        f'El arreglo numbers está referenciado en memoria {refcounter(id_numbers)} veces')
 
 
 def main():
-    showExample01()
+    show_example_01()
 
 
 if __name__ == '__main__':

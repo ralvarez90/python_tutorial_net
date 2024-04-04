@@ -9,8 +9,7 @@ Recibe cualquier número y retorna la parte entera.
 import math
 
 
-def main():
-
+def show_example_01():
     # división entera
     a = 3
     b = 2
@@ -24,10 +23,10 @@ def main():
         print(f'math.floor({number}) -> {math.floor(number)}')
 
 
+def main():
+    show_example_01()
+
+
 if __name__ == '__main__':
-
-    # run app
     main()
-
-    # end application
     input('\nPress any key to continue . . .')
