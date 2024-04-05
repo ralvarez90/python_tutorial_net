@@ -18,18 +18,18 @@ import gc
 import ctypes
 
 
-def refcounter(id_obj: int) -> int:
+def refCounter(id_obj: int) -> int:
     return ctypes.c_long.from_address(id_obj).value
 
 
-def object_exists(id_obj: int) -> bool:
+def existsObject(id_obj: int) -> bool:
     for object in gc.get_objects():
         if id(object) == id_obj:
             return True
     return False
 
 
-def show_example_01():
+def showExample01():
     # primer clase
     class A:
         def __init__(self) -> None:
@@ -47,44 +47,44 @@ def show_example_01():
 
     # creamos instancia de clase A
     a = A()
-    a_id = id(a)
-    b_id = id(a.b)
+    aId = id(a)
+    bId = id(a.b)
 
     # mostramos contadores
-    print(f'ref_count(a): {refcounter(a_id)}')
-    print(f'ref_count(b): {refcounter(b_id)}')
+    print(f'ref_count(a): {refCounter(aId)}')
+    print(f'ref_count(b): {refCounter(bId)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {object_exists(a_id)}')
-    print(f'object_exists(b): {object_exists(b_id)}')
+    print(f'object_exists(a): {existsObject(aId)}')
+    print(f'object_exists(b): {existsObject(bId)}')
 
     # separador
     print('-'*50)
 
     # eliminamos objetos
     a = None
-    print(f'ref_count(a): {refcounter(a_id)}')
-    print(f'ref_count(b): {refcounter(b_id)}')
+    print(f'ref_count(a): {refCounter(aId)}')
+    print(f'ref_count(b): {refCounter(bId)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {object_exists(a_id)}')
-    print(f'object_exists(b): {object_exists(b_id)}')
+    print(f'object_exists(a): {existsObject(aId)}')
+    print(f'object_exists(b): {existsObject(bId)}')
 
     # ejecturamos recolector
     gc.collect()
     print('-'*50)
 
     # mostramos contadores
-    print(f'ref_count(a): {refcounter(a_id)}')
-    print(f'ref_count(b): {refcounter(b_id)}')
+    print(f'ref_count(a): {refCounter(aId)}')
+    print(f'ref_count(b): {refCounter(bId)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {object_exists(a_id)}')
-    print(f'object_exists(b): {object_exists(b_id)}')
+    print(f'object_exists(a): {existsObject(aId)}')
+    print(f'object_exists(b): {existsObject(bId)}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

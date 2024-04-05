@@ -23,22 +23,22 @@ ser mutables o inmutables.
 """
 
 
-def show_example_01():
+def showExample01():
     # objeto inmutable
-    some_int = 123
-    print(f'some_int: {some_int}, with id: {hex(id(some_int))}')
-    some_int = 124
-    print(f'some_int: {some_int}, with id: {hex(id(some_int))}')
+    someInteger = 123
+    print(f'some_int: {someInteger}, with id: {hex(id(someInteger))}')
+    someInteger = 124
+    print(f'some_int: {someInteger}, with id: {hex(id(someInteger))}')
 
     # objeto mutable
-    some_list = [1, 2, 3]
-    print(f'some_list: {some_list}, with id: {hex(id(some_list))}')
-    some_list.append(4)
-    print(f'some_list: {some_list}, with id: {hex(id(some_list))}')
+    someList = [1, 2, 3]
+    print(f'some_list: {someList}, with id: {hex(id(someList))}')
+    someList.append(4)
+    print(f'some_list: {someList}, with id: {hex(id(someList))}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

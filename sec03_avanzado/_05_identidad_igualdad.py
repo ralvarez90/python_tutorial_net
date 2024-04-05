@@ -20,7 +20,7 @@ Es equivalente a la negación del operador de identidad.
 """
 
 
-def show_example_01():
+def showExample01():
     # identidad
     a = 100
     b = 100
@@ -29,20 +29,17 @@ def show_example_01():
     print(f'a is b ? {a is b}')
     print(f'a == b ? {a == b}')
 
-    # separador
-    print('-'*50)
-
     # objetos con el mismo estado, pero diferente identidad
-    list_a = [1, 2, 3]
-    list_b = [1, 2, 3]
-    print(f'list_a: {list_a}, with id: {hex(id(list_a))}')
-    print(f'list_b: {list_b}, with id: {hex(id(list_b))}')
-    print(f'list_a is list_b ? {list_a is list_b}')
-    print(f'list_a == list_b ? {list_a == list_b}')
+    listA = [1, 2, 3]
+    listB = [1, 2, 3]
+    print(f'listA: {listA}, with id: {hex(id(listA))}')
+    print(f'listB: {listB}, with id: {hex(id(listB))}')
+    print(f'listA is listB ? {listA is listB}')
+    print(f'listA == listB ? {listA == listB}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

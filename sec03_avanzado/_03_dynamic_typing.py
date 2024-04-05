@@ -9,12 +9,12 @@ a partir del cual se construye.
 """
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_01():
-    some_objects: list[object] = [
+def showExample01():
+    someObjects: list[object] = [
         1,
         True,
         None,
@@ -22,12 +22,12 @@ def show_example_01():
         1.1,
     ]
 
-    for obj in some_objects:
-        print(runtime_type(obj))
+    for obj in someObjects:
+        print(runtimeType(obj))
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

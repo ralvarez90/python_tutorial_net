@@ -9,7 +9,7 @@ Recibe cualquier número y retorna la parte entera.
 import math
 
 
-def show_example_01():
+def showExample01():
     # división entera
     a = 3
     b = 2
@@ -24,7 +24,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

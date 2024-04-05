@@ -9,42 +9,42 @@ criterios de paridad e imparidad, y nos permite convertir unidades.
 from math import floor
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def is_even(n: int) -> bool:
+def isEven(n: int) -> bool:
     return n % 2 == 0
 
 
-def is_odd(n: int) -> bool:
+def isOdd(n: int) -> bool:
     return n % 2 != 0
 
 
-def get_time(total_seconds: int) -> int:
+def getTime(seconds: int) -> int:
     return {
-        'days': floor(total_seconds / 60 / 60 / 24),
-        'hours': floor(total_seconds/60/60) % 24,
-        'minutes': floor(total_seconds/60) % 60,
-        'seconds': total_seconds % 60,
+        'days': floor(seconds / 60 / 60 / 24),
+        'hours': floor(seconds/60/60) % 24,
+        'minutes': floor(seconds/60) % 60,
+        'seconds': seconds % 60,
     }
 
 
-def show_example_01():
+def showExample01():
     # test de paridad
     n: int = int(input('Ingrese un entero: '))
-    print(f'{n} es par' if is_even(n) else f'{n} es impar')
+    print(f'{n} es par' if isEven(n) else f'{n} es impar')
 
 
-def show_example_02():
-    some_seconds = 93_750
-    print(f'Conversión de {some_seconds} segundos')
-    print(get_time(some_seconds))
+def showExample02():
+    someSeconds = 93_750
+    print(f'Conversión de {someSeconds} segundos')
+    print(getTime(someSeconds))
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

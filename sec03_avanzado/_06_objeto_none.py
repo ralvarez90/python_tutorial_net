@@ -21,35 +21,32 @@ El operador is no se puede sobrescribir.
 """
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_01():
+def showExample01():
     # info del objeto None
     print(
-        f'The object {None} has a id: {hex(id(None))} and type: {runtime_type(None)}')
+        f'The object {None} has a id: {hex(id(None))} and type: {runtimeType(None)}')
 
     # uso de is y ==
     print(f'None is None: {None is None}')
     print(f'None == None: {None == None}')
 
-    # separador
-    print('-'*50)
-
-    class Apple:
+    class __Apple:
         def __eq__(self, __value: object) -> bool:
             return True
 
     # retorna true en cualquier caso
-    a1 = Apple()
+    a1 = __Apple()
     print(a1 == None)
     print(a1 == 123)
     print(a1 == 'Hello World!')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
