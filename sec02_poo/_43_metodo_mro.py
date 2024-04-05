@@ -7,7 +7,6 @@ el método correcto para llamar.
 
 
 class Flyable:
-
     def start(self):
         print('Start the Flyable object')
 
@@ -16,7 +15,6 @@ class Flyable:
 
 
 class Car:
-
     def start(self):
         print('Start the Car object')
 
@@ -25,19 +23,18 @@ class Car:
 
 
 class FlyingCar(Flyable, Car):
-
     def start(self):
         return super().start()
 
 
-def show_example_01():
+def showExample01():
     car = FlyingCar()
     car.start()
     print(f'FlyingCar.__mro__: {FlyingCar.__mro__}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

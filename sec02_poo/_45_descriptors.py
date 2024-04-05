@@ -21,7 +21,6 @@ todo agregar mas notas sobre descriptores
 
 
 class Descriptor:
-
     def __init__(self, value) -> None:
         self._value = value
 
@@ -60,14 +59,14 @@ class MyClase:
     descriptor = Descriptor("initial descriptor")
 
 
-def show_example_01():
+def showExample01():
     obj = MyClase()
     print(obj.descriptor)
     obj.descriptor = 'new descriptor'
     print(obj.descriptor)
 
 
-def show_example_02():
+def showExample02():
     try:
         p = Person()
         p.firstname = ''
@@ -76,8 +75,8 @@ def show_example_02():
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

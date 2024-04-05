@@ -30,18 +30,18 @@ from dataclasses import dataclass, field
 
 @dataclass(order=True)
 class Person:
-    sort_index: int = field(init=False, repr=False)
+    sortIndex: int = field(init=False, repr=False)
 
     name: str
     age: int
-    can_vote: bool = field(init=False)
+    canVote: bool = field(init=False)
 
     def __post_init__(self):
-        self.can_vote = 18 <= self.age <= 70
-        self.sort_index = self.age
+        self.canVote = 18 <= self.age <= 70
+        self.sortIndex = self.age
 
 
-def show_example_01():
+def showExample01():
     members = [
         Person(name='John1', age=31),
         Person(name='John2', age=32),
@@ -55,7 +55,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

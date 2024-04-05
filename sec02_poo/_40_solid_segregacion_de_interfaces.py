@@ -20,26 +20,25 @@ debería hacer UNA cosa.
 
 No significa que la interfaz deba tener un método. Una interfaz puede 
 tener múltiples métodos cohesivos.
+
+# todo agregar ejemplo
 """
 from abc import ABC, abstractmethod
 
 
 class Movable(ABC):
-
     @abstractmethod
     def go(self):
         pass
 
 
 class Flyable(Movable):
-
     @abstractmethod
     def fly(self):
         pass
 
 
 class Aircraft(Flyable):
-
     def go(self):
         print('Going...')
 
@@ -48,6 +47,5 @@ class Aircraft(Flyable):
 
 
 class Car(Movable):
-
     def go(self):
         print('Going...')

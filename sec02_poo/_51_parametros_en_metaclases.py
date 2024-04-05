@@ -16,12 +16,12 @@ que mantengas o desarrolles el núcleo de marcos grandes como Django.
 
 class Human(type):
     """Some metaclass."""
-    def __new__(mcls, name, bases, class_dict, **kwargs):
-        class_ = super().__new__(mcls, name, bases, class_dict)
+    def __new__(cls, name, bases, class_dict, **kwargs):
+        _class = super().__new__(cls, name, bases, class_dict)
         if kwargs:
             for name, value in kwargs.items():
-                setattr(class_, name, value)
-        return class_
+                setattr(_class, name, value)
+        return _class
 
 
 class Person(object, metaclass=Human, country='MX', freedom=True):
@@ -30,12 +30,12 @@ class Person(object, metaclass=Human, country='MX', freedom=True):
         self.age = age
 
 
-def show_example_01():
+def showExample01():
     print(Person.__dict__)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

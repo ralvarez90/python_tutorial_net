@@ -40,12 +40,12 @@ class Persona:
     iq: int = 123
 
 
-def show_example_01():
+def showExample01():
     p = Person(name='John Wick', age=34)
     print(p)
 
 
-def show_example_02():
+def showExample02():
     p1 = Person('name', 0)
     p2 = Person('name', 0)
     print(p1, p1.__dict__)
@@ -53,24 +53,24 @@ def show_example_02():
     print(p1 == p2)
 
 
-def show_example_03():
-    some_person = Person(name='John Wick', age=45, iq=2000)
-    some_person.can_vote = True
-    print(some_person)
-    print(astuple(some_person))
-    print(asdict(some_person))
+def showExample03():
+    somePerson = Person(name='John Wick', age=45, iq=2000)
+    somePerson.can_vote = True
+    print(somePerson)
+    print(astuple(somePerson))
+    print(asdict(somePerson))
 
 
-def show_example_04():
-    readonly_person = Persona(nombre='Juan Wick', edad=34)
-    print(readonly_person)
+def showExample04():
+    readonlyPerson = Persona(nombre='Juan Wick', edad=34)
+    print(readonlyPerson)
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
-    show_example_04()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':

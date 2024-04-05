@@ -9,7 +9,7 @@ de variables de instancia.
 
 En python existe un decorador llamado @property que permite establecer
 variables de instancia que son funciones como si se tratasen de 
-atributos que no son invocables.
+atributos que no son invocables. Se analiza en la siguiente lección.
 
 2. Clase property
 La clase property en Python es una herramienta que permite a los desarrolladores 
@@ -55,14 +55,14 @@ class Person:
     age = property(fget=_getage, fset=_setage)
 
 
-def show_example_01():
+def showExample01():
     john = Person('John Wick', 45)
     john.age = 35
     print(john)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

@@ -13,7 +13,6 @@ si dos objetos tiena o apuntan a la misma referencia.
 
 
 class Person:
-
     def __init__(self, firstname: str, lastname: str, age: int) -> None:
         self.firstname = firstname
         self.lastname = lastname
@@ -25,7 +24,7 @@ class Person:
         return False
 
 
-def show_example_01():
+def showExample01():
     p1 = Person('John', 'Doe', 45)
     p2 = Person('John', 'Doe', 45)
     print(f'p1 is p2: {p1 is p2}')
@@ -33,7 +32,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

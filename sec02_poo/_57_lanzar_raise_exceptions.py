@@ -8,7 +8,7 @@ Es posible relanzar la excepción en si desde su mismo bloque except.
 """
 
 
-def show_example_01():
+def showExample01():
     try:
         raise ValueError('The value error exception', 'x', 'y')
     except ValueError as e:
@@ -16,7 +16,7 @@ def show_example_01():
         print(e.args)
 
 
-def show_example_02():
+def showExample02():
     def division(a, b):
         try:
             return a/b
@@ -27,7 +27,7 @@ def show_example_02():
 
 
 def main():
-    show_example_01()
+    showExample01()
     # show_example_02()
 
 

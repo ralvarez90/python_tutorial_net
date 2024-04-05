@@ -13,30 +13,26 @@ from abc import ABC, abstractmethod
 
 
 class CurrencyConverter(ABC):
-
     @abstractmethod
-    def convert(self, from_currency: str, to_currency: str, amount: float) -> float:
+    def convert(self, fromCurrency: str, toCurrency: str, amount: float) -> float:
         pass
 
 
 class AlphaConverter(CurrencyConverter):
-
-    def convert(self, from_currency: str, to_currency: str, amount: float) -> float:
+    def convert(self, fromCurrency: str, toCurrency: str, amount: float) -> float:
         print('Converting currencya via Alpha API')
-        print(f'{amount} {from_currency} = {amount*1.2} {to_currency}')
+        print(f'{amount} {fromCurrency} = {amount*1.2} {toCurrency}')
         return amount*1.5
 
 
 class FXConverter(CurrencyConverter):
-
-    def convert(self, from_currency: str, to_currency: str, amount: float) -> float:
+    def convert(self, fromCurrency: str, toCurrency: str, amount: float) -> float:
         print('Converting currency via FX API')
-        print(f'{amount} {from_currency} = {amount*1.2} {to_currency}')
+        print(f'{amount} {fromCurrency} = {amount*1.2} {toCurrency}')
         return amount*2
 
 
 class App:
-
     def __init__(self, converter: CurrencyConverter) -> None:
         self.converter = converter
 
@@ -44,21 +40,21 @@ class App:
         self.converter.convert('EUR', 'USD', 100)
 
 
-def show_example_01():
+def showExample01():
     converter: CurrencyConverter = FXConverter()
     app = App(converter)
     app.start()
 
 
-def show_example_02():
+def showExample02():
     converter: CurrencyConverter = AlphaConverter()
     app = App(converter)
     app.start()
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

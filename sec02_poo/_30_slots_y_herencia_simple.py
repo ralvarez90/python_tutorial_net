@@ -14,10 +14,13 @@ hija tendrán la propiedad __dict__ y __slot__.
 """
 
 
+number = int | float | complex
+
+
 class Point2D:
     __slots__ = ('x', 'y')
 
-    def __init__(self, x: float, y: float) -> None:
+    def __init__(self, x: number, y: number) -> None:
         self.x = x
         self.y = y
 
@@ -28,7 +31,7 @@ class Point2D:
 class Point3D(Point2D):
     __slots__ = ('z',)
 
-    def __init__(self, x: float, y: float, z: float) -> None:
+    def __init__(self, x: number, y: number, z: number) -> None:
         super().__init__(x, y)
         self.z = z
 
@@ -43,27 +46,27 @@ class Shape:
 class Coordenada2D(Shape):
     __slots__ = ('x', 'y')
 
-    def __init__(self, x: float, y: float) -> None:
+    def __init__(self, x: number, y: number) -> None:
         self.x = x
         self.y = y
 
 
-def show_example_01():
+def showExample01():
     point = Point3D(10, 20, 30)
     point.x = 1
     print(point.__slots__)
     print(point)
 
 
-def show_example_02():
+def showExample02():
     point = Coordenada2D(10, 20)
     print(point.__dict__)
     print(point.__slots__)
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

@@ -17,7 +17,6 @@ import re
 
 
 class Employee:
-
     def __init__(self, name: str, basepay: float) -> None:
         self.name = name
         self.basepay = basepay
@@ -30,7 +29,6 @@ class Employee:
 
 
 class SalesEmployee(Employee):
-
     def __init__(self, name: str, basepay: float, incentive: float) -> None:
         super().__init__(name, basepay)
         self.incentive = incentive
@@ -43,7 +41,7 @@ class SalesEmployee(Employee):
 
 
 class Parser:
-    phonePattenr = r'\d{3}-\d{3}-\d{4}'
+    phonePattern = r'\d{3}-\d{3}-\d{4}'
 
     def __init__(self, text: str) -> None:
         self.text = text
@@ -56,7 +54,7 @@ class Parser:
         return None
 
     def phone(self):
-        match = re.search(self.phonePattenr, self.text)
+        match = re.search(self.phonePattern, self.text)
         if match:
             return match.group(0)
         return None
@@ -72,29 +70,29 @@ class UKParser(Parser):
     phonePattern = r'(\+\d{1}-\d{3}-\d{3}-\d{4})'
 
 
-def show_example_01():
+def showExample01():
     emp1: Employee = Employee('John Wick1', 1_000_000)
     emp2: Employee = SalesEmployee('John Wick2', 1_000_000, 100_000)
     print(f'emp1 has a pay: ${emp1.getpay():,.2f}')
     print(f'emp2 has a pay: ${emp2.getpay():,.2f}')
 
 
-def show_example_02():
+def showExample02():
     s = 'Contact us via 408-205-5663 or email@test.com'
     parser: Parser = Parser(text=s)
     print(parser.parse())
 
 
-def show_example_03():
+def showExample03():
     s = 'Contact me via +1-650-453-3456 or email@test.co.uk'
     parser: Parser = UKParser(text=s)
     print(parser.parse())
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
+    showExample01()
+    showExample02()
+    showExample03()
 
 
 if __name__ == '__main__':

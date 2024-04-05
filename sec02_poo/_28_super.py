@@ -35,13 +35,13 @@ class SalesEmployee(Employee):
         return f'SalesEmployee{self.__dict__}'
 
 
-def show_example_01():
+def showExample01():
     emp1: Employee = SalesEmployee('John Wick', 1_000_000, 10_000, 1000)
     print(f'Total payment: ${emp1.getpay():,.2f}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

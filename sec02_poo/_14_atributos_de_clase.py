@@ -34,7 +34,6 @@ class Product:
 
 
 class Circle:
-    # atributos de clase
     PI = 3.14159
     circles = []
 

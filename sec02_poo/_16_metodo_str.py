@@ -7,7 +7,6 @@ métod dentro de la clase correspondiente.
 
 
 class Person:
-
     def __init__(self, firstname: str, lastname: str, age: int) -> None:
         self.firstname = firstname
         self.lastname = lastname
@@ -17,13 +16,13 @@ class Person:
         return f'Person{self.__dict__}'
 
 
-def show_example_01():
+def showExample01():
     person = Person('John', 'Wick', 45)
     print(person)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

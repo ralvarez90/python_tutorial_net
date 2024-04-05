@@ -16,12 +16,11 @@ como self.
 """
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
 class Request:
-
     def send(*args):
         primero, *otros = args
         print(f'primero: {primero}')
@@ -31,14 +30,14 @@ class Request:
         pass
 
 
-def show_example_01():
+def showExample01():
     # generamos instancia
     req = Request()
 
     # mostramos tipos
-    print(f'type(Request.enviar): {runtime_type(Request.enviar)}')
-    print(f'type(Request.send)  : {runtime_type(Request.send)}')
-    print(f'type(Request)       : {runtime_type(Request)}')
+    print(f'type(Request.enviar): {runtimeType(Request.enviar)}')
+    print(f'type(Request.send)  : {runtimeType(Request.send)}')
+    print(f'type(Request)       : {runtimeType(Request)}')
 
     # invocamos método
     req.send()
@@ -46,7 +45,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

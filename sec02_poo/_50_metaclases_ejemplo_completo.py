@@ -6,10 +6,10 @@ from pprint import pprint
 
 
 class Human(type):
-    def __new__(mcls, name: str, bases: dict, class_dict: dict):
-        selfclass = super().__new__(mcls, name, bases, class_dict)
-        selfclass.freedom = True
-        return selfclass
+    def __new__(cls, name: str, bases: dict, class_dict: dict):
+        _class = super().__new__(cls, name, bases, class_dict)
+        _class.freedom = True
+        return _class
 
 
 class Person(object, metaclass=Human):
@@ -21,14 +21,14 @@ class Person(object, metaclass=Human):
         return f'Person{self.__dict__}'
 
 
-def show_example_01():
+def showExample01():
     p = Person('John Wick', 45)
     print(p)
     print(f'Person.freedom: {Person.freedom}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

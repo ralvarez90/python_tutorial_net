@@ -39,7 +39,7 @@ def division(a: int, b: int):
         }
 
 
-def show_example_01():
+def showExample01():
     colores = ['red', 'green', 'blue']
     try:
         print(colores[3])
@@ -47,7 +47,7 @@ def show_example_01():
         print(e)
 
 
-def show_example_02():
+def showExample02():
     colors = ['red', 'green', 'blue']
     try:
         print(colors[3])
@@ -55,21 +55,21 @@ def show_example_02():
         print(e.__class__, '-', e)
 
 
-def show_example_03():
+def showExample03():
     result = division(10, 0)
     print(result)
 
 
-def show_example_04():
+def showExample04():
     result = division('10', '2')
     print(result)
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
-    show_example_04()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':

@@ -22,25 +22,24 @@ referencia de la clase en cuestión.
 
 
 class Person:
-
     def __init__(self, firstName: str, lastName: str, age: int) -> None:
         self.firstName = firstName
         self.lastName = lastName
         self.age = age
 
-    def get_fullname(self) -> str:
+    def getFullname(self) -> str:
         return f'{self.firstName} {self.lastName}'
 
     def introduce(self):
-        print(f"Hi. I'am {self.get_fullname()}. I'm {self.age} years old.")
+        print(f"Hi. I'am {self.getFullname()}. I'm {self.age} years old.")
 
     @classmethod
-    def create_anonymous(cls):
+    def createAnonymous(cls):
         # print(f'type of cls: {type(cls)}') retorna type
         return Person('John', 'Doe', 44)
 
 
-def show_example_01():
+def showExample01():
     """Invocando métodos de instancia
     """
     p = Person('Rodrigo', 'Álvarez', 33)
@@ -48,16 +47,16 @@ def show_example_01():
     Person.introduce(p)
 
 
-def show_example_02():
+def showExample02():
     """Invocando métodos de clase.
     """
-    p2 = Person.create_anonymous()
+    p2 = Person.createAnonymous()
     p2.introduce()
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

@@ -14,13 +14,12 @@ from pprint import pprint
 
 
 class HtmlDocument:
-
-    # varianles de clase
+    # variables de clase
     extension = 'html'
     version = 5
 
 
-def show_example_01():
+def showExample01():
     # mostramos variables de clase y dict
     pprint(HtmlDocument.__dict__)
 
@@ -34,7 +33,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

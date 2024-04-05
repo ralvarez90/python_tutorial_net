@@ -17,13 +17,11 @@ funciones con el mismo motivo de cambio.
 
 
 class PersonDB:
-
     def save(self, person: 'Person'):
         print(f'Save the {person} to the database.')
 
 
 class Person:
-
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
@@ -36,21 +34,21 @@ class Person:
         self.db.save(self)
 
 
-def show_example_01():
+def showExample01():
     p = Person('John Wick', 45)
     print(p)
     db = PersonDB()
     db.save(p)
 
 
-def show_example_02():
+def showExample02():
     p = Person('John Wick', 45)
     p.save()
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

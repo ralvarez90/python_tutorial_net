@@ -12,7 +12,6 @@ from abc import ABC, abstractmethod
 
 
 class Person:
-
     def __init__(self, name: str) -> None:
         self.name = name
 
@@ -21,38 +20,34 @@ class Person:
 
 
 class PersonStorage(ABC):
-
     @abstractmethod
     def save(self, person: Person):
         pass
 
 
 class PersonDB(PersonStorage):
-
     def save(self, person: Person):
         print(f'Saving the {person} to database')
 
 
 class PersonJSON(PersonStorage):
-
     def save(self, person: Person):
         print(f'Saving the {person} to a json file')
 
 
 class PersonXML(PersonStorage):
-
     def save(self, person: Person):
         print(f'Saving the {person} to an xml file')
 
 
-def show_example_01():
+def showExample01():
     person: Person = Person('John Wick')
     storage = PersonXML()
     storage.save(person)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

@@ -12,13 +12,11 @@ class NombreClase(ParentClass1, ParentClass2, ..., ParentClassN)
 
 
 class Car:
-
     def go(self):
         print('Going...')
 
 
 class Flyable:
-
     def fly(self):
         print('Flying...')
 
@@ -27,14 +25,14 @@ class FlyingCar(Flyable, Car):
     pass
 
 
-def show_example_01():
+def showExample01():
     fc = FlyingCar()
     fc.go()
     fc.fly()
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

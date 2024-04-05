@@ -21,7 +21,6 @@ from abc import ABC, abstractmethod
 
 
 class Employee(ABC):
-
     def __init__(self, firstname: str, lastname: str) -> None:
         self.firstname = firstname
         self.lastname = lastname
@@ -36,7 +35,6 @@ class Employee(ABC):
 
 
 class FulltimeEmployee(Employee):
-
     def __init__(self, firstname: str, lastname: str, salary: float) -> None:
         super().__init__(firstname, lastname)
         self.salary = salary
@@ -46,7 +44,6 @@ class FulltimeEmployee(Employee):
 
 
 class HourlyEmployee(Employee):
-
     def __init__(self, firstname: str, lastname: str, worked_hours: int, rate: float) -> None:
         super().__init__(firstname, lastname)
         self.worked_hours = worked_hours
@@ -57,7 +54,6 @@ class HourlyEmployee(Employee):
 
 
 class Payroll:
-
     def __init__(self) -> None:
         self.employees: list[Employee] = []
 
@@ -70,8 +66,7 @@ class Payroll:
             print(f'{e.fullname} \t ${e.getsalary():,.2f}')
 
 
-def show_example_01():
-    # nomina y empleados
+def showExample01():
     payroll = Payroll()
     payroll \
         .add(FulltimeEmployee('John1', 'Wick1', 100_000)) \
@@ -85,7 +80,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

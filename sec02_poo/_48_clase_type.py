@@ -34,13 +34,13 @@ class Person:
         return f'Hi, I am {self.name}. I am {self.age} years old.'
 
 
-def show_example_01():
+def showExample01():
     print(f'type(Person) -> {type(Person)}')
     print(f'isinstance(Person, type) -> {isinstance(Person, type)}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

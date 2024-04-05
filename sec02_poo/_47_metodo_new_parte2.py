@@ -20,14 +20,14 @@ class Person:
         return f'Person{self.__dict__}'
 
 
-def show_example_01():
+def showExample01():
     p = Person('John', 'Wick')
     print(p.fullname)
     print(p)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

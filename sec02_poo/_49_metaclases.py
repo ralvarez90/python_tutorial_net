@@ -44,22 +44,22 @@ class Persona(object, metaclass=Human):
         return f'Persona{self.__dict__}'
 
 
-def show_example_01():
+def showExample01():
     """Instancia de clase normal que usa como metaclase type.
     """
     p = Person('John Wick', 45)
     print(p)
 
 
-def show_example_02():
+def showExample02():
     """Instancía de case que usa metaclase personalizaa"""
     p = Persona(name='John Wick', age=34)
     print(p)
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

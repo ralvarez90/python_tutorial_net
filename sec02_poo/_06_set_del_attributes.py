@@ -14,7 +14,7 @@ class HmtlDocument:
     extension = 'html'
 
 
-def show_example_01():
+def showExample01():
     # accedemos a atribitos
     print(f'Extension document: {HmtlDocument.extension}')
 
@@ -30,7 +30,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

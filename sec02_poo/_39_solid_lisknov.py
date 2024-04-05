@@ -12,14 +12,12 @@ from abc import ABC, abstractmethod
 
 
 class Notification(ABC):
-
     @abstractmethod
     def notify(self, message: str):
         pass
 
 
 class Email(Notification):
-
     def __init__(self, email: str) -> None:
         self.email = email
 
@@ -28,7 +26,6 @@ class Email(Notification):
 
 
 class SMS(Notification):
-
     def __init__(self, phone: str) -> None:
         self.phone = phone
 
@@ -37,7 +34,6 @@ class SMS(Notification):
 
 
 class Contact:
-
     def __init__(self, name: str, email: str, phone: str) -> None:
         self.name = name
         self.email = email
@@ -45,7 +41,6 @@ class Contact:
 
 
 class NotificationManager:
-
     def __init__(self, notification: Notification) -> None:
         self.notification = notification
 
@@ -53,25 +48,22 @@ class NotificationManager:
         self.notification.notify(message)
 
 
-def show_example_01():
-    # instancia de contacto
+def showExample01():
     contact = Contact('John Wick', 'johnwick@killer.com', '+525632140588')
-
-    # instance of notification
-    notification_sms = SMS(contact.phone)
-    notificatuib_eml = Email(contact.email)
+    notificationSMS = SMS(contact.phone)
+    notificationEMAIL = Email(contact.email)
 
     # manager de notificacion
-    notification_manager = NotificationManager(notification_sms)
-    notification_manager.send('Hello John')
+    notificationManager = NotificationManager(notificationSMS)
+    notificationManager.send('Hello John')
 
     # asignamos otro tipo de notificacion
-    notification_manager.notification = notificatuib_eml
-    notification_manager.send('Hi John')
+    notificationManager.notification = notificationEMAIL
+    notificationManager.send('Hi John')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

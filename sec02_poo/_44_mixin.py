@@ -22,37 +22,34 @@ import json
 
 
 class Person:
-
     def __init__(self, name: str) -> None:
         self.name = name
 
 
 class DictMixin:
+    def toDict(self):
+        return self.__traverseDict(self.__dict__)
 
-    def todict(self):
-        return self._traverse_dict(self.__dict__)
-
-    def _traverse_dict(self, attributes: dict):
+    def __traverseDict(self, attributes: dict):
         result = {}
         for k, v in attributes.items():
-            result[k] = self._traverse(k, v)
+            result[k] = self.__traverse(k, v)
         return result
 
-    def _traverse(self, key, value):
+    def __traverse(self, key, value):
         if isinstance(value, DictMixin):
-            return value.todict()
+            return value.toDict()
         elif isinstance(value, dict):
-            return self._traverse_dict(value)
+            return self.__traverseDict(value)
         elif isinstance(value, list):
-            return [self._traverse(key, v) for v in value]
+            return [self.__traverse(key, v) for v in value]
         elif hasattr(value, '__dict__'):
-            return self._traverse_dict(value.__dict__)
+            return self.__traverseDict(value.__dict__)
         else:
             return value
 
 
 class JSONMixin:
-
     def toJson(self) -> str:
         return json.dumps(self.toDict())
 
@@ -64,17 +61,17 @@ class Employee(DictMixin, JSONMixin, Person):
         self.dependents = dependents
 
 
-def show_example_01():
+def showExample01():
     from pprint import pprint
     e = Employee(
         name='John Wick',
         skills=['Karate', 'Guns', 'Kick Ass'],
         dependents={'wife': 'Mary Jane', 'children': ['Dog', 'Cat']}
     )
-    print(e.todict())
+    print(e.toDict())
     print(e.toJson())
 
 
 if __name__ == '__main__':
-    show_example_01()
+    showExample01()
     input('\nPress any key to continue . . .')

@@ -33,7 +33,6 @@ class Item(Protocol):
 
 
 class Product:
-
     def __init__(self, name: str, quantity: int, price: float) -> None:
         self.name = name
         self.quantity = quantity
@@ -41,19 +40,18 @@ class Product:
 
 
 class Stock:
-
     def __init__(self, productname: str, quantity: int, price: float) -> None:
         self.productname = productname
         self.quantity = quantity
         self.price = price
 
 
-def gettotal(items: list[Item]) -> float:
+def obtenerTotal(items: list[Item]) -> float:
     return sum([item.quantity*item.price for item in items])
 
 
-def show_example_01():
-    total = gettotal([
+def showExample01():
+    total = obtenerTotal([
         Product('Product1', 10, 100),
         Product('Product2', 20, 100),
         Product('Product3', 30, 100),
@@ -64,8 +62,8 @@ def show_example_01():
     print(f'Total: ${total:,.2f}')
 
 
-def show_example_02():
-    total = gettotal([
+def showExample02():
+    total = obtenerTotal([
         Stock('Tablet', 5, 950),
         Stock('Laptop', 10, 850),
     ])
@@ -74,8 +72,8 @@ def show_example_02():
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 """MÁS SOBRE ENUMERACIONES
 
-Por definición, los miembros de una enumerasión son únicos, sin
+Por definición, los miembros de una enumeración son únicos, sin
 embargo puede crear diferetes nombres de miembros con un mismo
 valor asignado. Cuando esto ocurre python no crea diferentes miembros
 dentro de la enumerasión, solo crea diferentes alias de miembros 
@@ -67,7 +67,7 @@ class Day(Enum):
     SUN = 'Sunday'
 
 
-def show_example_01():
+def showExample01():
     response = '''{
         "status":"fulfilled"   
     }'''
@@ -83,43 +83,42 @@ def show_example_01():
         print(error)
 
 
-def show_example_02():
+def showExample02():
     print(f'Color enumeration:')
     print(Color.RED is Color.CRIMSON)
     print(Color.SALMON is Color.SALMON)
 
 
-def show_example_03():
+def showExample03():
     print('Main Color(1) is: ', Color(2))
     for c in Color:
         print(f'{c}', end=', ')
     print()
 
 
-def show_example_04():
+def showExample04():
     print(f'Color.__members__ : {Color.__members__}')
 
 
-def show_example_05():
+def showExample05():
     code = 'OK'
     if EstatusRespuesta[code] is EstatusRespuesta.SUCCESS:
         print('The request completed successfully')
 
 
-def show_example_06():
+def showExample06():
     for day in Day:
         print(day, end=', ')
     print()
 
 
 def main():
-    # run examples
-    show_example_01()
-    show_example_02()
-    show_example_03()
-    show_example_04()
-    show_example_05()
-    show_example_06()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
+    showExample05()
+    showExample06()
 
 
 if __name__ == '__main__':

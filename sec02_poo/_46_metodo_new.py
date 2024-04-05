@@ -43,19 +43,19 @@ class SquareNumber(int):
         return super().__new__(cls, value**2)
 
 
-def show_example_01():
+def showExample01():
     p = Person(name='Person1')
     print(p)
 
 
-def show_example_02():
+def showExample02():
     x = SquareNumber(3)
     print(x, isinstance(x, int))
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

@@ -17,9 +17,11 @@ dinámica.
 from random import randint
 from time import perf_counter
 
+number = int | float | complex
+
 
 class Point2DV1:
-    def __init__(self, x: float, y: float) -> None:
+    def __init__(self, x: number, y: number) -> None:
         self.x = x
         self.y = y
 
@@ -30,7 +32,7 @@ class Point2DV1:
 class Point2DV2:
     __slots__ = ('x', 'y')
 
-    def __init__(self, x: float, y: float) -> None:
+    def __init__(self, x: number, y: number) -> None:
         self.x = x
         self.y = y
 
@@ -38,7 +40,7 @@ class Point2DV2:
         return f'({self.x}, {self.y})'
 
 
-def show_example_01():
+def showExample01():
     coordenadas = []
     point = Point2DV1(0, 0)
     print(point)
@@ -51,11 +53,11 @@ def show_example_01():
         coordenadas.append(
             Point2DV1(x=randint(-1_000_000, 1_000_000), y=randint(-1_000_000, 1_000_000)))
     tf = perf_counter()
-    delta_t = tf-ti
-    print(f'Tiempo estimado: {delta_t:.2f} seg')
+    deltaT = tf-ti
+    print(f'Tiempo estimado: {deltaT:.2f} seg')
 
 
-def show_example_02():
+def showExample01():
     coordenadas = []
     point = Point2DV2(0, 0)
 
@@ -71,8 +73,8 @@ def show_example_02():
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample01()
 
 
 if __name__ == '__main__':

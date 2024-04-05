@@ -10,7 +10,6 @@ from pprint import pprint
 
 
 class Person:
-
     def __init__(self, name: str) -> None:
         self.__name = name
 
@@ -32,7 +31,7 @@ class Person:
         return 'Person{name=%s}' % (self.name)
 
 
-def show_example_01():
+def showExample01():
     p1 = Person(name='John Wick')
     p1.name = 'Juan Güick'
     print(p1)
@@ -40,7 +39,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

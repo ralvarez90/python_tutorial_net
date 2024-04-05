@@ -16,24 +16,24 @@ estándar.
 
 
 class FahrenheitError(Exception):
-    min_f = 32
-    max_f = 212
+    minF = 32
+    maxF = 212
 
     def __init__(self, f: float,  *args: object) -> None:
         super().__init__(args)
         self.f = f
 
     def __str__(self) -> str:
-        return f'The {self.f} is not in a valida range {self.min_f, self.max_f}'
+        return f'The {self.f} is not in a valida range {self.minF, self.maxF}'
 
 
-def fahrenheit_to_celsius(f: float) -> float:
-    if f < FahrenheitError.min_f or f > FahrenheitError.max_f:
+def fahrenheitToCelsius(f: float) -> float:
+    if f < FahrenheitError.minF or f > FahrenheitError.maxF:
         raise FahrenheitError(f)
     return (f-32) * 5/9
 
 
-def show_example_01():
+def showExample01():
     f = input('Enter a temperature in Fahrenheit:')
     try:
         f = float(f)
@@ -41,7 +41,7 @@ def show_example_01():
         print(ex)
     else:
         try:
-            c = fahrenheit_to_celsius(float(f))
+            c = fahrenheitToCelsius(float(f))
         except FahrenheitError as ex:
             print(ex)
         else:
@@ -49,7 +49,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

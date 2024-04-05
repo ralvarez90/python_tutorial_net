@@ -17,7 +17,6 @@ de una clase. Esta característiza se denomina 'name mangling'.
 
 
 class Counter:
-
     def __init__(self) -> None:
         self.current = 0
 
@@ -33,7 +32,6 @@ class Counter:
 
 
 class Contador:
-
     def __init__(self) -> None:
         self._current = 0
 
@@ -49,7 +47,6 @@ class Contador:
 
 
 def show_example_01():
-    # generamos instancia
     counter = Counter()
     counter.increment()
     counter.increment()

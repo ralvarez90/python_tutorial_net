@@ -23,22 +23,22 @@ lo que facilita la depuración y el diagnóstico de los errores.
 """
 
 # alias
-number = int | float
+number = int | float | complex
 
 
-def show_example_01():
+def showExample01():
 
-    def divide(a: int, b: int) -> number:
+    def __divide(a: int, b: int) -> number:
         try:
             return a/b
         except ZeroDivisionError as ex:
             raise ValueError('b must not be zero') from ex
 
-    divide(10, 0)
+    __divide(10, 0)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

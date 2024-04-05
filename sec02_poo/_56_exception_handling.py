@@ -33,7 +33,7 @@ exc_info del módulo sys. Regresa una tupla con 3 valores consistenes.
 """
 
 
-number = int | float
+number = int | float | complex
 
 
 def divide(a: int, b: int) -> number | None:
@@ -43,7 +43,7 @@ def divide(a: int, b: int) -> number | None:
         return None
 
 
-def show_example_01():
+def showExample01():
     result = divide(10, 0)
     if result is not None:
         print(f'Result: {result}')
@@ -51,7 +51,7 @@ def show_example_01():
         print(f'Invalid inputs')
 
 
-def show_example_02():
+def showExample02():
     colors = ['red', 'green', 'blue']
     try:
         print(colors[3])
@@ -63,7 +63,7 @@ def show_example_02():
         print('Finalizando con éxito')
 
 
-def show_example_03():
+def showExample03():
     import sys
     try:
         '20'/2
@@ -73,9 +73,9 @@ def show_example_03():
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
+    showExample01()
+    showExample02()
+    showExample03()
 
 
 if __name__ == '__main__':
