@@ -28,7 +28,7 @@ clases extienend de type.
 """
 
 
-def runtime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     """Retorna un string del tipo de dato
     del argumento.
 
@@ -41,17 +41,17 @@ def runtime_type(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_01():
+def showExample01():
     # algunas instancias
     instancias = (1, 1.0, 0j, True, 'hola')
 
     # show types
     for obj in instancias:
-        print('{:<5} has a type {}'.format(obj, runtime_type(obj)))
+        print('{:<5} has a type {}'.format(obj, runtimeType(obj)))
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

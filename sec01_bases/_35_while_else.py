@@ -5,7 +5,7 @@ else que se ejecuta cuando la condición del while es falso.
 """
 
 
-def show_example_01():
+def showExample01():
     basket = [
         {'fruit': 'apple', 'qty': 20},
         {'fruit': 'banana', 'qty': 30},
@@ -28,7 +28,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

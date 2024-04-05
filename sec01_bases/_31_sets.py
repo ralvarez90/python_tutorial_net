@@ -35,14 +35,13 @@ Los frozenset son conjuntos inmutables a partir de otros conjuntos.
 Los sets son iterables por lo que se puede obtener cada uno de sus
 objetos mediante un ciclo for.
 """
-import types
 
 
-def rintime_type(obj: object) -> str:
+def runtimeType(obj: object) -> str:
     return str(type(obj))[8:-2]
 
 
-def show_example_01():
+def showExample01():
     skills = {
         'Python Programming',
         'Databases',
@@ -50,29 +49,29 @@ def show_example_01():
     }
 
     print(f'skills: {skills}')
-    print(rintime_type(skills))
+    print(runtimeType(skills))
 
 
-def show_example_02():
+def showExample02():
     emptySet = set()
     emptyDict = {}
     print(f'emptySet : {emptySet}')
     print(f'emptyDict: {emptyDict}')
 
 
-def show_example_03():
+def showExample03():
     caracteres = set('letter')
     print(f'caracteres: {caracteres}')
 
 
-def show_example_04():
+def showExample04():
     rating = 1
     ratings = {1, 2, 3, 4, 5}
     print(f'1     in {ratings} ? {rating in ratings}')
     print(f'1 not in {ratings} ? {rating not in ratings}')
 
 
-def show_example_05():
+def showExample05():
     skills = {'Python', 'Java', 'Perl'}
     skills.add('Go')
     skills.add('Rust')
@@ -89,14 +88,14 @@ def show_example_05():
     skills.discard('Cobol')
 
 
-def show_example_06():
+def showExample06():
     skills = {'Problem Solving', 'Algorithms', 'Python Programming'}
     while len(skills) != 0:
         removed = skills.pop()
         print(f'Eliminado: "{removed}", restantes -> {skills}')
 
 
-def show_example_07():
+def showExample07():
     languages = {
         'python',
         'haskell',
@@ -109,15 +108,15 @@ def show_example_07():
     print(f'languages: {languages}')
 
 
-def show_example_08():
+def showExample08():
     skills = {'Python programming', 'Problem solving', 'Design patterns'}
     skills.add('Django')
     skills = frozenset(skills)
-    print(f'type of {skills} -> {rintime_type(skills)} ')
+    print(f'type of {skills} -> {runtimeType(skills)} ')
     # skills.add('REST Framework') lana error
 
 
-def show_example_09():
+def showExample09():
     languages = {
         'python',
         'haskell',
@@ -134,15 +133,15 @@ def show_example_09():
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
-    show_example_04()
-    show_example_05()
-    show_example_06()
-    show_example_07()
-    show_example_08()
-    show_example_09()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
+    showExample05()
+    showExample06()
+    showExample07()
+    showExample08()
+    showExample09()
 
 
 if __name__ == '__main__':

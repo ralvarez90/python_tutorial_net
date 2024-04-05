@@ -20,20 +20,20 @@ Muestra el número con notación exponencial.
 """
 
 
-def show_example_01():
+def showExample01():
     print(f'{"hello".upper()} WORLD!')
     print('{} WORLD!'.format('hello'.upper()))
     print('%s WORLD!' % ('hello'.upper()))
 
 
-def show_example_02():
+def showExample02():
     fname = 'John'
     lname = 'Wick'
     fullname = F'Hello, {" ".join((fname, lname))}!'
     print(fullname)
 
 
-def show_example_03():
+def showExample03():
     name = 'John Wick'
     site = 'www.johnwick.com'
     message = (
@@ -43,11 +43,11 @@ def show_example_03():
     print(message)
 
 
-def show_example_04():
+def showExample04():
     print(f'Curly braces: {{}}')
 
 
-def show_example_05():
+def showExample05():
     number = 0.01
     print(f'{number:e}')
     print(f'{number:E}')
@@ -62,11 +62,11 @@ def show_example_05():
 
 
 def main():
-    show_example_01()
-    show_example_02()
-    show_example_03()
-    show_example_04()
-    show_example_05()
+    showExample01()
+    showExample02()
+    showExample03()
+    showExample04()
+    showExample05()
 
 
 if __name__ == '__main__':

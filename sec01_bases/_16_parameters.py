@@ -28,7 +28,7 @@ def greeting(nombre: str, mensaje: str = 'Hi'):
     return f'{mensaje} {nombre}'
 
 
-def show_example_01():
+def showExample01():
     # ejemplo 1, uso de valor default default
     mensaje = greeting('Rodrigo')
     print(mensaje)
@@ -43,7 +43,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

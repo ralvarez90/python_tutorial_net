@@ -6,10 +6,9 @@ y rangos, al igual que las list comprehension.
 De forma general la sintaxis es:
 {key:value for (key, value) in dict.items() if condition}
 """
-from copy import deepcopy
 
 
-def show_example_01():
+def showExample01():
     stoks = {
         'APLN': 121,
         'AMZN': 3389,
@@ -29,7 +28,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ correspondientes.
 """
 
 
-def show_example_01():
+def showExample01():
     people = [
         {'name': 'John Doe', 'age': 25},
         {'name': 'Mary Jane', 'age': 22},
@@ -25,7 +25,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

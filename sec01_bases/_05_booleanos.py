@@ -25,21 +25,21 @@ class User:
         """
         self.name = name
         self.roll = roll
-        self.is_active = True
+        self.isActive = True
 
     def deactivate(self):
-        assert self.is_active, 'The user is not active'
-        self.is_active = False
+        assert self.isActive, 'The user is not active'
+        self.isActive = False
 
     @staticmethod
-    def check_status(user: 'User'):
-        if user.is_active:
+    def checkStatus(user: 'User'):
+        if user.isActive:
             print('OK')
             return
         print('ERROR')
 
 
-def show_example_01():
+def showExample01():
     # instancias
     user1 = User('Rodrigo Álvarez', Roll.ADMIN)
     user2 = User('Aldo Caldo', Roll.NORMAL)
@@ -48,12 +48,12 @@ def show_example_01():
     user2.deactivate()
 
     # verificación de estatus
-    User.check_status(user1)
-    User.check_status(user2)
+    User.checkStatus(user1)
+    User.checkStatus(user2)
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

@@ -5,14 +5,14 @@ bucles.
 """
 
 
-def show_example_02():
+def showExample01():
     while True:
         print('Hello from while')
         break
 
 
 def main():
-    show_example_02()
+    showExample01()
 
 
 if __name__ == '__main__':

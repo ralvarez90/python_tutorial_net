@@ -26,21 +26,21 @@ substring.
 # TODO - Agregar descripción y ejemplos de métodos de los strings
 
 
-def show_example_01():
+def showExample01():
     elements = ('red', 'green', 'blue')
     rgb = ', '.join(elements)
     print(f'rgb: {rgb}')
 
 
-def show_example_02():
+def showExample02():
     s = 'Python String Split'
     print(s.split())
     print(s.split(maxsplit=1))
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

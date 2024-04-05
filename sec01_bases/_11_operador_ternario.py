@@ -15,21 +15,21 @@ usados como índices.
 """
 
 
-def show_example_01():
+def showExample01():
     age = int(input('age: '))
     message = 'Welcome' if age >= 18 else 'Bye!'
     print(f'message_v1: {message}')
 
 
-def show_example_02():
+def showExample02():
     age = int(input('age: '))
     message = ('Bye!', 'Welcome')[age >= 18]
     print(f'message_v2: {message}')
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

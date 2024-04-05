@@ -43,11 +43,11 @@ else se ejecuta solo si no hay excepciones y el finally siempre.
 """
 
 
-def calcular_imc(height: float, weight: float):
+def calcularIMC(height: float, weight: float):
     return weight/height**2
 
 
-def show_example_01():
+def showExample01():
     try:
         # ingreso datos
         print('Enter the net sales for:')
@@ -65,20 +65,20 @@ def show_example_01():
         print('Esto SIEMPRE se ejecuta...')
 
 
-def show_example_02():
+def showExample02():
     try:
         height = float(input('Enter your height: '))
         weight = float(input('Enter your weight: '))
     except ValueError as error:
         print(error)
     else:
-        bmi = round(calcular_imc(height, weight))
+        bmi = round(calcularIMC(height, weight))
         print('BMI: %.2f' % (bmi))
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

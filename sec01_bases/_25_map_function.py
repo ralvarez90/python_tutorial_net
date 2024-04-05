@@ -11,29 +11,34 @@ expresión lambda.
 """
 
 
-def square(number: int | float) -> int | float:
+Number = int | float | complex
+
+
+def square(number: Number) -> Number:
     return number ** 2
 
 
-def show_example_01():
+def showExample01():
     bonuses = [100, 200, 300]
-    doubles = list(map(square, bonuses))
+    doubles = list(map(lambda x: x*2, bonuses))
+    squares = list(map(square, bonuses))
     negatives = list(map(lambda n: -n, bonuses))
     print(f'bonuses  : {bonuses}')
     print(f'doubles  : {doubles}')
+    print(f'squares  : {squares}')
     print(f'negatives: {negatives}')
 
 
-def show_example_02():
+def showExample02():
     names = ['david', 'peter', 'jenifer']
-    title_names = list(map(lambda name: name.title(), names))
+    titleFormatNames = list(map(lambda name: name.title(), names))
     print(f'names: {names}')
-    print(f'title_names: {title_names}')
+    print(f'titleFormatNames: {titleFormatNames}')
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

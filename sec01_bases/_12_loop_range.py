@@ -12,14 +12,14 @@ step a utilizar.
 """
 
 
-def show_example_01():
+def showExample01():
     total = 0
     for n in range(1, int(input('>>> ')) + 1):
         total += n
     print(f'Total: {total}')
 
 
-def show_example_02():
+def showExample02():
     total = 0
     for n in range(1, int(input('>>> '))+1):
         total += n
@@ -28,8 +28,8 @@ def show_example_02():
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

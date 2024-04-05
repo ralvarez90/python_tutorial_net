@@ -28,7 +28,11 @@ import os
 import time
 
 
-def show_example_01():
+def isDirectory(path: str) -> bool:
+    return os.path.exists(path) or os.path.isdir(path)
+
+
+def showExample01():
     # home de usuario
     userPath = Path.home()
 
@@ -44,7 +48,7 @@ def show_example_01():
     [print(f) for f in homeFiles if not f.startswith('.')]
 
 
-def show_example_02():
+def showExample02():
     homePath = Path.home()
     completePath = os.path.join(homePath, 'snap')
     print(f'{completePath}')
@@ -52,16 +56,12 @@ def show_example_02():
     print(directoriosDelPath)
 
 
-def is_directory(path: str) -> bool:
-    return os.path.exists(path) or os.path.isdir(path)
-
-
-def show_example_03():
+def showExample03():
     snapDirPath = os.path.join(Path.home(), 'snap')
-    print(f'{snapDirPath} is a directory: {is_directory(snapDirPath)}')
+    print(f'{snapDirPath} is a directory: {isDirectory(snapDirPath)}')
 
 
-def show_example_04():
+def showExample04():
     dirActual = os.getcwd()
     dirTemporal = os.path.join(dirActual, 'temporal')
 
@@ -77,9 +77,9 @@ def show_example_04():
 
 def main():
     # show_example_1()
-    show_example_02()
-    show_example_03()
-    show_example_04()
+    showExample02()
+    showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':

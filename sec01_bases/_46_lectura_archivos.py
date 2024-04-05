@@ -12,7 +12,7 @@ import os
 import random
 
 
-def get_file_list(path: str = './') -> list[str]:
+def getFileList(path: str = './') -> list[str]:
     """Obtiene lista de archivos del directorio actual por default. Puede
     espeficicar cualquier path del sistema.
     """
@@ -22,8 +22,8 @@ def get_file_list(path: str = './') -> list[str]:
     return []
 
 
-def show_example_01():
-    archivos = sorted(get_file_list())
+def showExample01():
+    archivos = sorted(getFileList())
     un_archivo = random.choice(archivos)
     if un_archivo != '':
         with open(file=un_archivo, mode='r', encoding='utf-8') as f:
@@ -34,7 +34,7 @@ def show_example_01():
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':

@@ -5,16 +5,18 @@ asigna un valor, asociando dicho nombre a dicho valor.
 
 La forma en la que se declara una variable es:
 nombre_variable = valor
+nombreVariable = valor
+nombreVariable: typehint = valor
 """
 
 
-def show_example_01():
+def showExample01():
     message: str = 'Hello World in Python3'
     print(f'message: {message}')
 
 
 def main():
-    show_example_01()
+    showExample01()
 
 
 if __name__ == '__main__':
