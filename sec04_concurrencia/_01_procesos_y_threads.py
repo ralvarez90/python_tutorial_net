@@ -10,7 +10,6 @@ como objetos de la clase.
 from time import sleep, perf_counter
 
 
-
 def showExample01():
 
     # inner function
