@@ -8,20 +8,28 @@ Un programa es como una clase, mientras que los procesos son
 como objetos de la clase.
 """
 from time import sleep, perf_counter
-from threading import Thread
 
 
-def task():
-    print(f'starting task...')
-    sleep(1)
-    print(f'done')
+
+def showExample01():
+
+    # inner function
+    def task():
+        print(f'starting task...')
+        sleep(1)
+        print(f'done')
+
+    ti = perf_counter()
+    for _ in range(5):
+        task()
+    tf = perf_counter()
+    print(f'Tiempo transcurrido: {tf-ti:.2f} segundos')
+
+
+def main():
+    showExample01()
 
 
 if __name__ == '__main__':
-
-    start = perf_counter()
-    task()
-    task()
-    end_time = perf_counter()
-
-    print(f'Tiempo transcurrido: {end_time-start:.2f} segundos')
+    main()
+    input('\nPress any key to continue . . .')
