@@ -16,4 +16,10 @@ léxico.
 Python almacena la vinculación entre variables/objetos en espacios
 de nombres. Todo scope o alcance está dentro de un respectivo
 espacio de nombres.
+
+En Python la jearquía de scopes es de la forma:
+built-in scope
+    module scope
+        nonlocal scope
+            local scope
 """
