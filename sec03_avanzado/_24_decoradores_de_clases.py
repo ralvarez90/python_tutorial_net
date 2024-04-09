@@ -1,9 +1,9 @@
 """DECORADORES DE CLASES
 
-Recordemos que las clases son objetos Callables, es decir
-se pueden invocar. Esto solo pasa cuando se implementa en
-su interior el método __call__, por lo tanto, puede hacer
-este método un decorador.
+Recordemos que las clases que implementan __call__ son objetos Callables, 
+es decir se pueden invocar. Esto solo pasa cuando se implementa en su 
+interior el método __call__, por lo tanto, puede hacer este método un 
+decorador.
 """
 
 
