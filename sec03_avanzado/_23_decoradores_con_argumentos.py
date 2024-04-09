@@ -4,7 +4,8 @@ Los decoradores son funciones, por lo tanto pueden recibir
 argumentos.
 
 Notas:
-- El decorador @wraps del módulo functools
+- El decorador @wraps del módulo functools conserva los metadatos
+de 
 """
 from functools import wraps
 

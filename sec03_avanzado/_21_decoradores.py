@@ -1,30 +1,46 @@
-"""DECORADORES
+"""DECORADORES CON ARGUMENTOS
 
-Un decorador es una función que toma otra como argumento y extiende su funcionalidad
-retornando la función argumento con su funcionalidad extendida.
+Recordemos que los decoradores son funciones que 
+reciben como argumento otra función, la modifican
+y la vuelven a retornar.
 
-Recordemos que por definición un decorador es una función que recibe
-otra función como argumento.
+Al ser funciones pueden o no recibir argumentos. La definición
+forma de un decorador es:
+- Funcion que toma otra como argumento y retorna otra función o
+closure.
 """
 
 
 def showExample01():
+    """Version sin uso de decorador."""
 
-    def netPrice(price: float, tax: float):
-        return price * (1 + tax)
+    def getNetPrice(price: float, tax: float) -> float:
+        return price * (1+tax)
 
     def currency(fn):
         def wrapper(*args, **kwargs):
             result = fn(*args, **kwargs)
-            return f'${result}'
+            return f'{result}'
         return wrapper
 
-    netPrice = currency(fn=netPrice)
-    print(netPrice(100, 0.05))
+    # decoramos funcion getNetPrice
+    getNetPrice = currency(getNetPrice)
+    print(getNetPrice(100, 0.05))
 
 
 def showExample02():
-    pass
+    """Version con uso de decorador."""
+
+    def currency(fn):
+        def wrapper(*args, **kwargs):
+            result = fn(*args, **kwargs)
+            return f'{result}'
+        return wrapper
+
+    @currency
+    def getNetPrice(price: float, tax: float) -> float:
+        return price * (1+tax)
+    print(getNetPrice(100, 0.05))
 
 
 def main():
