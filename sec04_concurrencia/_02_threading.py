@@ -76,15 +76,9 @@ def showExample03():
     print(f'showExample03 se ejecuta en {tf-ti} segundos')
 
 
-def showExample04():
-    
-    def replace(filename, substr, newSubstr):
-        print(f'Processing the file: {filename}')
-
-
 def main():
-    # showExample01()
-    # showExample02()
+    showExample01()
+    showExample02()
     showExample03()
 
 
