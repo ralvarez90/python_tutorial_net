@@ -13,7 +13,11 @@ dentro de la secuencia. Si no existe el elemento retorna un ValueError.
 
 Index también puede recibir un segundo parámetro indicando un índice específico
 a partir de cual buscar.
+
+3. max y min
+Podemos obtener el elemento máximo y mínimo de una secuencia.
 """
+import random
 
 
 def showExample01():
@@ -37,9 +41,17 @@ def showExample02():
     print(numbers.index(5, 3))
 
 
+def showExample03():
+    numbers = [random.randint(1, 11) for _ in range(10)]
+    print(f'Si numbers es igual a "{numbers}"')
+    print(f'min(numbers): {min(numbers)}')
+    print(f'max(numbers): {max(numbers)}')
+
+
 def main():
     showExample01()
     showExample02()
+    showExample03()
 
 
 if __name__ == '__main__':
