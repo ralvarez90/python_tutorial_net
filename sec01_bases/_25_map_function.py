@@ -8,20 +8,23 @@ uno de los elementos del iterable que reciba como argumento.
 
 La función que recibe como primer argumento puede ser externa o una
 expresión lambda.
+
+La función asignada al parámetro de map recibe solo un parámetro y
+regresa solo 1 valor.
 """
 
 
 Number = int | float | complex
 
 
-def square(number: Number) -> Number:
+def getSquare(number: Number) -> Number:
     return number ** 2
 
 
 def showExample01():
     bonuses = [100, 200, 300]
     doubles = list(map(lambda x: x*2, bonuses))
-    squares = list(map(square, bonuses))
+    squares = list(map(getSquare, bonuses))
     negatives = list(map(lambda n: -n, bonuses))
     print(f'bonuses  : {bonuses}')
     print(f'doubles  : {doubles}')

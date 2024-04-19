@@ -32,10 +32,10 @@ def runtimeType(obj: object) -> str:
     """Retorna un string del tipo de dato
     del argumento.
 
-    >>> runtime_type('Hello')
+    >>> runtimeType('Hello')
     'str'
 
-    >>> runtime_type(1)
+    >>> runtimeType(1)
     'int'
     """
     return str(type(obj))[8:-2]

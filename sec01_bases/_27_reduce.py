@@ -1,6 +1,8 @@
 """FUNCIÓN REDUCE
 
 Permite obtener un valor concreto a partir de una secuencia.
+La función que se recibe como argumento en reduce recibe
+dos parámetros y devuelve un resultado.
 """
 import functools
 

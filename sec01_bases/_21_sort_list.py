@@ -4,6 +4,9 @@
 Método de las listas que ordena de acuerdo a un key, los
 elementos. Este método cambia el estado del la lista ordenándola.
 
+El parámetro de la función asignada en key recibe un solo
+argumento.
+
 2. sorted
 Método build-in en python que recibe un iterables de objetos
 comparables de alguna forma, y retorna una lista de los elementos
@@ -44,19 +47,22 @@ def showExample03():
 
     print(f'original: {items}')
 
-    def helperFromName(companyData: Tuple[str, int, float]) -> str:
+    def _fromName(companyData: Tuple[str, int, float]) -> str:
         return companyData[0]
 
-    def helperFromYear(companyData: Tuple[str, int, float]) -> int:
+    def _fromYear(companyData: Tuple[str, int, float]) -> int:
         return companyData[1]
 
+    # se ordena por monto
     items.sort(key=lambda company: company[2])
     print(f'Ordenado por monto: {items}')
 
-    items.sort(key=helperFromName)
+    # se ordena por nombre
+    items.sort(key=_fromName)
     print(f'Ordenado por nombre: {items}')
 
-    items.sort(key=helperFromYear)
+    # se ordena por año
+    items.sort(key=_fromYear)
     print(f'Ordenado por año  : {items}')
 
 

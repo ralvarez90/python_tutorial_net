@@ -3,6 +3,10 @@
 Permite ejecutar un bloque de código mientras la condición
 a evaluar sea True. Pude anidárcele un bloque else que se ejecuta
 cuando la condición se deja de cumplir.
+
+Podemos además definir un nombre de variable empleando el símbolo
+de asignación :=, que crea una variable dentro del scope del
+while. Ver ejemplo 02.
 """
 import random
 

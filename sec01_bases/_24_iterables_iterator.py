@@ -26,15 +26,15 @@ cada elemento de su interior este se elimina.
 
 def showExample01():
     colors = ['red', 'green', 'blue']
-    colors_iter = iter(colors)
+    colorsIterator = iter(colors)
     for _ in range(len(colors)):
-        print(next(colors_iter))
+        print(next(colorsIterator))
 
 
 def showExample02():
     colors = ['red', 'green', 'blue']
-    colors_iter = iter(colors)
-    for item in colors_iter:
+    colorsIterator = iter(colors)
+    for item in colorsIterator:
         print(item)
 
 

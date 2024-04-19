@@ -2,6 +2,9 @@
 
 A veces, es necesario iterar sobre los elementos de una lista y 
 seleccionar algunos de ellos según criterios específicos.
+
+La función asignada al parámetro de filter recibe un
+valor y retorna un booleano.
 """
 
 
@@ -12,7 +15,7 @@ def showExample01():
     print(f'filter: {filtered}')
 
 
-def showExample03():
+def showExample02():
     countries = [
         ['China', 1394015977],
         ['United States', 329877505],
@@ -34,7 +37,7 @@ def showExample03():
 
 def main():
     showExample01()
-    showExample03()
+    showExample02()
 
 
 if __name__ == '__main__':

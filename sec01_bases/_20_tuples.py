@@ -13,13 +13,15 @@ def runtimeType(obj: object) -> str:
 
 
 def showExample01():
-    tpl = tuple([i for i in range(1, 11)])
-    print(f'tuple1: {tpl}, with type: {runtimeType(tpl)}')
+    tpl1 = tuple([i for i in range(1, 11)])
+    print(f'tuple1: {tpl1}, with type: {runtimeType(tpl1)}')
+
+    tpl2 = 1,
+    print(f'tuple2: {tpl2}, with type: {runtimeType(tpl2)}')
 
 
 def main():
     showExample01()
-    print(runtimeType((1,)))
 
 
 if __name__ == '__main__':

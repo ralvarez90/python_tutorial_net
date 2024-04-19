@@ -56,13 +56,13 @@ def showExample02():
     ]
 
     print(f'colors: {colors}')
-    sub_colors = colors[1:4]
-    print(f'colors[1:4] -> {sub_colors}')
+    subColores = colors[1:4]
+    print(f'colors[1:4] -> {subColores}')
 
 
 def showExample03():
-    some_lst = [i for i in range(1, 1)]
-    print(f'some_lst: {some_lst}')
+    someList = [i for i in range(1, 1)]
+    print(f'some_lst: {someList}')
     print(f'tail of  : {obtenerCola([1])}')
 
 

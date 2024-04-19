@@ -9,7 +9,7 @@ De forma general la sintaxis es:
 
 
 def showExample01():
-    stoks = {
+    stocks = {
         'APLN': 121,
         'AMZN': 3389,
         'MSFT': 4492,
@@ -20,10 +20,10 @@ def showExample01():
     # for k, v in stoks.items():
     #     stoks[k] = int(v*1.20)
 
-    print(f'finalStock: {stoks}')
+    print(f'finalStock: {stocks}')
 
-    # con expresipn
-    newStock = {k: int(v*1.2) for (k, v) in stoks.items()}
+    # con expresión y k:v a asugbar
+    newStock = {k: int(v*1.2) for (k, v) in stocks.items()}
     print(f'newStock:   {newStock}')
 
 

@@ -9,7 +9,6 @@ Python incluye funciones built-in listas para usar.
 
 
 def greeting():
-    """Display a greeting to users."""
     print('Nos salvaste, estamos agradecidos')
 
 
