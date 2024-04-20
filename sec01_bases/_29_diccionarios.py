@@ -18,6 +18,10 @@ de un diccionario.
 
 Los diccionarios tiene un serie de métodos útiles para manejarlos.
 Esta es una de las estructuras de datos más importantes.
+
+El método get nos permite obtener valores asociados a un key dentro
+de un diccionario sin lanzar excepción en caso de que no exista
+la llave en cuestión.
 """
 
 
@@ -40,6 +44,7 @@ def showExample01():
     for k in persona:
         print(f'persona[{k}] -> {persona[k]}')
 
+    # uso de get
     print(persona.get('firstName', ''))
     print(persona.get('nombre', 'sin-nombre'))
 

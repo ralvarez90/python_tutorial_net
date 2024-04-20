@@ -1,10 +1,9 @@
 """LISTAS POR COMPRENSIÓN
 
 Tanto la función for loop como map() pueden ayudarle a crear una 
-nueva lista basada en una existente.
-
-Las list comprehension nos permite generar listas a partir de
-expresiones. Se pueden agregar condiciones.
+nueva lista basada en una existente. Las listas por comprensión
+(comprehension list) son otra alternativa para generar secuencias
+de valores dinámicas.
 """
 
 

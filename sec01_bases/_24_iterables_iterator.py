@@ -7,12 +7,13 @@ Un iterable tiene la habilidad de regresar sus elementos uno
 a la vez. Debido a esta característica puede usar el ciclo for
 con iterables.
 
-Algunos iterables son los range, strings, listas y tuplas.
+Algunos ejemplos de iterables son los range, strings, listas y 
+tuplas.
 
 1. Iterator
-En Python, "iter" es una función que se utiliza para obtener un iterador 
-a partir de un objeto iterable. Un objeto iterable es aquel que
-puede ser recorrido. 
+En Python, "iter" es una función que se utiliza para obtener un 
+iterador a partir de un objeto iterable. Un objeto iterable es 
+aquel que puede ser recorrido. 
 
 Podemos iterar un iterador con el for o mediante la función next, que
 permite obtener el siguiente elemento en la secuencia. Si se invoca

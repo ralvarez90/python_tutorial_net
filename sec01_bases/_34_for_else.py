@@ -3,6 +3,10 @@
 El ciclo for permite establecer un bloque else que se
 ejecuta cuando termina de iterar sobre los elementos
 correspondientes.
+
+Si el iterable en cuestión no se termina de iterar
+(ocurre por ejemplo break), entonces el bloque else
+NO se ejecuta.
 """
 
 

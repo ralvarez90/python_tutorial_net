@@ -13,7 +13,7 @@ def runtimeType(obj: object) -> str:
     return str(type(object))[8:-2]
 
 
-def obtenerSuma(x: number, y: number, *args: tuple[number]) -> number:
+def obtenerSuma(x: number, y: number, *args: number) -> number:
     return x+y+sum(args)
 
 

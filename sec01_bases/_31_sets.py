@@ -126,10 +126,10 @@ def showExample09():
     }
 
     for lang in languages:
-        print(f'- {lang}')
+        print(f'- {lang.title()}')
 
     for index, value in enumerate(languages, start=1):
-        print(index, value)
+        print(index, value.title())
 
 
 def main():

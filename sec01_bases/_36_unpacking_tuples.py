@@ -4,7 +4,7 @@ Podemos desempacar elementos de colecciones empleando *
 en diferentes contextos. Es practicamente lo mismo que
 el unpacking con listas.
 
-Si una función como parámetros tiene un nobre de variable
+Si una función como parámetro tiene un nombre de variable
 precedido con un *, entonces dicho parámetro es una tupla 
 dentro del cuerpo de la función.
 """
@@ -31,8 +31,9 @@ def showExample01():
     someTpl = (1, 2, 3)
     head = obtenerCabecera(someTpl)
     tail = obtenerCola(someTpl)
-    print(f'head: {head}')
-    print(f'tail: {tail}')
+    print(f'someTpl: {someTpl}')
+    print(f'head   : {head}')
+    print(f'tail   : {tail}')
 
 
 def showExample02():
