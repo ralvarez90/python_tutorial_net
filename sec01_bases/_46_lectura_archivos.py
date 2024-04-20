@@ -16,9 +16,9 @@ def getFileList(path: str = './') -> list[str]:
     """Obtiene lista de archivos del directorio actual por default. Puede
     espeficicar cualquier path del sistema.
     """
-    actual_path = (os.getcwd(), path)[path != '']
-    if os.path.isdir(actual_path):
-        return os.listdir(actual_path)
+    actualPath = (os.getcwd(), path)[path != '']
+    if os.path.isdir(actualPath):
+        return os.listdir(actualPath)
     return []
 
 

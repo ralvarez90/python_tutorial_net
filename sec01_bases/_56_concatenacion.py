@@ -6,7 +6,7 @@ tenemos en python para concatener strings.
 
 
 def showExample01():
-    s = 'Esto' ' es un string concatenado1'
+    s = ('Esto' ' es un string concatenado1')
     print(s)
 
 

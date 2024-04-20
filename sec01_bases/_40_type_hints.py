@@ -1,8 +1,8 @@
 """ANOTACIONES DE TIPO
 
-Las sugerencias de tipo de python le brindan escritura estática 
-opcional para aprovechar lo mejor de la escritura estática y 
-dinámica.
+Las anotaciones de tipo son un elemento informativo a
+nivel código, cuyo único fin es agregar legibilidad al
+código. No tiene ningún efecto a nivel de ejecución.
 
 Python en el módulo typing incluye alias de tipos que son
 List, Tuple, Dict, Set, Frozenset, Sequence, Mapping, 

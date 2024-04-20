@@ -2,18 +2,20 @@
 
 El leer un archivo en python conlleva los siguientes
 elementos:
-- Abrir un archivo de texto para lectura empleando la función
+1. Abrir un archivo de texto para lectura empleando la función
 open.
-- Leer el contenido del archivo de texto empleando los
+2. Leer el contenido del archivo de texto empleando los
 métodos read, readline o readlines del objeto file que retorna
 la función open.
-- Cerrar el archivo empleando el método close.
+3. Cerrar el archivo empleando el método close.
 
 1. Función open
 Puede recibir diversos parámetros pero los principales son:
+
 - path (ruta del archivo), este si se encuentra localizado
 dentro del mismo directorio del script que ejecuta python
 únicamente se requiere poner el nombre del archivo.
+
 - mode (modo en el que se abre el archivo), este parámetro
 es opcional:
 r   modo lectura

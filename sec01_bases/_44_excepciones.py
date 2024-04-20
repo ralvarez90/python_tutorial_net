@@ -1,7 +1,7 @@
 """EXCEPCIONES
 
 En python existen dos tipos de errores. De Sintaxis y excepciones. Todo
-código bien escrito en python puede cansar errores al momento de 
+código bien escrito en python puede causar errores al momento de 
 ejecutarse. En python los errores en tiempo de ejecución se denominan
 excepciones.
 

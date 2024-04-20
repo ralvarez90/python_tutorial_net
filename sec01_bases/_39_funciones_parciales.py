@@ -21,8 +21,14 @@ def showExample01():
     print(f'Doble de 10: {double(10)}')
 
 
+def showExample02():
+    # todo: hacer ejemplo elaborado sobre partials functions
+    pass
+
+
 def main():
     showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

@@ -29,7 +29,7 @@ def showExample01():
 def showExample02():
     fname = 'John'
     lname = 'Wick'
-    fullname = F'Hello, {" ".join((fname, lname))}!'
+    fullname = f'Hello, {" ".join((fname, lname))}!'
     print(fullname)
 
 
@@ -38,7 +38,8 @@ def showExample03():
     site = 'www.johnwick.com'
     message = (
         f'Hello {name}\n'
-        f"You're learning be a Killer in {site}"
+        f"You're learning be a Killer in"
+        f' {site}'
     )
     print(message)
 

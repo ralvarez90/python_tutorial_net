@@ -23,7 +23,7 @@ startswith, endswith
 Retorna booleanos indicando si un string inicia o finaliza con determinado
 substring.
 """
-# TODO - Agregar descripción y ejemplos de métodos de los strings
+# TODO - Agregar descripción y ejemplos de másmétodos de los strings
 
 
 def showExample01():
