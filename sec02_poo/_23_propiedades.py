@@ -38,21 +38,21 @@ la clase si es necesario.
 class Person:
     def __init__(self, name: str, age: int) -> None:
         self.name = name
-        self._setage(age)
+        self._setAge(age)
 
-    def _setage(self, age: int):
+    def _setAge(self, age: int):
         if age < 0:
             raise ValueError('The age cannot be a negative integer.')
         self.__age = age
 
-    def _getage(self) -> int:
+    def _getAge(self) -> int:
         return self.__age
 
     def __str__(self) -> str:
         return f'Person{self.__dict__}'
 
     # creamos propiedad
-    age = property(fget=_getage, fset=_setage)
+    age = property(fget=_getAge, fset=_setAge)
 
 
 def showExample01():

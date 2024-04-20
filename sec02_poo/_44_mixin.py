@@ -17,6 +17,9 @@ para combinar las clases mixin con una clase principal.
 Dado que Python no define una forma formal de definir clases 
 mixin, es una buena práctica nombrar las clases mixin 
 con el sufijo Mixin.
+
+Mixin se traduce como mezcla.
+# todo: agregar otro ejemplo muestra
 """
 import json
 

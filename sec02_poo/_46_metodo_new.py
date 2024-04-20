@@ -8,7 +8,7 @@ inicial a cada una de las instancias.
 El método __new__ es un método estático que se invoca
 desde object.
 
-El método __new__ cuenta con la siguiente firma
+El método __new__ cuenta con la siguiente firma 
 object.__new__(class, *args, **kwargs) donde el
 primer argumento es la clase del nuevo objeto que
 se creará, y *args y **kwargs  deben coincidir con los
@@ -25,16 +25,16 @@ objeto en el momento de la instancia.
 
 
 class Person:
-    def __new__(cls, firstname: str, lastname: str):
-        self = object.__new__(cls)
-        return self
+    def __new__(cls, name: str):
+        object_ = object.__new__(cls)
+        return object_
 
     def __init__(self, name: str) -> None:
         print(f'Initializing the person2 object...')
         self.name = name
 
     def __str__(self) -> str:
-        return f'Person2{self.__dict__}'
+        return f'Person{self.__dict__}'
 
 
 class SquareNumber(int):
@@ -44,13 +44,27 @@ class SquareNumber(int):
 
 
 def showExample01():
-    p = Person(name='Person1')
+    p = Person(name='John Wick')
     print(p)
 
 
 def showExample02():
     x = SquareNumber(3)
     print(x, isinstance(x, int))
+
+
+def showExample03():
+
+    class Person:
+        def __new__(cls, firstname: str, lastname: str):
+            self_ = super().__new__(cls)
+            self_.firstname = firstname
+            self_.lastname = lastname
+            self_.fullname = f'{firstname} {lastname}'
+            return self_
+
+    johnDoe: Person = Person(firstname='John', lastname='Doe')
+    print(johnDoe)
 
 
 def main():

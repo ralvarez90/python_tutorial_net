@@ -1,8 +1,8 @@
 """CLASES ABSTRACTAS
 
-Clases cuyo objetivo es que sean extendidas por otras clases. Las
-clases asbtractas no pueden ser instanciadas mienstras que las
-clases derivadas que sean concretas si.
+Clases cuyo objetivo es que sean extendidas por otras clases. No 
+pueden ser instanciadas mientras que las clases derivadas que 
+sean concretas si.
 
 De forma típica una clase abstracta está diseñada para crear
 moldes de diseño de otras clases. Una clase abstracta es aquella
@@ -16,6 +16,8 @@ abstractos.
 
 En la práctica, se utilizan clases abstractas para compartir el 
 código entre varias clases estrechamente relacionadas.
+
+# todo: agregar mas ejemplos sobre clases abstractas
 """
 from abc import ABC, abstractmethod
 
@@ -30,7 +32,7 @@ class Employee(ABC):
         return f'{self.firstname} {self.lastname}'
 
     @abstractmethod
-    def getsalary(self):
+    def getSalary(self):
         pass
 
 
@@ -39,7 +41,7 @@ class FulltimeEmployee(Employee):
         super().__init__(firstname, lastname)
         self.salary = salary
 
-    def getsalary(self):
+    def getSalary(self):
         return self.salary
 
 
@@ -49,7 +51,7 @@ class HourlyEmployee(Employee):
         self.worked_hours = worked_hours
         self.rate = rate
 
-    def getsalary(self):
+    def getSalary(self):
         return self.worked_hours * self.rate
 
 
@@ -63,7 +65,7 @@ class Payroll:
 
     def print(self):
         for e in self.employees:
-            print(f'{e.fullname} \t ${e.getsalary():,.2f}')
+            print(f'{e.fullname} \t ${e.getSalary():,.2f}')
 
 
 def showExample01():

@@ -22,7 +22,7 @@ import math
 
 
 class Point2D:
-    def __init__(self, x: float = 0, y: float = 0) -> None:
+    def __init__(self, x: float = 0, y: float = 0):
         self.x = x
         self.y = y
 
@@ -37,7 +37,7 @@ class Point2D:
         return Point2D(x=self.x - __value.x, y=self.y - __value.y)
 
     @property
-    def length(self):
+    def length(self) -> float:
         return math.sqrt(self.x**2 + self.y**2)
 
     def __str__(self) -> str:
@@ -45,13 +45,13 @@ class Point2D:
 
 
 class Item:
-    def __init__(self, name: str, qty: int, price: float) -> None:
+    def __init__(self, name: str, qty: int, price: float):
         self.name = name
         self.qty = qty
         self.price = price
 
     @property
-    def amount(self):
+    def amount(self) -> float:
         return self.qty * self.price
 
     def __str__(self) -> str:
@@ -81,10 +81,10 @@ class Cart:
 def showExample01():
     i = Point2D(1, 0)
     j = Point2D(0, 1)
-    unit_point = i+j
+    unit: Point2D = i+j
     print(f'i     -> {i} with length:', i.length)
     print(f'j     -> {j} with length:', j.length)
-    print(f'i + j -> {unit_point} with lenght: {unit_point.length:.2f}')
+    print(f'i + j -> {unit} with lenght: {unit.length:.2f}')
 
 
 def showExample02():

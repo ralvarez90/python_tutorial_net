@@ -46,7 +46,7 @@ class Contador:
         self._current = 0
 
 
-def show_example_01():
+def showExample01():
     counter = Counter()
     counter.increment()
     counter.increment()
@@ -54,7 +54,7 @@ def show_example_01():
     print(f'counter.value() -> {counter.value()}')
 
 
-def show_example_02():
+def showExample02():
     contador = Contador()
     contador.increment()
     contador.increment()
@@ -64,8 +64,8 @@ def show_example_02():
 
 
 def main():
-    show_example_01()
-    show_example_02()
+    showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':

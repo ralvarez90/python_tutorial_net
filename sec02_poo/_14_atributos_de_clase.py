@@ -26,10 +26,10 @@ class Product:
         self.price = price
         self.discount = Product.default_discount
 
-    def set_discount(self, discount: float):
+    def setDiscount(self, discount: float):
         self.discount = discount
 
-    def get_netprice(self) -> float:
+    def getNetPrice(self) -> float:
         return self.price * (1-self.discount)
 
 
@@ -88,14 +88,13 @@ def showExample03():
 
 def showExample04():
     p1 = Product(2000)
-    print(f'p1.netprice() -> ${p1.get_netprice():,.2f}')
+    print(f'p1.netprice() -> ${p1.getNetPrice():,.2f}')
     p2 = Product(2000)
-    p2.set_discount(0.05)
-    print(f'p2.netprice() -> ${p2.get_netprice():,.2f}')
+    p2.setDiscount(0.05)
+    print(f'p2.netprice() -> ${p2.getNetPrice():,.2f}')
 
 
 def main():
-    # run examples
     showExample01()
     showExample02()
     showExample03()

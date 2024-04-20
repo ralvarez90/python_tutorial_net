@@ -2,8 +2,8 @@
 
 Son campos dentro de una clase. Puede haber de instancias o de clase.
 """
-from pprint import pprint
 import json
+from pprint import pprint
 
 
 class Person:

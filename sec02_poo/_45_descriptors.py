@@ -16,7 +16,7 @@ propiedades, métodos estáticos y métodos de clase. Son especialmente
 útiles cuando quieres tener un control adicional sobre cómo se accede 
 o modifica un atributo de una clase.
 
-todo agregar mas notas sobre descriptores
+#todo: agregar mas notas sobre descriptores
 """
 
 

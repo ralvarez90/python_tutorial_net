@@ -23,13 +23,13 @@ class Employee:
 
 
 class SalesEmployee(Employee):
-    def __init__(self, name: str, basepay: float, bonus: float, sales_incentive: float) -> None:
+    def __init__(self, name: str, basepay: float, bonus: float, salesIncentive: float) -> None:
         super().__init__(name, basepay, bonus)
-        assert sales_incentive >= 0, 'Sales incentive cannot be a negative number'
-        self.sales_incentive = sales_incentive
+        assert salesIncentive >= 0, 'Sales incentive cannot be a negative number'
+        self.salesIncentive = salesIncentive
 
     def getpay(self) -> float:
-        return super().getpay() + self.sales_incentive
+        return super().getpay() + self.salesIncentive
 
     def __str__(self) -> str:
         return f'SalesEmployee{self.__dict__}'

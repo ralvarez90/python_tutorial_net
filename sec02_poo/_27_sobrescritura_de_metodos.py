@@ -5,7 +5,7 @@ cuerpo de un método en las clases hijas con la finalidad de adaptar
 el comportamiento de dicho método. Se puede reutilizar o no el cuerpo
 del método en el padre.
 
-La sobreescritura permite implemnentar el polimorfismo a través de
+La sobreescritura permite implementar el polimorfismo a través de
 la gerarquía de herencia.
 
 Al invocar un método de instancia, primer busca dentro de su diccionario
@@ -21,7 +21,7 @@ class Employee:
         self.name = name
         self.basepay = basepay
 
-    def getpay(self) -> float:
+    def getPay(self) -> float:
         return self.basepay
 
     def __str__(self) -> str:
@@ -33,8 +33,8 @@ class SalesEmployee(Employee):
         super().__init__(name, basepay)
         self.incentive = incentive
 
-    def getpay(self) -> float:
-        return super().getpay() + self.incentive
+    def getPay(self) -> float:
+        return super().getPay() + self.incentive
 
     def __str__(self) -> str:
         return f'SalesEmployee{self.__dict__}'
@@ -73,8 +73,8 @@ class UKParser(Parser):
 def showExample01():
     emp1: Employee = Employee('John Wick1', 1_000_000)
     emp2: Employee = SalesEmployee('John Wick2', 1_000_000, 100_000)
-    print(f'emp1 has a pay: ${emp1.getpay():,.2f}')
-    print(f'emp2 has a pay: ${emp2.getpay():,.2f}')
+    print(f'emp1 has a pay: ${emp1.getPay():,.2f}')
+    print(f'emp2 has a pay: ${emp2.getPay():,.2f}')
 
 
 def showExample02():

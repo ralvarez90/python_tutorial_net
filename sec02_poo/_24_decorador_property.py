@@ -10,7 +10,7 @@ este no podrá cambiarse.
 
 
 class Person:
-    def __init__(self, name: str, age: int) -> None:
+    def __init__(self, name: str, age: int):
         self._name = name
         self._age = age
 
@@ -39,7 +39,7 @@ class Person:
 class Circle:
     PI = 3.14159
 
-    def __init__(self, radius: float) -> None:
+    def __init__(self, radius: float):
         self._radius = radius
         self._area = None
 

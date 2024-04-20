@@ -2,11 +2,12 @@
 
 setattr
 Podemos cambiar el estado e atributos de clase o de instancia
-de forma directao o empleando el método setattr.
+de forma dinámica y en tiempo de ejecución empleando el método 
+setattr.
 
 delattr
 Podemos eliminar un atributo de un objeto empleando la función
-delattr
+delattr.
 """
 
 

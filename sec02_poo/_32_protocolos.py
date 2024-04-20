@@ -20,8 +20,10 @@ más por el comportamiento y las propiedades de la entrada, no por su
 tipo explícito.
 
 En resumen, se emplean para definir interfaces implícitas.
+
+#todo agregar otro ejemplo
 """
-from typing import List, Protocol
+from typing import Protocol
 
 
 class Item(Protocol):
@@ -40,8 +42,8 @@ class Product:
 
 
 class Stock:
-    def __init__(self, productname: str, quantity: int, price: float) -> None:
-        self.productname = productname
+    def __init__(self, productName: str, quantity: int, price: float) -> None:
+        self.productName = productName
         self.quantity = quantity
         self.price = price
 

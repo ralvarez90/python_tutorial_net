@@ -22,7 +22,7 @@ class Person:
     """Clase con propiedad self.name y método.
     """
 
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str):
         self.name = name
 
     def greet(self) -> str:
@@ -36,23 +36,23 @@ class Employee(Person):
     """Clase Empleado que cumple la relación 'es una' Persona.
     """
 
-    def __init__(self, name: str, job_title: str) -> None:
+    def __init__(self, name: str, jobTitle: str):
         super().__init__(name)
-        self.job_title = job_title
+        self.jobTitle = jobTitle
 
     def __str__(self) -> str:
         return f'Employee{self.__dict__}'
 
 
 def showExample01():
-    employee_1 = Employee(name='John Wick', job_title='Killer')
-    person_1 = Person('Juan Güic')
-    print(f'employee_1: {employee_1}')
-    print(f'person_1  : {person_1}')
+    employee1 = Employee(name='John Wick', jobTitle='Killer')
+    person1 = Person('Juan Güic')
+    print(f'employee1: {employee1}')
+    print(f'person1  : {person1}')
 
 
 def showExample02():
-    e1 = Employee(name='Peter Parker', job_title='Super hero')
+    e1 = Employee(name='Peter Parker', jobTitle='Super hero')
     p1 = Person(name='Van Dame')
     print(f'e1 is a Person  : {isinstance(e1, Person)}  ')
     print(f'e1 is a Employee: {isinstance(e1, Employee)}')

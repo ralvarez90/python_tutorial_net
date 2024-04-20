@@ -35,9 +35,9 @@ def showExample01():
     p1.job = 'Killer'
 
     # agregamos función dinámica clase.
-    Person.show_job = lambda p: print(p.job)
-    Person.show_job(p1)
-    print(runtimeType(Person.show_job))
+    Person.showJob = lambda p: print(p.job)
+    Person.showJob(p1)
+    print(runtimeType(Person.showJob))
 
     # invocamos método de instancia
     p1.greet()
