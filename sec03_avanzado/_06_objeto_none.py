@@ -34,12 +34,12 @@ def showExample01():
     print(f'None is None: {None is None}')
     print(f'None == None: {None == None}')
 
-    class __Apple:
+    class Apple:
         def __eq__(self, __value: object) -> bool:
             return True
 
     # retorna true en cualquier caso
-    a1 = __Apple()
+    a1 = Apple()
     print(a1 == None)
     print(a1 == 123)
     print(a1 == 'Hello World!')

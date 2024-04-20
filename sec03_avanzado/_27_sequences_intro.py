@@ -15,6 +15,9 @@ Python cuenta con las siguientes secuencias construidas en el lenguaje
 Python clasifica las secuencias como mutables e inmutables. Las secuencias
 inmutables son los strings, tuplas, rangos y bytes mientras que las 
 secuencias mutables son las listas, y los bytearrays.
+
+Un iterable es una colección de objetos obtenibles una a uno, y cualquier
+secuencia es un iterable. Un iterables es una secuencia más general.
 """
 from typing import Sequence
 

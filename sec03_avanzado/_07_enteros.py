@@ -19,8 +19,7 @@ def runtimeType(obj: object) -> str:
 def showExample01():
     someNumber: int = 128
     print(f'{someNumber} with type: {runtimeType(someNumber)}')
-    print(f'sys.getsizeof(', someNumber, '): ',
-          sys.getsizeof(someNumber), '\n')
+    print(f'sys.getsizeof(', someNumber, '): ', sys.getsizeof(someNumber), '\n')
 
     # ejemplo 2, entero más largo
     otherNumber = 1_000_000_000
@@ -28,8 +27,7 @@ def showExample01():
 
     # ejemplo 3, otro entero
     otherNumber = 2**32
-    print('sys.getsizeof(', otherNumber,
-          'with size:', sys.getsizeof(otherNumber))
+    print('sys.getsizeof(', otherNumber, 'with size:', sys.getsizeof(otherNumber))
 
 
 def main():

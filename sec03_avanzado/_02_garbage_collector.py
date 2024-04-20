@@ -18,13 +18,13 @@ import gc
 import ctypes
 
 
-def refCounter(id_obj: int) -> int:
-    return ctypes.c_long.from_address(id_obj).value
+def refCount(idObj: int) -> int:
+    return ctypes.c_long.from_address(idObj).value
 
 
-def existsObject(id_obj: int) -> bool:
+def existsObject(idObj: int) -> bool:
     for object in gc.get_objects():
-        if id(object) == id_obj:
+        if id(object) == idObj:
             return True
     return False
 
@@ -51,36 +51,36 @@ def showExample01():
     bId = id(a.b)
 
     # mostramos contadores
-    print(f'ref_count(a): {refCounter(aId)}')
-    print(f'ref_count(b): {refCounter(bId)}')
+    print(f'refCount(a): {refCount(aId)}')
+    print(f'refCount(b): {refCount(bId)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {existsObject(aId)}')
-    print(f'object_exists(b): {existsObject(bId)}')
+    print(f'objectExists(a): {existsObject(aId)}')
+    print(f'objectExists(b): {existsObject(bId)}')
 
     # separador
     print('-'*50)
 
     # eliminamos objetos
     a = None
-    print(f'ref_count(a): {refCounter(aId)}')
-    print(f'ref_count(b): {refCounter(bId)}')
+    print(f'refCount(a): {refCount(aId)}')
+    print(f'refCount(b): {refCount(bId)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {existsObject(aId)}')
-    print(f'object_exists(b): {existsObject(bId)}')
+    print(f'objectExists(a): {existsObject(aId)}')
+    print(f'objectExists(b): {existsObject(bId)}')
 
     # ejecturamos recolector
     gc.collect()
     print('-'*50)
 
     # mostramos contadores
-    print(f'ref_count(a): {refCounter(aId)}')
-    print(f'ref_count(b): {refCounter(bId)}')
+    print(f'refCount(a): {refCount(aId)}')
+    print(f'refCount(b): {refCount(bId)}')
 
     # chequeo de existencia de referencias
-    print(f'object_exists(a): {existsObject(aId)}')
-    print(f'object_exists(b): {existsObject(bId)}')
+    print(f'objectExists(a): {existsObject(aId)}')
+    print(f'objectExists(b): {existsObject(bId)}')
 
 
 def main():

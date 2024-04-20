@@ -16,6 +16,9 @@ a partir de cual buscar.
 
 3. max y min
 Podemos obtener el elemento máximo y mínimo de una secuencia.
+
+4. operador +
+Empleamos este operador para concatenar dos secuencias de datos.
 """
 import random
 
@@ -48,10 +51,18 @@ def showExample03():
     print(f'max(numbers): {max(numbers)}')
 
 
+def showExample04():
+    east = ['New York', 'New Jersey']
+    west = ['San Diego', 'San Francisco']
+    cities = east + west
+    print(f'east + west = {east} + {west} = {cities}')
+
+
 def main():
     showExample01()
     showExample02()
     showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':
