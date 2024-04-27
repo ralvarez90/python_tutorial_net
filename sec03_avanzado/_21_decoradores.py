@@ -1,7 +1,6 @@
 """DECORADORES CON ARGUMENTOS
 
-Recordemos que los decoradores son funciones que 
-reciben como argumento otra función, la modifican
+Los decoradores son funciones que reciben como argumento otra función, la modifican
 y la vuelven a retornar.
 
 Al ser funciones pueden o no recibir argumentos. La definición

@@ -17,7 +17,7 @@ inmutables son los strings, tuplas, rangos y bytes mientras que las
 secuencias mutables son las listas, y los bytearrays.
 
 Un iterable es una colección de objetos obtenibles una a uno, y cualquier
-secuencia es un iterable. Un iterables es una secuencia más general.
+secuencia es un iterable. Un iterable es una secuencia más general.
 """
 from typing import Sequence
 

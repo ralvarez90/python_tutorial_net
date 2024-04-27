@@ -58,13 +58,20 @@ def showExample04():
     print(f'east + west = {east} + {west} = {cities}')
 
 
+def showExample05():
+    numbers = [1, 4, 5, 3, 5, 7, 8, 5]
+    print(f'numbers: {numbers}')
+    print(f'first index of 5 is: {numbers.index(5)}')
+
+
 def main():
     showExample01()
     showExample02()
     showExample03()
     showExample04()
+    showExample05()
 
 
 if __name__ == '__main__':
     main()
-    input('\nPress any key to continue . . .')
+    input('\nPress any key to continue . . . ')

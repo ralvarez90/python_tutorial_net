@@ -1,9 +1,10 @@
 """SCOPE GLOBAL
 
-Básicamente es el alcance que se tiene dentro de un
-módulo. La palabra reservada global permite referencia
-variables globales dentro de funciones, ya que cada 
-función tiene su pripio scope local.
+Básicamente es el alcance que se tiene dentro de un módulo. 
+
+La palabra reservada global permite referenciar variables 
+globales dentro de funciones, ya que cada función tiene su 
+pripio scope local.
 
 El scope global está contenido dentro de otro scope
 conicido como built-in. 

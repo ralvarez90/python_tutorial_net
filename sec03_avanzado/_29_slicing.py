@@ -12,9 +12,9 @@ import random
 
 
 def showExample01():
-    someNumbers = [random.randint(1, 8) for _ in range(10)]
-    print(f'someNumbers: {someNumbers}')
-    print(f'someNumbers[2:6] -> {someNumbers[2:6]}')
+    numbers = [random.randint(1, 8) for _ in range(10)]
+    print(f'numbers      : {numbers}')
+    print(f'numbers[2:6] : {numbers[2:6]}')
 
 
 def main():

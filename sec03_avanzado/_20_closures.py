@@ -3,7 +3,7 @@
 En python podemos definir funciones dentro de otras. Estas se denominan
 funciones anidadas.
 
-Un closure una función anidada, que accede el estado que a una o más referencias
+Un closure es una función anidada, que accede el estado que a una o más referencias
 del la función que la contiente.
 """
 

@@ -14,11 +14,12 @@ positivos o negativas.
 Método indices de slices
 Dato un slices definido, podemos invocar su método indices que
 nos permite obtener índices válidos dentro de un rango especificado
-por el sl
+por el slice.
 """
 from typing import Sequence, TypeVar
 
 
+# definición de genérico
 T = TypeVar('T')
 
 
@@ -46,11 +47,11 @@ def showExample03():
     message = 'Hello World in Python!'
     print(f'message: "{message}"')
 
-    def innerGetLast(seq: Sequence[T]) -> T | None:
+    def getLastItem(seq: Sequence[T]) -> T | None:
         return seq[-1] if len(seq) != 0 else None
 
-    print(f'innerGetLast(message) -> {innerGetLast(message)}')
-    print(f'innerGetLast([])      -> {innerGetLast([])}')
+    print(f'getLastItem(message) -> {getLastItem(message)}')
+    print(f'getLastItem([])      -> {getLastItem([])}')
 
 
 def showExample04():

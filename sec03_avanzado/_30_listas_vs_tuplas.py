@@ -12,6 +12,8 @@ Entre las principales diferencias entre las tuplas y las
 listas son:
 - Las tuplas ocupan menos espacio en memoria
 - Copiar una tupla es más rápido que una lista. 
+
+# todo: agregar ejemplo de timeit
 """
 from sys import getsizeof
 from timeit import timeit
@@ -19,7 +21,7 @@ from typing import Sequence
 
 
 def showExample01():
-    # tupla y losta
+    # tupla y lista
     sequence1 = (1, 2, 3, 4, 5)
     sequence2 = [1, 2, 3, 4, 5]
 
@@ -61,4 +63,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    input('\nPress any key to continue . . .')
+    input('\nPress any key to continue . . . ')
