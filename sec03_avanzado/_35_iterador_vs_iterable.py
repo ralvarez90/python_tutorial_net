@@ -18,7 +18,7 @@ la clase iter.
 Se emplea para obtener el siguiente elemento entregado por un
 iterador.
 
-Podemos separar el iterador de un iterable.  Ver ejemplo
+Podemos separar el iterador de un iterable.  Ver ejemplo 04.
 """
 
 
@@ -32,6 +32,7 @@ def showExample01():
     numbersIterator = numbers.__iter__()
     print(f'numbers.__iter__()  :  {numbersIterator}')
     print(f'type of (numbersIterator) : {runtimeType(numbersIterator)}')
+    print()
 
 
 def showExample02():
@@ -40,6 +41,7 @@ def showExample02():
     numbersIterator = iter(numbers)
     for _ in range(len(numbers)):
         print(next(numbersIterator))
+    print()
 
 
 def showExample03():
@@ -66,24 +68,49 @@ def showExample03():
     colors = Colors()
     for c in colors:
         print(c)
+    print()
 
 
 def showExample04():
+    print('EXAMPLE 04. Separating an iterator from an interable')
 
     # iterable
     class Colors:
         def __init__(self) -> None:
             self.rgb = ['red', 'green', 'blue']
 
+        def __len__(self) -> int:
+            return len(self.rgb)
+
     # iterador
+    class ColorIterator:
+        def __init__(self, colors: Colors) -> None:
+            self.__colors = colors
+            self.__index = 0
+
+        def __iter__(self):
+            return self
+
+        def __next__(self):
+            if self.__index >= len(self.__colors):
+                raise StopIteration
+
+            color = self.__colors.rgb[self.__index]
+            self.__index += 1
+            return color
 
     # test
+    colors = Colors()
+    colorIterator = ColorIterator(colors)
+    for c in colorIterator:
+        print(c)
 
 
 def main():
     showExample01()
     showExample02()
     showExample03()
+    showExample04()
 
 
 if __name__ == '__main__':
