@@ -12,6 +12,7 @@ y si no existe buscará el __getitem__.
 
 
 def showExample01():
+    print('EXAMPLE 01. Using iter method with a none sequence or iterable')
 
     class Counter:
         def __init__(self) -> None:
@@ -20,6 +21,20 @@ def showExample01():
     # lanza excepción
     counter = Counter()
     # iterator = iter(counter)
+
+
+def showExample02():
+    print('EXAMPLE 02. Using iter method and adding __getiten__ method in class.  Instances of'
+          '\nthis classes are sequence now')
+
+    class Counter:
+        def __init__(self) -> None:
+            self.current = 0
+
+        def __getitem__(self, index: int):
+            if isinstance(index, int):
+                self.current += 1
+                return self.current
 
 
 def main():
