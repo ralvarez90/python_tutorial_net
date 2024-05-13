@@ -24,20 +24,25 @@ from threading import Thread
 
 def showExample01():
 
+    # inner task
     def task():
         print('Starting a task...')
         sleep(1)
         print('done...')
 
+    # create timer an run task
     ti = perf_counter()
     task()
     task()
     tf = perf_counter()
+
+    # results
     print(f'showExample01 se ejecuta en {tf-ti} segundos')
 
 
 def showExample02():
 
+    # inner task
     def task():
         print('Starting task...')
         sleep(1)
@@ -47,17 +52,18 @@ def showExample02():
     ti = perf_counter()
 
     # se crean hilos, se ejecutan y se agregan al main thread
-    threadsToExec = [Thread(target=task) for _ in range(10)]
+    threadsToExec = [Thread(target=task) for _ in range(8)]
     [t.start() for t in threadsToExec]
     [t.join() for t in threadsToExec]
 
-    # contador final
+    # resultados
     tf = perf_counter()
     print(f"showExample02 se ejecuta en {tf-ti} segundos")
 
 
 def showExample03():
 
+    # inner task with id
     def task(id: int):
         print(f'Starting task {id}...')
         sleep(1)
@@ -67,11 +73,11 @@ def showExample03():
     ti = perf_counter()
 
     # se crean hilos, se ejecuta y se agregan al main thread
-    threadsToExec = [Thread(target=task, args=(i,)) for i in range(1, 1001)]
+    threadsToExec = [Thread(target=task, args=(i+1,)) for i in range(1000)]
     [t.start() for t in threadsToExec]
     [t.join() for t in threadsToExec]
 
-    # contador final
+    # contador final y resultados
     tf = perf_counter()
     print(f'showExample03 se ejecuta en {tf-ti} segundos')
 
