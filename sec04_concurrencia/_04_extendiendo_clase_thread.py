@@ -21,7 +21,7 @@ class HttpRequestThread(Thread):
         self.url = url
 
     def run(self) -> None:
-        print(f'Checking {self.url}')
+        print(f'Checking {self.url} . . . ')
         try:
             response = urllib.request.urlopen(self.url)
             print(response.code)
@@ -32,11 +32,14 @@ class HttpRequestThread(Thread):
 
 
 def showExample01():
+
+    # list urls
     urls = [
         'https://httpstat.us/200',
         'https://httpstat.us/400'
     ]
 
+    # threads starts and join to main thread
     threads = [HttpRequestThread(url) for url in urls]
     [t.start() for t in threads]
     [t.join() for t in threads]
