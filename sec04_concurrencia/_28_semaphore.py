@@ -33,8 +33,8 @@ def download(url: str):
         print('Finished downloading %s' % (url))
         return data
 
-def main():
 
+def main():
     # URLs to download
     urls = [
         'https://www.ietf.org/rfc/rfc791.txt',
