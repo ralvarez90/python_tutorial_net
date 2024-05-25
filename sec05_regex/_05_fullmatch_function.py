@@ -10,7 +10,6 @@ import re
 
 
 def showExample01():
-
     s1 = '2031'
     s2 = 'Python 3.10 released in 2021'
     pattern = r'\d{4}'
