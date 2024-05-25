@@ -14,7 +14,6 @@ import urllib.request
 
 def showExample01():
 
-    # inner class
     class HttpRequestThread(Thread):
         def __init__(self, url: str) -> None:
             super().__init__()

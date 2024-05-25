@@ -21,7 +21,7 @@ class HttpRequestThread(Thread):
         self.url = url
 
     def run(self) -> None:
-        print(f'Checking {self.url} . . . ')
+        print(f'Checking {self.url}. . . ')
         try:
             response = urllib.request.urlopen(self.url)
             print(response.code)

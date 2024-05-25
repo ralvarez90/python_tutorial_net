@@ -25,15 +25,15 @@ from threading import Thread
 def showExample01():
 
     # inner task
-    def task():
+    def innterTask():
         print('Starting a task...')
         sleep(1)
         print('done...')
 
     # create timer an run task
     ti = perf_counter()
-    task()
-    task()
+    innterTask()
+    innterTask()
     tf = perf_counter()
 
     # results
@@ -58,7 +58,7 @@ def showExample02():
 
     # resultados
     tf = perf_counter()
-    print(f"showExample02 se ejecuta en {tf-ti} segundos")
+    print('showExample02 se ejecuta en %d segundos' & (tf-ti))
 
 
 def showExample03():

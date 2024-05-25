@@ -26,7 +26,7 @@ def main():
 
     # resultados
     deltaT = perf_counter() - ti
-    print(f'It took {deltaT: 0.2f} second(s) to complete')
+    print('It took %.2f second(s) to complete' % (deltaT))
 
 
 if __name__ == '__main__':
