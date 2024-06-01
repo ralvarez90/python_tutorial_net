@@ -29,13 +29,19 @@ import re
 def showExample01():
     s = '<button type="submit" class="btn">Send</button>'
     pattern = r'".+?"'
-    matches = re.match(pattern, s)
+    matches = re.finditer(pattern, s)
     for m in matches:
         print(m)
 
 
+def showExample02():
+    # todo
+    raise NotImplementedError('Add more examples.')
+
+
 def main():
     showExample01()
+    showExample02()
 
 
 if __name__ == '__main__':
